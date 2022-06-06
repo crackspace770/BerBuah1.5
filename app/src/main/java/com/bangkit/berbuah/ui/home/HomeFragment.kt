@@ -18,7 +18,7 @@ import com.bangkit.berbuah.databinding.FragmentHomeBinding
 
 import java.io.File
 
-class HomeActivity : Fragment()  {
+class HomeFragment : Fragment()  {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
@@ -30,7 +30,6 @@ class HomeActivity : Fragment()  {
         private val REQUIRED_PERMISSIONS = arrayOf(android.Manifest.permission.CAMERA)
         private const val REQUEST_CODE_PERMISSIONS = 10
     }
-
 
 
     override fun onCreateView(
@@ -107,20 +106,20 @@ class HomeActivity : Fragment()  {
         _binding = null
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            (R.id.logout) -> {
-                viewModel.logout()
-                preferences.edit().apply {
-                    clear()
-                    apply()
-                    finish()
-                }
-                return true
-            }
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//        return when (item.itemId) {
+//            (R.id.logout) -> {
+//                viewModel.logout()
+//                preferences.edit().apply {
+//                    clear()
+//                    apply()
+//                    finish()
+//                }
+//                return true
+//            }
 
-            else -> false
-        }
-    }
+//            else -> false
+//        }
+//    }
 
 }

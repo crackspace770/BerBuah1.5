@@ -6,13 +6,13 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.bangkit.berbuah.api.ApiConfig
-import com.bangkit.berbuah.model.UserPreference
+import com.bangkit.berbuah.model.UserPreferences
 import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class SearchViewModel(private val pref : UserPreference) : ViewModel() {
+class SearchViewModel(private val pref : UserPreferences) : ViewModel() {
 
     private val _listUser = MutableLiveData<List<ListFruitItem>>()
     val listUser: LiveData<List<ListFruitItem>> = _listUser

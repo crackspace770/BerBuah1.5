@@ -50,7 +50,7 @@ class SearchAdapter: RecyclerView.Adapter<SearchAdapter.ViewHolder>() {
 
                     itemView.setOnClickListener {
                         val intent = Intent(itemView.context, DetailActivity::class.java)
-                        intent.putExtra(DetailActivity.EXTRA_STORY, data)
+//                        intent.putExtra(DetailActivity.EXTRA_STORY, data)
 
                         val optionsCompat: ActivityOptionsCompat =
                             ActivityOptionsCompat.makeSceneTransitionAnimation(

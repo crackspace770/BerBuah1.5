@@ -33,22 +33,22 @@ class FavoriteFragment : Fragment() {
         val favoriteViewModel = ViewModelProvider(this).get(FavoriteViewModel::class.java)
 
         _binding = FragmentFavoriteBinding.inflate(inflater, container, false)
-        binding.rvResult.layoutManager = LinearLayoutManager(context)
+        binding.rvFavorite.layoutManager = LinearLayoutManager(context)
         val root: View = binding.root
         return root
 
-        adapter.setOnItemClickCallback(object : FavoriteAdapter.OnItemClickCallback {
-            override fun onItemClicked(data: FruitItem) {
-                showSelectedUser(data, favorite = Favorite())
-            }
-        })
+//        adapter.setOnItemClickCallback(object : FavoriteAdapter.OnItemClickCallback {
+//            override fun onItemClicked(data: FruitItem) {
+//                showSelectedUser(data, favorite = Favorite())
+//            }
+//        })
     }
 
     private fun showSelectedUser(user: FruitItem, favorite: Favorite) {
-        val moveWithObjectIntent = Intent(this@FavoriteFragment, DetailActivity::class.java)
-        moveWithObjectIntent.putExtra(DetailActivity.EXTRA_USER, user)
-        moveWithObjectIntent.putExtra(DetailActivity.EXTRA_FAVORITE, favorite)
-        startActivity(moveWithObjectIntent)
+//        val moveWithObjectIntent = Intent(this@FavoriteFragment, DetailActivity::class.java)
+//        moveWithObjectIntent.putExtra(DetailActivity.EXTRA_USER, user)
+//        moveWithObjectIntent.putExtra(DetailActivity.EXTRA_FAVORITE, favorite)
+//        startActivity(moveWithObjectIntent)
     }
 
     private fun obtainViewModel(activity: AppCompatActivity): FavoriteViewModel {
@@ -72,7 +72,7 @@ class FavoriteFragment : Fragment() {
                 preferences.edit().apply {
                     clear()
                     apply()
-                    finish()
+//                    finish()
                 }
                 return true
             }

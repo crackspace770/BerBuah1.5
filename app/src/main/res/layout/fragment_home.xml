@@ -4,7 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.HomeActivity">
+    tools:context=".ui.home.HomeFragment">
+
+<!--    <View-->
+<!--        android:id="@+id/view"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="?attr/actionBarSize"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:text="@string/app_name"-->
+<!--        android:textColor="?android:textColorPrimary"-->
+<!--        android:textSize="20sp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <TextView
+        android:id="@+id/tvPilih"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/pilih_gambar"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/previewImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/previewImage"
@@ -21,7 +55,7 @@
         app:srcCompat="@drawable/ic_place_holder" />
 
     <Button
-        android:id="@+id/buttonCamera"
+        android:id="@+id/btnCamera"
         android:layout_width="130dp"
         android:layout_height="50dp"
         android:layout_marginStart="32dp"
@@ -29,12 +63,12 @@
         android:layout_marginEnd="8dp"
         android:backgroundTint="@color/green2"
         android:text="@string/camera"
-        app:layout_constraintEnd_toStartOf="@+id/buttonGallery"
+        app:layout_constraintEnd_toStartOf="@+id/btnGallery"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/previewImage" />
 
     <Button
-        android:id="@+id/buttonGallery"
+        android:id="@+id/btnGallery"
         android:layout_width="130dp"
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
@@ -43,11 +77,11 @@
         android:backgroundTint="@color/green2"
         android:text="@string/gallery"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonCamera"
+        app:layout_constraintStart_toEndOf="@+id/btnCamera"
         app:layout_constraintTop_toBottomOf="@+id/previewImage" />
 
     <Button
-        android:id="@+id/buttonUpload"
+        android:id="@+id/btnUpload"
         android:layout_width="177dp"
         android:layout_height="58dp"
         android:layout_marginStart="32dp"
@@ -57,21 +91,6 @@
         android:text="@string/deteksi"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonCamera" />
-
-    <TextView
-        android:id="@+id/tvPilih"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginBottom="8dp"
-        android:text="Pilih gambar yang kamu inginkan"
-        android:textAlignment="center"
-        android:textAllCaps="true"
-        android:textSize="28sp"
-        app:layout_constraintBottom_toTopOf="@+id/previewImage"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/btnCamera" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

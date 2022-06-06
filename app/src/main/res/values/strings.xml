@@ -37,5 +37,8 @@
 
     <string name="image_login">Image Login</string>
     <string name="image_signup">Image Signup</string>
+    <string name="pilih_gambar">Pilih gambar yang kamu inginkan</string>
+    <string name="input_fruit_name">Masukkan nama buah</string>
+    <string name="not_found">Not Found</string>
 
 </resources>

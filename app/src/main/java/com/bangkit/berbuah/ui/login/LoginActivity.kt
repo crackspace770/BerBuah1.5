@@ -20,7 +20,7 @@ import com.bangkit.berbuah.R
 import com.bangkit.berbuah.api.ApiConfig
 import com.bangkit.berbuah.databinding.ActivityLoginBinding
 import com.bangkit.berbuah.model.UserModel
-import com.bangkit.berbuah.ui.home.HomeActivity
+import com.bangkit.berbuah.ui.home.HomeFragment
 import com.bangkit.berbuah.ui.signup.SignupActivity
 import retrofit2.Call
 import retrofit2.Callback
@@ -92,7 +92,7 @@ class LoginActivity: AppCompatActivity(), View.OnClickListener {
                                     response.body()?.loginResult?.apply {
                                         validateLogin(userId, name, token, isLogin = true)
                                     }
-                                    val mainIntent = Intent(this@LoginActivity, HomeActivity::class.java)
+                                    val mainIntent = Intent(this@LoginActivity, HomeFragment::class.java)
                                     showLoading(false)
                                     startActivity(mainIntent)
                                     finish()
@@ -126,7 +126,7 @@ class LoginActivity: AppCompatActivity(), View.OnClickListener {
 
     private fun hasLogin(boolean: Boolean) {
         if(boolean) {
-            val intent = Intent(this, HomeActivity::class.java)
+            val intent = Intent(this, HomeFragment::class.java)
             startActivity(intent)
         }
     }
