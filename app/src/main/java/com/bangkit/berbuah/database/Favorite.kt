@@ -11,7 +11,7 @@ import kotlinx.parcelize.Parcelize
 data class Favorite (
 
     @PrimaryKey
-    @ColumnInfo(name = "login")
+    @ColumnInfo(name = "nama")
     var name: String = "",
 
     @ColumnInfo(name = "avatar")

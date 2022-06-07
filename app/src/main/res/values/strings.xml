@@ -21,8 +21,8 @@
     <string name="logout">Logout</string>
     <string name="message_welcome_page">App where you can post your own picture and share it with other!</string>
     <string name="title_welcome_page">Welcome to PhotoApp!</string>
-    <string name="title_signup_page">Fill in Your Data!</string>
-    <string name="message_login">Create Your Own Story</string>
+    <string name="title_signup_page">Isi Datamu!</string>
+    <string name="message_login">Login dulu yah!</string>
     <string name="title_login">Sudah siap untuk upgrade skill?</string>
     <string name="backToLogin">Kembali ke halaman login</string>
     <string name="name">Nama</string>
@@ -39,7 +39,7 @@
     <string name="image_signup">Image Signup</string>
     <string name="pilih_gambar">Pilih gambar yang kamu inginkan</string>
     <string name="input_fruit_name">Masukkan nama buah</string>
-    <string name="not_found">Not Found</string>
+    <string name="not_found">Nama buah yang kamu cari tidak ada</string>
     <string name="title_activity_bottom_navigation">BottomNavigationActivity</string>
     <string name="invalid_permission">Invalid Permission</string>
 
