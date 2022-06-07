@@ -40,5 +40,7 @@
     <string name="pilih_gambar">Pilih gambar yang kamu inginkan</string>
     <string name="input_fruit_name">Masukkan nama buah</string>
     <string name="not_found">Not Found</string>
+    <string name="title_activity_bottom_navigation">BottomNavigationActivity</string>
+    <string name="invalid_permission">Invalid Permission</string>
 
 </resources>

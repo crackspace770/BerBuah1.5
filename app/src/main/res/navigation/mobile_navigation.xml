@@ -2,47 +2,48 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/mobile_navigation">
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/homeFragment">
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.bangkit.berbuah.ui.home.HomeFragment"
+        android:name="com.bangkit.berbuah.ui.fragments.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home">
-        <action
-            android:id="@+id/action_homeFragment_to_detailUserActivity"
-            app:destination="@id/detailActivity"
-            app:popUpToInclusive="false" />
-        <action
-            android:id="@+id/action_homeFragment_to_searchFragment"
-            app:destination="@id/searchFragment" />
+<!--        <action-->
+<!--            android:id="@+id/action_homeFragment_to_detailUserActivity"-->
+<!--            app:destination="@id/detailActivity"-->
+<!--            app:popUpToInclusive="false" />-->
+<!--        <action-->
+<!--            android:id="@+id/action_homeFragment_to_searchFragment"-->
+<!--            app:destination="@id/searchFragment" />-->
     </fragment>
     <activity
         android:id="@+id/detailActivity"
-        android:name="com.bangkit.berbuah.ui.detail.DetailActivity"
+        android:name="com.bangkit.berbuah.ui.activities.DetailActivity"
         android:label="activity_detail_user"
         tools:layout="@layout/activity_detail" />
     <fragment
         android:id="@+id/searchFragment"
-        android:name="com.bangkit.berbuah.ui.search.SearchFragment"
+        android:name="com.bangkit.berbuah.ui.fragments.SearchFragment"
         android:label="fragment_search"
         tools:layout="@layout/fragment_search">
-        <action
-            android:id="@+id/action_searchFragment_to_favoriteFragment"
-            app:destination="@id/favoriteFragment" />
+<!--        <action-->
+<!--            android:id="@+id/action_searchFragment_to_favoriteFragment"-->
+<!--            app:destination="@id/favoriteFragment" />-->
     </fragment>
     <fragment
         android:id="@+id/favoriteFragment"
-        android:name="com.bangkit.berbuah.ui.favorite.FavoriteFragment"
+        android:name="com.bangkit.berbuah.ui.fragments.FavoriteFragment"
         android:label="fragment_favorite"
         tools:layout="@layout/fragment_favorite">
-        <action
-            android:id="@+id/action_favoriteFragment_to_settingFragment"
-            app:destination="@id/settingFragment" />
+<!--        <action-->
+<!--            android:id="@+id/action_favoriteFragment_to_settingFragment"-->
+<!--            app:destination="@id/settingFragment" />-->
     </fragment>
     <fragment
         android:id="@+id/settingFragment"
-        android:name="com.bangkit.berbuah.SettingFragment"
+        android:name="com.bangkit.berbuah.ui.fragments.SettingFragment"
         android:label="fragment_setting"
         tools:layout="@layout/fragment_setting" />
 

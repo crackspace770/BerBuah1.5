@@ -2,7 +2,7 @@ package com.bangkit.berbuah.api
 
 import com.bangkit.berbuah.ui.login.LoginResponse
 import com.bangkit.berbuah.ui.search.SearchResponse
-import com.bangkit.berbuah.ui.signup.SignupResponse
+import com.bangkit.berbuah.response.SignupResponse
 import retrofit2.Call
 import retrofit2.http.*
 
