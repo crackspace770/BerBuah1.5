@@ -15,8 +15,7 @@ import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.content.ContextCompat
 import com.bangkit.berbuah.databinding.ActivityCameraBinding
 import com.bangkit.berbuah.ui.fragments.HomeFragment
-import com.bangkit.berbuah.ui.home.createFile
-import java.lang.Exception
+import com.bangkit.berbuah.utils.Utils.createFile
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 

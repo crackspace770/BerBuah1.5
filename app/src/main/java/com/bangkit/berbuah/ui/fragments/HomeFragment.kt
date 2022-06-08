@@ -11,18 +11,17 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import com.bangkit.berbuah.R
 import com.bangkit.berbuah.databinding.FragmentHomeBinding
 import com.bangkit.berbuah.ui.activities.CameraActivity
-import com.bangkit.berbuah.ui.home.rotateBitmap
-import com.bangkit.berbuah.ui.home.uriToFile
+import com.bangkit.berbuah.utils.Utils.rotateBitmap
+import com.bangkit.berbuah.utils.Utils.uriToFile
 import com.bangkit.berbuah.viewmodel.HomeViewModel
-
 import java.io.File
 
 class HomeFragment : Fragment() {
