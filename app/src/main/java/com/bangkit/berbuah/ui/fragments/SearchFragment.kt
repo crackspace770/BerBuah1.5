@@ -1,89 +1,120 @@
 package com.bangkit.berbuah.ui.fragments
 
-import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.bangkit.berbuah.R
 import com.bangkit.berbuah.adapter.SearchAdapter
-
 import com.bangkit.berbuah.databinding.FragmentSearchBinding
-import com.bangkit.berbuah.ui.search.DataItem
-import com.bangkit.berbuah.model.FruitItem
 import com.bangkit.berbuah.viewmodel.SearchViewModel
-
-import java.util.ArrayList
+import com.bangkit.berbuah.viewmodel.ViewModelFactory
 
 
 class SearchFragment : Fragment() {
 
-    private var _binding: FragmentSearchBinding? = null
-    private lateinit var adapter: SearchAdapter
-    private val binding get() = _binding!!
+    //    private val binding get() = _binding!!
+    private var binding: FragmentSearchBinding? = null
+    private lateinit var searchAdapter: SearchAdapter
     private lateinit var viewModel: SearchViewModel
-    private lateinit var preferences: SharedPreferences
+//    private lateinit var preferences: SharedPreferences
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        val mainViewModel = ViewModelProvider(this).get(SearchViewModel::class.java)
+    ): View? {
+//        val mainViewModel = ViewModelProvider(this).get(SearchViewModel::class.java)
 //        preferences = getSharedPreferences(LoginActivity.SHARED_PREFERENCES, Context.MODE_PRIVATE)
 
-        _binding = FragmentSearchBinding.inflate(inflater, container, false)
-        binding.rvResult.layoutManager = LinearLayoutManager(context)
-        val root: View = binding.root
-        return root
+        binding = FragmentSearchBinding.inflate(inflater, container, false)
+        return binding?.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val mainViewModel = ViewModelProvider(this).get(SearchViewModel::class.java)
+        searchFruitData()
 
-//        binding.btnUpload.setOnClickListener { view ->
-//            mainViewModel.findUser(binding.edSearch.text.toString())
-//            val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-//            imm.hideSoftInputFromWindow(view.windowToken, 0)
-//        }
-    }
+        viewModel = obtainViewModel(context as AppCompatActivity)
 
-    private fun setSearchData(searchResult: List<DataItem>) {
-        val listFruit: ArrayList<FruitItem> = ArrayList()
-        for (fruit in searchResult) {
-//            val userList = FruitItem(fruit.nama, fruit.photo)
-//            listFruit.add(userList)
+        viewModel.isLoading.observe(viewLifecycleOwner) {
+            showLoading(it)
         }
-//        val adapter = SearchAdapter(listFruit)
-//        binding.rvResult.adapter = adapter
-//        binding.searchView.setText("")
+
+        getDataFruit()
+    }
+
+    private fun obtainViewModel(activity: AppCompatActivity): SearchViewModel {
+        val factory = ViewModelFactory.getInstance(activity.application)
+        return ViewModelProvider(activity, factory)[SearchViewModel::class.java]
 
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            (R.id.logout) -> {
-                viewModel.logout()
-                preferences.edit().apply {
-                    clear()
-                    apply()
-//                    finish()
+    private fun searchFruitData() {
+        binding?.searchView?.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                searchAdapter.fruitList.clear()
+                query.let {
+                    binding?.searchView?.clearFocus() // hide keyboard after searching
+//                    finalState()
+                    viewModel.setListFruit(it.toString())
                 }
                 return true
             }
 
-            else -> false
+            override fun onQueryTextChange(newText: String?): Boolean {
+                return false
+            }
+        })
+    }
+
+    private fun getDataFruit() {
+        binding?.apply {
+            rvResult.setHasFixedSize(true)
+            rvResult.layoutManager = LinearLayoutManager(context)
+            searchAdapter = SearchAdapter()
+            rvResult.adapter = searchAdapter
+
+            viewModel.getFruitSearch().observe(viewLifecycleOwner) { listUser ->
+                listUser.let {
+                    if (it.size == 0) {
+//                        emptyState()
+                    } else {
+                        searchAdapter.setData(it)
+//                        finalState()
+                    }
+                }
+            }
         }
     }
+
+//    private fun setSearchData(searchResult: List<DataItem>) {
+//        val listFruit: ArrayList<FruitItem> = ArrayList()
+//        for (fruit in searchResult) {
+//            val userList = FruitItem(fruit.nama, fruit.photo)
+//            listFruit.add(userList)
+//}
+//        val adapter = SearchAdapter(listFruit)
+//        binding.rvResult.adapter = adapter
+//        binding.searchView.setText("")
+
+//    }
+
+    private fun showLoading(isLoading: Boolean) {
+        binding?.apply {
+            progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
+//            tvLoading.visibility = if (isLoading) View.VISIBLE else View.GONE
+        }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        binding = null
+    }
+
 }

@@ -18,7 +18,7 @@ class ApiConfig {
                 .addInterceptor(loggingInterceptor)
                 .build()
             val retrofit = Retrofit.Builder()
-                .baseUrl("https://us-central1-lustrous-maxim-349908.cloudfunctions.net/v1/api/articles")
+                .baseUrl("https://us-central1-lustrous-maxim-349908.cloudfunctions.net/articles/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build()

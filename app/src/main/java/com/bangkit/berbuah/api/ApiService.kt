@@ -1,7 +1,8 @@
 package com.bangkit.berbuah.api
 
+import com.bangkit.berbuah.model.Search
+import com.bangkit.berbuah.response.FruitResponse
 import com.bangkit.berbuah.ui.login.LoginResponse
-import com.bangkit.berbuah.ui.search.SearchResponse
 import com.bangkit.berbuah.response.SignupResponse
 import retrofit2.Call
 import retrofit2.http.*
@@ -23,8 +24,7 @@ interface ApiService {
     ): Call<LoginResponse>
 
     @GET("search")
-    fun getListSearch(
-        @Header("Authorization")
-        authHeader: String,
-    ): Call<SearchResponse>
+    fun getSearchFruit(
+        @Query("buah") query: String?
+    ): Call<Search>
 }

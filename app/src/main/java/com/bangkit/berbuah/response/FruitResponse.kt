@@ -1,67 +1,55 @@
-package com.bangkit.berbuah.model
+package com.bangkit.berbuah.response
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 import kotlinx.parcelize.Parcelize
 
+@Parcelize
 data class FruitResponse(
 
-	@field:SerializedName("code")
-	val code: Int? = null,
-
-	@field:SerializedName("status")
-	val status: String? = null,
-
-	@field:SerializedName("data")
-	val data: List<DataItem?>? = null
-)
-
-@Parcelize
-data class DataItem(
-
 	@field:SerializedName("id")
-	val id: String? = null,
+	val id: Int,
 
-	@field:SerializedName("name")
-	val name: String? = null,
+	@field:SerializedName("nama")
+	val nama: String,
 
 	@field:SerializedName("nama_latin")
-	val namaLatin: String? = null,
+	val nama_latin: String,
 
 	@field:SerializedName("deskripsi")
-	val deskripsi: String? = null,
+	val deskripsi: String,
 
 	@field:SerializedName("gambar")
-	val gambar: String? = null,
+	val gambar: String,
 
 	@field:SerializedName("manfaat")
-	val manfaat: List<String?>? = null,
+	val manfaat: List<String>,
 
 	@field:SerializedName("nutrisi")
-	val nutrisi: Nutrisi? = null
+	val nutrisi: Nutrisi
 ): Parcelable
 
 @Parcelize
 data class Nutrisi(
 
 	@field:SerializedName("kalori")
-	val kalori: String? = null,
+	val kalori: String,
 
 	@field:SerializedName("karbohidrat")
-	val karbohidrat: String? = null,
+	val karbohidrat: String,
 
 	@field:SerializedName("gula")
-	val gula: String? = null,
+	val gula: String,
 
 	@field:SerializedName("serat")
-	val serat: String? = null,
+	val serat: String,
 
 	@field:SerializedName("protein")
-	val protein: String? = null,
+	val protein: String,
 
 	@field:SerializedName("air")
-	val air: String? = null,
+	val air: String,
 
 	@field:SerializedName("lemak")
-	val lemak: String? = null
+	val lemak: String
 ): Parcelable
