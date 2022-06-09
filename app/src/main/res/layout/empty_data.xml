@@ -9,13 +9,13 @@
     <ImageView
         android:id="@+id/img_not_found"
         android:layout_width="wrap_content"
-        android:layout_height="250dp"
+        android:layout_height="200dp"
         android:contentDescription="@string/app_name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.25"
+        app:layout_constraintVertical_bias="0.4"
         app:srcCompat="@drawable/watermelon1" />
 
     <TextView
@@ -25,10 +25,8 @@
         android:layout_marginTop="24dp"
         android:text="@string/not_found"
         android:textAlignment="center"
-        android:textColor="@color/green1"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/img_not_found" />
 

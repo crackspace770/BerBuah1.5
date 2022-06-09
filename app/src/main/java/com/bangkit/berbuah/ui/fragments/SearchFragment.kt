@@ -61,7 +61,7 @@ class SearchFragment : Fragment() {
                 searchAdapter.fruitList.clear()
                 query.let {
                     binding?.searchView?.clearFocus() // hide keyboard after searching
-//                    finalState()
+                    finalState()
                     viewModel.setListFruit(it.toString())
                 }
                 return true
@@ -83,13 +83,29 @@ class SearchFragment : Fragment() {
             viewModel.getFruitSearch().observe(viewLifecycleOwner) { listUser ->
                 listUser.let {
                     if (it.size == 0) {
-//                        emptyState()
+                        emptyState()
                     } else {
                         searchAdapter.setData(it)
-//                        finalState()
+                        finalState()
                     }
                 }
             }
+        }
+    }
+
+    private fun emptyState() {
+        binding?.apply {
+            rvResult.visibility = View.GONE
+            layoutEmptyData.let {
+                it.root.visibility = View.VISIBLE
+            }
+        }
+    }
+
+    private fun finalState() {
+        binding?.apply {
+            rvResult.visibility = View.VISIBLE
+            layoutEmptyData.root.visibility = View.GONE
         }
     }
 
