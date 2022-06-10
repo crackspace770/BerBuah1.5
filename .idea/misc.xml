@@ -3,11 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidStudioProjects/BerBuah/app/src/main/res/drawable/ic_capture.xml" value="0.123" />
         <entry key="..\:/AndroidStudioProjects/BerBuah/app/src/main/res/drawable/ic_place_holder.xml" value="0.1165" />
         <entry key="..\:/AndroidStudioProjects/BerBuah/app/src/main/res/layout/activity_bottom_navigation.xml" value="0.209375" />
-        <entry key="..\:/AndroidStudioProjects/BerBuah/app/src/main/res/layout/activity_detail.xml" value="0.209375" />
+        <entry key="..\:/AndroidStudioProjects/BerBuah/app/src/main/res/layout/activity_detail.xml" value="0.20277777777777778" />
         <entry key="..\:/AndroidStudioProjects/BerBuah/app/src/main/res/layout/activity_login.xml" value="0.209375" />
-        <entry key="..\:/AndroidStudioProjects/BerBuah/app/src/main/res/layout/activity_main.xml" value="0.209375" />
+        <entry key="..\:/AndroidStudioProjects/BerBuah/app/src/main/res/layout/activity_main.xml" value="0.20277777777777778" />
         <entry key="..\:/AndroidStudioProjects/BerBuah/app/src/main/res/layout/activity_main_example.xml" value="0.209375" />
         <entry key="..\:/AndroidStudioProjects/BerBuah/app/src/main/res/layout/activity_splash.xml" value="0.209375" />
         <entry key="..\:/AndroidStudioProjects/BerBuah/app/src/main/res/layout/empty_data.xml" value="0.20833333333333334" />
