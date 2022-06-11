@@ -9,9 +9,6 @@ import androidx.lifecycle.ViewModel
 import com.bangkit.berbuah.api.ApiConfig
 import com.bangkit.berbuah.model.Detail
 import com.bangkit.berbuah.model.DetailFruit
-import com.bangkit.berbuah.response.FruitData
-import com.bangkit.berbuah.response.FruitResponse
-import com.bangkit.berbuah.response.Nutrisi
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

@@ -16,18 +16,18 @@ data class DetailFruit(
     val nama_latin: String? = null,
     val deskripsi: String? = null,
     val gambar: String? = null,
-    val manfaat: List<String>? = null
-//    val nutrisi: Nutrisi? = null
+    val manfaat: List<String>? = null,
+    val nutrisi: List<Nutrisi>? = null
 ) : Parcelable
 
 @Parcelize
 data class Nutrisi(
-    val kalori: String,
-    val karbohidrat: String,
-    val gula: String,
-    val serat: String,
-    val protein: String,
-    val air: String,
-    val lemak: String
+    val kalori: String? = null,
+    val karbohidrat: String? = null,
+    val gula: String? = null,
+    val serat: String? = null,
+    val protein: String? = null,
+    val air: String? = null,
+    val lemak: String? = null
 ): Parcelable
 
