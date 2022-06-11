@@ -15,14 +15,18 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStore
+import androidx.lifecycle.ViewModelProvider
 import com.bangkit.berbuah.R
-
 import com.bangkit.berbuah.api.ApiConfig
 import com.bangkit.berbuah.databinding.ActivityLoginBinding
 import com.bangkit.berbuah.model.UserModel
+import com.bangkit.berbuah.model.UserPreference
+import com.bangkit.berbuah.model.UserPreferences
 import com.bangkit.berbuah.ui.fragments.HomeFragment
-import com.bangkit.berbuah.ui.login.LoginResponse
+import com.bangkit.berbuah.response.LoginResponse
+import com.bangkit.berbuah.viewmodel.AuthViewModelFactory
 import com.bangkit.berbuah.viewmodel.LoginViewModel
+import com.bangkit.berbuah.viewmodel.ViewModelFactory
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -48,22 +52,23 @@ class LoginActivity: AppCompatActivity(), View.OnClickListener {
         binding.loginButton.setOnClickListener(this)
         binding.signupButton.setOnClickListener(this)
 
-        //setupViewModel()
+        setupViewModel()
         playAnimation()
         setupView()
         setupAction()
     }
 
- //   private fun setupViewModel() {
-   //     loginViewModel = ViewModelProvider(
-     //       this,
-       //     ViewModelFactory(UserPreference.getInstance(dataStore))
-      //  )[LoginViewModel::class.java]
+    private fun setupViewModel() {
 
-     //   loginViewModel.getUser().observe(this, { user ->
-       //     this.user = user
-      //  })
-    //}
+        loginViewModel = ViewModelProvider(
+            this,
+            AuthViewModelFactory(UserPreferences.getInstance(dataStore))
+        )[LoginViewModel::class.java]
+
+        loginViewModel.getUser().observe(this, { user ->
+            this.user = user
+        })
+    }
 
     private fun setupAction() {
         binding.loginButton.setOnClickListener {
@@ -77,39 +82,18 @@ class LoginActivity: AppCompatActivity(), View.OnClickListener {
                     binding.passwordEditText.error = "Enter Your Password"
                 }
                 else -> {
-                    loginViewModel.login()
-                    showLoading(true)
-                    val email = binding.emailEditText.text.toString().trim()
-                    val password = binding.passwordEditText.text.toString().trim()
-                    ApiConfig.getApiService()
-                        .login(email, password)
-                        .enqueue(object: Callback<LoginResponse> {
-                            override fun onResponse(
-                                call: Call<LoginResponse>,
-                                response: Response<LoginResponse>
-                            ) {
-                                if(response.isSuccessful) {
-
-                                    response.body()?.loginResult?.apply {
-                                        validateLogin(userId, name, token, isLogin = true)
-                                    }
-                                    val mainIntent = Intent(this@LoginActivity, HomeFragment::class.java)
+                                    val mainIntent = Intent(this@LoginActivity, MainActivity::class.java)
                                     showLoading(false)
                                     startActivity(mainIntent)
                                     finish()
                                 }
                             }
 
-                            override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
-                                showLoading(false)
-                                Toast.makeText(this@LoginActivity, "Data yang dimasukan tidak valid", Toast.LENGTH_SHORT).show()
-                            }
 
-                        })
+
+
                 }
             }
-        }
-    }
 
 
     private fun setupView() {
@@ -127,7 +111,7 @@ class LoginActivity: AppCompatActivity(), View.OnClickListener {
 
     private fun hasLogin(boolean: Boolean) {
         if(boolean) {
-            val intent = Intent(this, HomeFragment::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
     }
@@ -143,21 +127,13 @@ class LoginActivity: AppCompatActivity(), View.OnClickListener {
         }
     }
 
-    private fun validateLogin(userId: String, name: String, token: String, isLogin: Boolean){
+    private fun validateLogin(name: String, isLogin: Boolean){
         val editor: SharedPreferences.Editor = sharedPreferences.edit()
         editor.putString(NAME, name)
-        editor.putString(USER_ID, userId)
-        editor.putString(TOKEN, token)
         editor.putBoolean(IS_LOGIN, isLogin)
         editor.apply()
     }
 
-    private fun saveToken(token: String, name: String, email: String){
-        val preferences = getSharedPreferences("myPrefs", MODE_PRIVATE)
-        preferences.edit().putString("token", token).apply()
-        preferences.edit().putString("name", name).apply()
-        preferences.edit().putString("email", email).apply()
-    }
 
     private fun showLoading(isLoading: Boolean) {
         if(isLoading) binding.progressBar.visibility = View.VISIBLE
@@ -189,10 +165,9 @@ class LoginActivity: AppCompatActivity(), View.OnClickListener {
     }
 
     companion object {
+
         val SHARED_PREFERENCES = "shared_preferences"
         val NAME = "name"
-        val USER_ID = "user_id"
-        val TOKEN = "token"
         val IS_LOGIN = "is_login"
     }
 

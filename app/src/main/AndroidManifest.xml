@@ -23,7 +23,7 @@
         android:theme="@style/Theme.BerBuah"
         tools:targetApi="31">
         <activity
-            android:name=".ui.activities.MainActivity"
+            android:name=".ui.activities.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,11 +32,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.activities.SplashActivity"
+            android:name=".ui.activities.MainActivity"
             android:exported="false" />
         <activity
             android:name=".ui.activities.CameraActivity"
             android:exported="false" />
+
         <activity
             android:name=".ui.activities.LoginActivity"
             android:exported="false" />

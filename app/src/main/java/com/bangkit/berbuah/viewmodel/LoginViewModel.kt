@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import com.bangkit.berbuah.model.UserModel
+import com.bangkit.berbuah.model.UserPreference
 import com.bangkit.berbuah.model.UserPreferences
 import kotlinx.coroutines.launch
 
