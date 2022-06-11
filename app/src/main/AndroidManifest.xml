@@ -46,6 +46,13 @@
         <activity
             android:name=".ui.activities.DetailActivity"
             android:exported="false" />
+
+        <meta-data
+            android:name="com.google.firebase.ml.vision.DEPENDENCIES"
+            android:value="label" />
+
     </application>
+
+
 
 </manifest>

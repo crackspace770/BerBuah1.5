@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "283505799728",
+    "firebase_url": "https://lustrous-maxim-349908-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "lustrous-maxim-349908",
+    "storage_bucket": "lustrous-maxim-349908.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:283505799728:android:0b9ba82d42fb4473b6f3f5",
+        "android_client_info": {
+          "package_name": "com.bangkit.berbuah"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "283505799728-6ovg42vs1308rvsa76l6o296dkuk40h9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqdem1WvG6JFbfWCtu5e589oWB4pIDoHA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "283505799728-6ovg42vs1308rvsa76l6o296dkuk40h9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:283505799728:android:762cb669a4fe9c3bb6f3f5",
+        "android_client_info": {
+          "package_name": "com.capstone.berbuah"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "283505799728-6ovg42vs1308rvsa76l6o296dkuk40h9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqdem1WvG6JFbfWCtu5e589oWB4pIDoHA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "283505799728-6ovg42vs1308rvsa76l6o296dkuk40h9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
