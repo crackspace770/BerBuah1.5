@@ -7,42 +7,47 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.bangkit.berbuah.api.ApiConfig
-import com.bangkit.berbuah.model.FruitItem
-import com.bangkit.berbuah.model.Search
+import com.bangkit.berbuah.model.Detail
+import com.bangkit.berbuah.model.DetailFruit
+import com.bangkit.berbuah.response.FruitData
 import com.bangkit.berbuah.response.FruitResponse
+import com.bangkit.berbuah.response.Nutrisi
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class SearchViewModel(private val application: Application) : ViewModel() {
+class DetailViewModel(private val application: Application) : ViewModel() {
 
-    private val listFruitMutable = MutableLiveData<ArrayList<FruitItem>>()
+    private val listDetailFruitMutable = MutableLiveData<ArrayList<DetailFruit>>()
     private val _isLoading = MutableLiveData<Boolean>()
     val isLoading: LiveData<Boolean> = _isLoading
 
-    internal fun setListFruit(query: String) {
+    internal fun setDetailFruit(nama: String) {
         _isLoading.value = true
-        val client = ApiConfig.getApiService().getSearchFruit(query)
-        client.enqueue(object : Callback<Search> {
+        val client = ApiConfig.getApiService().getDetailFruit(nama)
+        client.enqueue(object : Callback<Detail> {
 
             override fun onResponse(
-                call: Call<Search>,
-                response: Response<Search>
+                call: Call<Detail>,
+                response: Response<Detail>
             ) {
                 _isLoading.value = false
-                val listFruit = ArrayList<FruitItem>()
+                val listDetailFruit = ArrayList<DetailFruit>()
                 if (response.isSuccessful) {
                     if (response.body() != null) {
-                        response.body()?.data?.forEach { fruit ->
-                            listFruit.add(
-                                FruitItem(
-                                    fruit.nama,
-                                    fruit.deskripsi,
-                                    fruit.gambar
+                        response.body()?.data?.forEach { detailFruit ->
+                            listDetailFruit.add(
+                                DetailFruit(
+                                    detailFruit.nama,
+                                    detailFruit.nama_latin,
+                                    detailFruit.deskripsi,
+                                    detailFruit.gambar,
+                                    detailFruit.manfaat,
+//                                    detailFruit.nutrisi.air
                                 )
                             )
                         }
-                        listFruitMutable.postValue(listFruit)
+                        listDetailFruitMutable.postValue(listDetailFruit)
                     }
                 } else {
                     Toast.makeText(
@@ -54,7 +59,7 @@ class SearchViewModel(private val application: Application) : ViewModel() {
                 }
             }
 
-            override fun onFailure(call: Call<Search>, t: Throwable) {
+            override fun onFailure(call: Call<Detail>, t: Throwable) {
                 _isLoading.value = false
                 Toast.makeText(
                     application.applicationContext,
@@ -66,9 +71,9 @@ class SearchViewModel(private val application: Application) : ViewModel() {
         })
     }
 
-    internal fun getFruitSearch(): LiveData<ArrayList<FruitItem>> = listFruitMutable
+    internal fun getDetailFruit(): LiveData<ArrayList<DetailFruit>> = listDetailFruitMutable
 
     companion object {
-        private const val TAG = "SearchViewModel"
+        private const val TAG = "DetailViewModel"
     }
 }

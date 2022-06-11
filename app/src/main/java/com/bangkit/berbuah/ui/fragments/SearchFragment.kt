@@ -8,9 +8,14 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.bangkit.berbuah.R
 import com.bangkit.berbuah.adapter.SearchAdapter
 import com.bangkit.berbuah.databinding.FragmentSearchBinding
+import com.bangkit.berbuah.interfaces.ItemClickCallback
+import com.bangkit.berbuah.model.FruitItem
+import com.bangkit.berbuah.ui.activities.DetailActivity
 import com.bangkit.berbuah.viewmodel.SearchViewModel
 import com.bangkit.berbuah.viewmodel.ViewModelFactory
 
@@ -90,6 +95,11 @@ class SearchFragment : Fragment() {
                     }
                 }
             }
+            searchAdapter.setOnItemClickCallback(object : ItemClickCallback {
+                override fun onItemClicked(fruitItem: FruitItem) {
+                    showClickedFruitItem(fruitItem)
+                }
+            })
         }
     }
 
@@ -107,6 +117,12 @@ class SearchFragment : Fragment() {
             rvResult.visibility = View.VISIBLE
             layoutEmptyData.root.visibility = View.GONE
         }
+    }
+
+    private fun showClickedFruitItem(fruitItem: FruitItem) {
+        val bundle = Bundle()
+        bundle.putParcelable(DetailActivity.EXTRA_DATA_FRUIT, fruitItem)
+        view?.findNavController()?.navigate(R.id.action_searchFragment_to_detailActivity, bundle)
     }
 
 //    private fun setSearchData(searchResult: List<DataItem>) {

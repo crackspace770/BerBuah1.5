@@ -10,6 +10,7 @@ import androidx.core.util.Pair
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bangkit.berbuah.databinding.SearchItemListBinding
+import com.bangkit.berbuah.interfaces.ItemClickCallback
 import com.bangkit.berbuah.model.FruitItem
 import com.bumptech.glide.Glide
 import com.bangkit.berbuah.ui.activities.DetailActivity
@@ -17,6 +18,7 @@ import com.bangkit.berbuah.utils.SearchDiffUtil
 
 class SearchAdapter : RecyclerView.Adapter<SearchAdapter.ViewHolder>() {
 
+    private lateinit var onItemClickCallback: ItemClickCallback
     var fruitList = ArrayList<FruitItem>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -29,6 +31,10 @@ class SearchAdapter : RecyclerView.Adapter<SearchAdapter.ViewHolder>() {
     }
 
     override fun getItemCount(): Int = fruitList.size
+
+    fun setOnItemClickCallback(onItemClickCallback: ItemClickCallback) {
+        this.onItemClickCallback = onItemClickCallback
+    }
 
     fun setData(items: ArrayList<FruitItem>) {
         val diffUtils = SearchDiffUtil(fruitList, items)
@@ -56,8 +62,9 @@ class SearchAdapter : RecyclerView.Adapter<SearchAdapter.ViewHolder>() {
 //                    Log.d("story:", listListStoryItemDetail.toString())
 
                     itemView.setOnClickListener {
-                        val intent = Intent(itemView.context, DetailActivity::class.java)
-                        intent.putExtra(DetailActivity.EXTRA_STORY, data)
+                        onItemClickCallback.onItemClicked(data)
+//                        val intent = Intent(itemView.context, DetailActivity::class.java)
+//                        intent.putExtra(DetailActivity.EXTRA_DATA_FRUIT, data)
 
 //                        val optionsCompat: ActivityOptionsCompat =
 //                            ActivityOptionsCompat.makeSceneTransitionAnimation(
@@ -66,7 +73,7 @@ class SearchAdapter : RecyclerView.Adapter<SearchAdapter.ViewHolder>() {
 //                                Pair(tvName, "nameListStoryItem"),
 //
 //                                )
-//                        itemView.context.startActivity(intent, optionsCompat.toBundle())
+//                        itemView.context.startActivity(intent)
                     }
                 }
 

@@ -60,7 +60,7 @@ class HomeFragment : Fragment() {
 
             btnCamera.setOnClickListener { startCamera() }
             btnGallery.setOnClickListener { startGallery() }
-            //uploadButton.setOnClickListener { postStory("Bearer $token") }
+            btnDeteksi.setOnClickListener { startPredction() }
         }
     }
 
@@ -134,6 +134,10 @@ class HomeFragment : Fragment() {
         intent.type = "image/*"
         val chooser = Intent.createChooser(intent, "Choose a Picture")
         launcherIntentGallery.launch(chooser)
+    }
+
+    private fun startPredction() {
+
     }
 
 

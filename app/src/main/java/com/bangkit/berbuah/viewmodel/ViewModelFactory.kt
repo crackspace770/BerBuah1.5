@@ -12,9 +12,9 @@ class ViewModelFactory constructor(private val application: Application) :
     @Suppress("UNCHECKED_CAST")
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         return when {
-//            modelClass.isAssignableFrom(DetailViewModel::class.java) -> {
-//                DetailViewModel(application) as T
-//            }
+            modelClass.isAssignableFrom(DetailViewModel::class.java) -> {
+                DetailViewModel(application) as T
+            }
 //            modelClass.isAssignableFrom(SettingViewModel::class.java) -> {
 //                SettingViewModel(application) as T
 //            }

@@ -21,6 +21,6 @@
     </style>
 
     <style name="RoundedSquare">
-        <item name="cornerSize">10%</item>
+        <item name="cornerSize">15%</item>
     </style>
 </resources>
