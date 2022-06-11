@@ -54,11 +54,15 @@ class SignupActivity: AppCompatActivity(), View.OnClickListener {
     private fun setupAction() {
         binding.signupButton.setOnClickListener {
             val name = binding.nameEditText.text.toString()
+            val username = binding.usernameEditText.text.toString()
             val email = binding.emailEditText.text.toString()
             val password = binding.passwordEditText.text.toString()
             when {
                 name.isEmpty() -> {
                     binding.nameEditText.error = "Enter your name"
+                }
+                username.isEmpty() -> {
+                    binding.usernameEditText.error = "Enter your username"
                 }
                 email.isEmpty() -> {
                     binding.emailEditText.error = "Enter your password"
@@ -72,7 +76,7 @@ class SignupActivity: AppCompatActivity(), View.OnClickListener {
                 else -> {
                     showLoading(true)
                     ApiConfig.getApiService()
-                        .signup(name, email, password)
+                        .signup(name, username,email, password)
                         .enqueue(object: Callback<SignupResponse> {
                             override fun onResponse(
                                 call: Call<SignupResponse>,
@@ -122,6 +126,7 @@ class SignupActivity: AppCompatActivity(), View.OnClickListener {
 
     private fun clearEditText() {
         binding.nameEditText.text!!.clear()
+        binding.usernameEditText.text!!.clear()
         binding.emailEditText.text!!.clear()
         binding.passwordEditText.text!!.clear()
     }
@@ -130,6 +135,7 @@ class SignupActivity: AppCompatActivity(), View.OnClickListener {
         return if(binding.emailEditText.text!!.isNotEmpty()
             && binding.passwordEditText.text!!.isNotEmpty()
             && binding.nameEditText.text!!.isNotEmpty()
+            && binding.usernameEditText.text!!.isNotEmpty()
             && android.util.Patterns.EMAIL_ADDRESS.matcher(binding.emailEditText.text.toString()).matches()
             && binding.passwordEditText.text.toString().length <= 5) {
             true
@@ -155,6 +161,7 @@ class SignupActivity: AppCompatActivity(), View.OnClickListener {
         val title = ObjectAnimator.ofFloat(binding.titleTextView, View.ALPHA, 1f).setDuration(500)
         val nameTextView = ObjectAnimator.ofFloat(binding.nameTextView, View.ALPHA, 1f).setDuration(500)
         val emailTextView = ObjectAnimator.ofFloat(binding.emailTextView, View.ALPHA, 1f).setDuration(500)
+        val usernameTextView = ObjectAnimator.ofFloat(binding.usernameTextView, View.ALPHA, 1f).setDuration(500)
         val passwordTextView = ObjectAnimator.ofFloat(binding.passwordTextView, View.ALPHA, 1f).setDuration(500)
         val signup = ObjectAnimator.ofFloat(binding.signupButton, View.ALPHA, 1f).setDuration(500)
 
@@ -162,6 +169,7 @@ class SignupActivity: AppCompatActivity(), View.OnClickListener {
             playSequentially(
                 title,
                 nameTextView,
+                usernameTextView,
                 emailTextView,
                 passwordTextView,
                 signup
