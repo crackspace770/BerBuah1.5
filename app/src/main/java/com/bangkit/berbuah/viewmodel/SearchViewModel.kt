@@ -9,7 +9,6 @@ import androidx.lifecycle.ViewModel
 import com.bangkit.berbuah.api.ApiConfig
 import com.bangkit.berbuah.model.FruitItem
 import com.bangkit.berbuah.model.Search
-import com.bangkit.berbuah.response.FruitResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
