@@ -135,15 +135,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwordEditText" />
 
-    <Button
-        android:id="@+id/signupButton"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
+    <TextView
+        android:id="@+id/tv_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:backgroundTint="@color/green2"
-        android:text="@string/signup"
+        android:text="@string/yuk_daftar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginButton" />

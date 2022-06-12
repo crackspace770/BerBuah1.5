@@ -5,6 +5,7 @@ import android.animation.ObjectAnimator
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.text.TextUtils
 import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
@@ -16,25 +17,84 @@ import com.bangkit.berbuah.api.ApiConfig
 import com.bangkit.berbuah.databinding.ActivitySignupBinding
 
 import com.bangkit.berbuah.response.SignupResponse
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class SignupActivity: AppCompatActivity(), View.OnClickListener {
+class SignupActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySignupBinding
+    private lateinit var auth: FirebaseAuth
+    private var databaseReference: DatabaseReference? = null
+    private var database: FirebaseDatabase? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySignupBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.signupButton.setOnClickListener(this)
-        binding.backToLogin.setOnClickListener(this)
+        auth = FirebaseAuth.getInstance()
+        database = FirebaseDatabase.getInstance()
+        databaseReference = database?.reference!!.child("profile")
 
-        setupAction()
         playAnimation()
         setupView()
+        register()
+    }
+
+    private fun register() {
+
+        binding.signupButton.setOnClickListener {
+            if (TextUtils.isEmpty(binding.usernameEditText.text.toString())) {
+                binding.usernameEditText.setError("Mohon masukkan nama pengguna! ")
+                return@setOnClickListener
+            } else if (TextUtils.isEmpty(binding.nameEditText.text.toString())) {
+                binding.nameEditText.setError("Mohon masukkan nama! ")
+                return@setOnClickListener
+            } else if (TextUtils.isEmpty(binding.emailEditText.text.toString())) {
+                binding.emailEditText.setError("Please enter user name ")
+                return@setOnClickListener
+            } else if (TextUtils.isEmpty(binding.passwordEditText.text.toString())) {
+                binding.passwordEditText.setError("Please enter password ")
+                return@setOnClickListener
+            }
+
+
+            auth.createUserWithEmailAndPassword(
+                binding.emailEditText.text.toString(),
+                binding.passwordEditText.text.toString()
+            )
+                .addOnCompleteListener {
+                    if (it.isSuccessful) {
+                        val currentUser = auth.currentUser
+                        val currentUSerDb = databaseReference?.child((currentUser?.uid!!))
+                        currentUSerDb?.child("username")
+                            ?.setValue(binding.usernameEditText.text.toString())
+                        currentUSerDb?.child("name")?.setValue(binding.nameEditText.text.toString())
+
+                        Toast.makeText(
+                            this@SignupActivity,
+                            "Berhasil mendaftar, silahkan lanjut login ",
+                            Toast.LENGTH_LONG
+                        ).show()
+                        finish()
+
+                    } else {
+                        Toast.makeText(
+                            this@SignupActivity,
+                            "Gagal mendaftar, silahkan coba lagi! ",
+                            Toast.LENGTH_LONG
+                        ).show()
+                    }
+                }
+        }
+
+        binding.backToLogin.setOnClickListener {
+            startActivity(Intent(this@SignupActivity, LoginActivity::class.java))
+        }
     }
 
     private fun setupView() {
@@ -50,104 +110,8 @@ class SignupActivity: AppCompatActivity(), View.OnClickListener {
         supportActionBar?.hide()
     }
 
-
-    private fun setupAction() {
-        binding.signupButton.setOnClickListener {
-            val name = binding.nameEditText.text.toString()
-            val username = binding.usernameEditText.text.toString()
-            val email = binding.emailEditText.text.toString()
-            val password = binding.passwordEditText.text.toString()
-            when {
-                name.isEmpty() -> {
-                    binding.nameEditText.error = "Enter your name"
-                }
-                username.isEmpty() -> {
-                    binding.usernameEditText.error = "Enter your username"
-                }
-                email.isEmpty() -> {
-                    binding.emailEditText.error = "Enter your password"
-                }
-                password.isEmpty() -> {
-                    binding.passwordEditText.error = "Enter your password, 6 Characters in minimum"
-                }
-                password.length < 6 -> {
-                    binding.passwordEditText.error = "Password should be 6 characters in minimum"
-                }
-                else -> {
-                    showLoading(true)
-                    ApiConfig.getApiService()
-                        .signup(name, username,email, password)
-                        .enqueue(object: Callback<SignupResponse> {
-                            override fun onResponse(
-                                call: Call<SignupResponse>,
-                                response: Response<SignupResponse>
-                            ) {
-                                if(response.isSuccessful) {
-
-                                    Toast.makeText(this@SignupActivity, "Account created, go back to login page", Toast.LENGTH_SHORT).show()
-                                }
-                                val mainIntent = Intent(this@SignupActivity, LoginActivity::class.java)
-                                showLoading(false)
-                                startActivity(mainIntent)
-                                finish()
-                            }
-
-                            override fun onFailure(call: Call<SignupResponse>, t: Throwable) {
-                                showLoading(false)
-                                Toast.makeText(this@SignupActivity, "Failed to create account", Toast.LENGTH_SHORT).show()
-                                Toast.makeText(this@SignupActivity, "Try Again", Toast.LENGTH_SHORT).show()
-                            }
-
-                        })
-                }
-            }
-        }
-    }
-
-    override fun onClick(v: View?) {
-        when(v?.id) {
-            R.id.signupButton -> {
-                if(validateCreateAccount()) {
-                    clearEditText()
-                } else {
-                    clearEditText()
-                }
-            }
-            R.id.backToLogin-> {
-                val intent = Intent(this@SignupActivity, LoginActivity::class.java)
-                startActivity(intent)
-                finish()
-            }
-        }
-
-    }
-
-
-
-    private fun clearEditText() {
-        binding.nameEditText.text!!.clear()
-        binding.usernameEditText.text!!.clear()
-        binding.emailEditText.text!!.clear()
-        binding.passwordEditText.text!!.clear()
-    }
-
-    private fun validateCreateAccount(): Boolean {
-        return if(binding.emailEditText.text!!.isNotEmpty()
-            && binding.passwordEditText.text!!.isNotEmpty()
-            && binding.nameEditText.text!!.isNotEmpty()
-            && binding.usernameEditText.text!!.isNotEmpty()
-            && android.util.Patterns.EMAIL_ADDRESS.matcher(binding.emailEditText.text.toString()).matches()
-            && binding.passwordEditText.text.toString().length <= 5) {
-            true
-        } else {
-            Toast.makeText(this, "Data harus diisi dengan benar", Toast.LENGTH_SHORT).show()
-            false
-        }
-
-    }
-
     private fun showLoading(isLoading: Boolean) {
-        if(isLoading) binding.progressBar.visibility = View.VISIBLE
+        if (isLoading) binding.progressBar.visibility = View.VISIBLE
         else binding.progressBar.visibility = View.GONE
     }
 
@@ -159,10 +123,14 @@ class SignupActivity: AppCompatActivity(), View.OnClickListener {
         }.start()
 
         val title = ObjectAnimator.ofFloat(binding.titleTextView, View.ALPHA, 1f).setDuration(500)
-        val nameTextView = ObjectAnimator.ofFloat(binding.nameTextView, View.ALPHA, 1f).setDuration(500)
-        val emailTextView = ObjectAnimator.ofFloat(binding.emailTextView, View.ALPHA, 1f).setDuration(500)
-        val usernameTextView = ObjectAnimator.ofFloat(binding.usernameTextView, View.ALPHA, 1f).setDuration(500)
-        val passwordTextView = ObjectAnimator.ofFloat(binding.passwordTextView, View.ALPHA, 1f).setDuration(500)
+        val nameTextView =
+            ObjectAnimator.ofFloat(binding.nameTextView, View.ALPHA, 1f).setDuration(500)
+        val emailTextView =
+            ObjectAnimator.ofFloat(binding.emailTextView, View.ALPHA, 1f).setDuration(500)
+        val usernameTextView =
+            ObjectAnimator.ofFloat(binding.usernameTextView, View.ALPHA, 1f).setDuration(500)
+        val passwordTextView =
+            ObjectAnimator.ofFloat(binding.passwordTextView, View.ALPHA, 1f).setDuration(500)
         val signup = ObjectAnimator.ofFloat(binding.signupButton, View.ALPHA, 1f).setDuration(500)
 
         AnimatorSet().apply {

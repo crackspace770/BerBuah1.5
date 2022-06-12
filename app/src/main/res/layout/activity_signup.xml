@@ -75,7 +75,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
-        android:text="Username"
+        android:text="@string/username"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
@@ -91,7 +91,7 @@
         android:drawableStart="@drawable/ic_baseline_person_24"
         android:drawablePadding="8dp"
         android:ems="10"
-        android:hint="Username"
+        android:hint="@string/username"
         android:inputType="textPersonName"
         android:paddingHorizontal="16dp"
         android:paddingVertical="8dp"
@@ -174,15 +174,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwordEditText" />
 
-    <Button
+    <TextView
         android:id="@+id/backToLogin"
-        android:layout_width="0dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
         android:backgroundTint="@color/green2"
-        android:text="@string/backToLogin"
+        android:text="@string/yuk_login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signupButton" />
@@ -225,7 +224,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:visibility="visible" />
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

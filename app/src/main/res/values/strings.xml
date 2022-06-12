@@ -43,6 +43,7 @@
     <string name="title_activity_bottom_navigation">BottomNavigationActivity</string>
     <string name="invalid_permission">Invalid Permission</string>
     <string name="search_fruit">Pencarian Buah</string>
+    <string name="hasil_deteksi">Pepaya</string>
     <string name="fruit_detection">Deteksi Buah</string>
     <string name="nama_latin">Nama Latin</string>
     <string name="lorem_ipsum">Lorem ipsum dolor sit amet</string>
@@ -61,10 +62,15 @@
     <string name="serat">Serat</string>
     <string name="id">AUYiQLMZmVCN8rNmlc5U</string>
     <string name="favorite_fruit">Buah Favorit</string>
-    <string name="user_setting">Pengaturan</string>
+    <string name="user_setting">Profil Pengguna</string>
     <string name="signout">Sign Out</string>
-    <string name="dummy_name">Alexander Great</string>
-    <string name="dummy_email">alex.great@bangkit.academy</string>
-    <string name="dummy_username">alexgreat</string>
+    <string name="dummy_username">anandafajar</string>
+    <string name="dummy_name">Ananda Fajar</string>
+    <string name="dummy_email">ananda.fajar@bangkit.academy</string>
+    <string name="hasil_prediksi">Hasil Prediksi</string>
+    <string name="title_profil">Profil</string>
+    <string name="yuk_daftar">Belum punya akun? Yuk daftar dulu</string>
+    <string name="yuk_login">Sudah punya akun? Yuk login</string>
+    <string name="berbuah">BerBuah</string>
 
 </resources>

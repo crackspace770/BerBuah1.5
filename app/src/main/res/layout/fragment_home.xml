@@ -89,4 +89,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnCamera" />
 
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:text="@string/hasil_prediksi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnDeteksi"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
