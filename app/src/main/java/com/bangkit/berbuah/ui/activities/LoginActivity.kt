@@ -65,9 +65,9 @@ class LoginActivity: AppCompatActivity(), View.OnClickListener {
             AuthViewModelFactory(UserPreferences.getInstance(dataStore))
         )[LoginViewModel::class.java]
 
-        loginViewModel.getUser().observe(this, { user ->
+        loginViewModel.getUser().observe(this) { user ->
             this.user = user
-        })
+        }
     }
 
     private fun setupAction() {
@@ -83,7 +83,7 @@ class LoginActivity: AppCompatActivity(), View.OnClickListener {
                 }
                 else -> {
                                     val mainIntent = Intent(this@LoginActivity, MainActivity::class.java)
-                                    showLoading(false)
+                                    showLoading(true)
                                     startActivity(mainIntent)
                                     finish()
                                 }

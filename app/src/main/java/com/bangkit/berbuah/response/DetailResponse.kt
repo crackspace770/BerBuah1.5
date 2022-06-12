@@ -19,8 +19,8 @@ data class DetailResponse(
     @field:SerializedName("manfaat")
     val manfaat: List<String>,
 
-    @field:SerializedName("nutrisi")
-    val nutrisi: List<Nutrisi>
+//    @field:SerializedName("nutrisi")
+//    val nutrisi: List<Nutrisi>
 )
 
 data class Nutrisi(

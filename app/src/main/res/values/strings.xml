@@ -61,5 +61,10 @@
     <string name="serat">Serat</string>
     <string name="id">AUYiQLMZmVCN8rNmlc5U</string>
     <string name="favorite_fruit">Buah Favorit</string>
+    <string name="user_setting">Pengaturan</string>
+    <string name="signout">Sign Out</string>
+    <string name="dummy_name">Alexander Great</string>
+    <string name="dummy_email">alex.great@bangkit.academy</string>
+    <string name="dummy_username">alexgreat</string>
 
 </resources>
