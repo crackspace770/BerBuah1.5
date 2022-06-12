@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
             R.id.homeFragment,
             R.id.searchFragment,
             R.id.favoriteFragment,
-            R.id.settingFragment
+            R.id.profilFragment
         ).build()
 
         setupActionBarWithNavController(navController, appBarConfiguration)

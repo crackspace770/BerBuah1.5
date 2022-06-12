@@ -106,9 +106,7 @@ class SearchFragment : Fragment() {
     private fun emptyState() {
         binding?.apply {
             rvResult.visibility = View.GONE
-            layoutEmptyData.let {
-                it.root.visibility = View.VISIBLE
-            }
+            layoutEmptyData.root.visibility = View.VISIBLE
         }
     }
 

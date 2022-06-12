@@ -14,9 +14,6 @@
             android:id="@+id/action_homeFragment_to_detailActivity"
             app:destination="@id/detailActivity"
             app:popUpToInclusive="false" />
-<!--        <action-->
-<!--            android:id="@+id/action_homeFragment_to_searchFragment"-->
-<!--            app:destination="@id/searchFragment" />-->
     </fragment>
     <activity
         android:id="@+id/detailActivity"
@@ -37,12 +34,10 @@
         android:name="com.bangkit.berbuah.ui.fragments.FavoriteFragment"
         android:label="fragment_favorite"
         tools:layout="@layout/fragment_favorite">
-<!--        <action-->
-<!--            android:id="@+id/action_favoriteFragment_to_settingFragment"-->
-<!--            app:destination="@id/settingFragment" />-->
+
     </fragment>
     <fragment
-        android:id="@+id/settingFragment"
+        android:id="@+id/profilFragment"
         android:name="com.bangkit.berbuah.ui.fragments.ProfilFragment"
         android:label="fragment_setting"
         tools:layout="@layout/fragment_profil" />

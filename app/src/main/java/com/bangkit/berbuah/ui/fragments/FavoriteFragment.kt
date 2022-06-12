@@ -32,8 +32,7 @@ class FavoriteFragment : Fragment() {
     ): View {
         _binding = FragmentFavoriteBinding.inflate(inflater, container, false)
         binding.rvFavorite.layoutManager = LinearLayoutManager(context)
-        val root: View = binding.root
-        return root
+        return binding.root
     }
 
     private fun obtainViewModel(activity: AppCompatActivity): FavoriteViewModel {
@@ -78,7 +77,7 @@ class FavoriteFragment : Fragment() {
         val listFruitData = ArrayList<FruitItem>()
         if (listFruitFavorite != null) {
             for (fruit in listFruitFavorite) {
-                val fruitFavorite = FruitItem(fruit.id, fruit.name, fruit.gambar)
+                val fruitFavorite = FruitItem(fruit.id, fruit.deskripsi, fruit.gambar)
                 listFruitData.add(fruitFavorite)
             }
         }

@@ -3,8 +3,6 @@ package com.bangkit.berbuah.viewmodel
 import android.app.Application
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.bangkit.berbuah.model.UserPreferences
-import java.lang.IllegalArgumentException
 
 class ViewModelFactory constructor(private val application: Application) :
     ViewModelProvider.NewInstanceFactory() {
@@ -18,9 +16,6 @@ class ViewModelFactory constructor(private val application: Application) :
             modelClass.isAssignableFrom(FavoriteViewModel::class.java) -> {
                 FavoriteViewModel(application) as T
             }
-//            modelClass.isAssignableFrom(MainViewModel::class.java) -> {
-//                MainViewModel(application) as T
-//            }
             modelClass.isAssignableFrom(SearchViewModel::class.java) -> {
                 SearchViewModel(application) as T
             }

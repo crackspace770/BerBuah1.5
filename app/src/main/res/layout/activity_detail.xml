@@ -49,14 +49,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginTop="24dp"
-                android:text="@string/name"
                 android:textColor="@color/black"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:transitionName="name"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/img_fruit" />
+                app:layout_constraintTop_toBottomOf="@+id/img_fruit"
+                tools:text="@string/name" />
 
             <TextView
                 android:id="@+id/textView"
@@ -76,10 +76,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginTop="8dp"
-                tools:text="@string/lorem_ipsum"
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/textView" />
+                app:layout_constraintTop_toBottomOf="@id/textView"
+                tools:text="@string/lorem_ipsum" />
 
             <TextView
                 android:id="@+id/textView2"
@@ -100,13 +100,13 @@
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginTop="8dp"
                 android:justificationMode="inter_word"
-                tools:text="@string/lorem_ipsum"
                 android:textSize="20sp"
                 android:transitionName="description"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView2"
-                tools:targetApi="o" />
+                tools:targetApi="o"
+                tools:text="@string/lorem_ipsum" />
 
 
             <TextView
@@ -128,13 +128,13 @@
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginTop="8dp"
                 android:justificationMode="inter_word"
-                tools:text="@string/lorem_ipsum"
                 android:textSize="20sp"
                 android:transitionName="description"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView3"
-                tools:targetApi="o" />
+                tools:targetApi="o"
+                tools:text="@string/lorem_ipsum" />
 
             <TextView
                 android:id="@+id/textView4"
@@ -401,9 +401,9 @@
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="70dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cl_protein"
-                app:layout_constraintBottom_toBottomOf="parent">
+                app:layout_constraintTop_toBottomOf="@+id/cl_protein">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -464,7 +464,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

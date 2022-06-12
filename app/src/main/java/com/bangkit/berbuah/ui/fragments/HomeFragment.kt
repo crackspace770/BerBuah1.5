@@ -3,12 +3,9 @@ package com.bangkit.berbuah.ui.fragments
 import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.graphics.Bitmap
 import android.graphics.BitmapFactory
-import android.media.ThumbnailUtils
 import android.net.Uri
 import android.os.Bundle
-import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -26,8 +23,6 @@ import com.bangkit.berbuah.utils.Utils.rotateBitmap
 import com.bangkit.berbuah.utils.Utils.uriToFile
 import com.bangkit.berbuah.viewmodel.HomeViewModel
 import java.io.File
-import java.nio.ByteBuffer
-import java.nio.ByteOrder
 
 
 class HomeFragment : Fragment() {
@@ -56,8 +51,7 @@ class HomeFragment : Fragment() {
         val homeViewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        val root: View = binding.root
-        return root
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

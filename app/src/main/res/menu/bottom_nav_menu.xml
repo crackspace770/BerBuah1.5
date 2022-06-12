@@ -13,11 +13,11 @@
 
     <item
         android:id="@+id/favoriteFragment"
-        android:icon="@drawable/ic_baseline_favorite_24_black"
+        android:icon="@drawable/ic_favorite_selected"
         android:title="@string/title_notifications" />
 
     <item
-        android:id="@+id/settingFragment"
+        android:id="@+id/profilFragment"
         android:icon="@drawable/ic_profil"
         android:title="@string/title_profil" />
 

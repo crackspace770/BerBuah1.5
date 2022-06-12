@@ -50,24 +50,8 @@ class SearchAdapter : RecyclerView.Adapter<SearchAdapter.ViewHolder>() {
                     tvName.setText(data.nama)
                     tvDescription.setText(data.deskripsi)
 
-
-//                    val listListStoryItemDetail =
-//                        FruitItem(data.nama, data.description, data.gizi, data.manfaat, data.photo)
-//                    Log.d("story:", listListStoryItemDetail.toString())
-
                     itemView.setOnClickListener {
                         onItemClickCallback.onItemClicked(data)
-//                        val intent = Intent(itemView.context, DetailActivity::class.java)
-//                        intent.putExtra(DetailActivity.EXTRA_DATA_FRUIT, data)
-
-//                        val optionsCompat: ActivityOptionsCompat =
-//                            ActivityOptionsCompat.makeSceneTransitionAnimation(
-//                                itemView.context as Activity,
-//                                Pair(imgPhoto, "imageListStoryItem"),
-//                                Pair(tvName, "nameListStoryItem"),
-//
-//                                )
-//                        itemView.context.startActivity(intent)
                     }
                 }
 

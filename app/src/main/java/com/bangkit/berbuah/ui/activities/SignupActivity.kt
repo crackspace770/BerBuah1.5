@@ -11,18 +11,10 @@ import android.view.WindowInsets
 import android.view.WindowManager
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.bangkit.berbuah.R
-
-import com.bangkit.berbuah.api.ApiConfig
 import com.bangkit.berbuah.databinding.ActivitySignupBinding
-
-import com.bangkit.berbuah.response.SignupResponse
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
 class SignupActivity : AppCompatActivity() {
 
