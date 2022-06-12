@@ -15,9 +15,9 @@ class ViewModelFactory constructor(private val application: Application) :
             modelClass.isAssignableFrom(DetailViewModel::class.java) -> {
                 DetailViewModel(application) as T
             }
-//            modelClass.isAssignableFrom(SettingViewModel::class.java) -> {
-//                SettingViewModel(application) as T
-//            }
+            modelClass.isAssignableFrom(FavoriteViewModel::class.java) -> {
+                FavoriteViewModel(application) as T
+            }
 //            modelClass.isAssignableFrom(MainViewModel::class.java) -> {
 //                MainViewModel(application) as T
 //            }

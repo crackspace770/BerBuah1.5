@@ -4,63 +4,53 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.bangkit.berbuah.database.Favorite
-import com.bangkit.berbuah.databinding.FragmentFavoriteBinding
+import com.bangkit.berbuah.databinding.ItemRowFruitBinding
+import com.bangkit.berbuah.interfaces.ItemClickCallback
 import com.bangkit.berbuah.model.FruitItem
-import com.bangkit.berbuah.utils.FavoriteDiffCallBack
+import com.bangkit.berbuah.utils.MyDiffUtil
+import com.bangkit.berbuah.utils.Utils.loadImageUrl
 
-class FavoriteAdapter: RecyclerView.Adapter<FavoriteAdapter.FavoriteViewHolder>()  {
+class FavoriteAdapter : RecyclerView.Adapter<FavoriteAdapter.ViewHolder>() {
 
-    private val listFavorites = ArrayList<Favorite>()
-    private lateinit var onItemClickCallback: OnItemClickCallback
+    private lateinit var onItemClickCallback: ItemClickCallback
+    private val fruitFavorite = ArrayList<FruitItem>()
 
-    interface OnItemClickCallback {
-        fun onItemClicked(data: FruitItem)
-    }
-
-    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
+    fun setOnItemClickCallback(onItemClickCallback: ItemClickCallback) {
         this.onItemClickCallback = onItemClickCallback
     }
 
-    //menampilkan recyclerView
-    inner class FavoriteViewHolder(private val binding: FragmentFavoriteBinding): RecyclerView.ViewHolder(binding.root) {
-        fun bind(favorite: Favorite) {
-//            if (favorite.isFavorite == true) {
-//                binding.tvName.text = favorite.login
-//                Glide.with(itemView.context)
-//                    .load(favorite.avatar)
-//                    .into(binding.imgAvatar)
-//                itemView.setOnClickListener {
-//                    val intent = Intent(it.context, DetailActivity::class.java)
-//                    val user = FruitItem(favorite.nama, favorite.photo)
-//                    intent.putExtra(DetailActivity.EXTRA_FAVORITE, favorite)
-//                    intent.putExtra(DetailActivity.EXTRA_USER, user)
-//                    it.context.startActivity(intent)
-//                }
-//            }
+    fun setData(items: ArrayList<FruitItem>) {
+        val diffUtils = MyDiffUtil(fruitFavorite, items)
+        val diffResult = DiffUtil.calculateDiff(diffUtils)
+        fruitFavorite.clear()
+        fruitFavorite.addAll(items)
+        diffResult.dispatchUpdatesTo(this)
+    }
+
+    inner class ViewHolder(private var binding: ItemRowFruitBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+        fun bind(fruitFavorite: FruitItem) {
+            binding.apply {
+                imgItemPhoto.loadImageUrl(fruitFavorite.gambar.toString())
+                tvName.text = fruitFavorite.nama
+                tvDescription.text = fruitFavorite.deskripsi
+
+                itemView.setOnClickListener {
+                    onItemClickCallback.onItemClicked(fruitFavorite)
+                }
+            }
         }
     }
 
-    //mendapatkan data favorites
-    fun setListFavorites(listFavorites: List<Favorite>) {
-        val diffCallBack = FavoriteDiffCallBack(this.listFavorites, listFavorites)
-        val diffResult = DiffUtil.calculateDiff(diffCallBack)
-        this.listFavorites.clear()
-        this.listFavorites.addAll(listFavorites)
-        diffResult.dispatchUpdatesTo(this)
-    }
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FavoriteViewHolder {
-        val binding = FragmentFavoriteBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return FavoriteViewHolder(binding)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        val binding =
+            ItemRowFruitBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return ViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: FavoriteViewHolder, position: Int) {
-        holder.bind(listFavorites[position])
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        holder.bind(fruitFavorite[position])
     }
 
-    override fun getItemCount(): Int {
-        return listFavorites.size
-    }
-
-
+    override fun getItemCount(): Int = fruitFavorite.size
 }

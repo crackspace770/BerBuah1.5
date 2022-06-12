@@ -6,9 +6,14 @@ import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.bangkit.berbuah.api.ApiConfig
+import com.bangkit.berbuah.database.Favorite
 import com.bangkit.berbuah.model.Detail
 import com.bangkit.berbuah.model.DetailFruit
+import com.bangkit.berbuah.ui.repository.FavoriteRepository
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -16,6 +21,8 @@ import retrofit2.Response
 class DetailViewModel(private val application: Application) : ViewModel() {
 
     private val listDetailFruitMutable = MutableLiveData<ArrayList<DetailFruit>>()
+    private val favoriteFruitRepository: FavoriteRepository = FavoriteRepository(application)
+
     private val _isLoading = MutableLiveData<Boolean>()
     val isLoading: LiveData<Boolean> = _isLoading
 
@@ -69,6 +76,23 @@ class DetailViewModel(private val application: Application) : ViewModel() {
     }
 
     internal fun getDetailFruit(): LiveData<ArrayList<DetailFruit>> = listDetailFruitMutable
+
+    internal fun check(id: String) = favoriteFruitRepository.check(id)
+
+    internal fun insert(id: String, nama: String, deskripsi: String, gambar: String) {
+        viewModelScope.launch(Dispatchers.IO) {
+            val fruitItem = Favorite(
+                id, nama, deskripsi, gambar
+            )
+            favoriteFruitRepository.insert(fruitItem)
+        }
+    }
+
+    internal fun delete(id: String) {
+        viewModelScope.launch(Dispatchers.IO) {
+            favoriteFruitRepository.delete(id)
+        }
+    }
 
     companion object {
         private const val TAG = "DetailViewModel"

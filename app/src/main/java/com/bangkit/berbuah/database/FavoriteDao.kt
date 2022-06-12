@@ -2,19 +2,19 @@ package com.bangkit.berbuah.database
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.bangkit.berbuah.database.Favorite
 
 @Dao
 interface FavoriteDao {
-    @Insert(onConflict = OnConflictStrategy.IGNORE)
+
+    @Insert
     fun insert(favorite: Favorite)
 
-    @Update
-    fun update(favorite: Favorite)
+    @Query("SELECT count(*) FROM favorite WHERE favorite.id = :id")
+    fun check(id: String): Int
 
-    @Delete
-    fun delete(favorite: Favorite)
+    @Query("DELETE FROM favorite WHERE favorite.id = :id")
+    fun delete(id: String): Int
 
-    @Query("SELECT * FROM favorite ORDER BY nama ASC")
+    @Query("SELECT * FROM favorite")
     fun getAllFavorite(): LiveData<List<Favorite>>
 }

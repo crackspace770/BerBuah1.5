@@ -72,5 +72,8 @@
     <string name="yuk_daftar">Belum punya akun? Yuk daftar dulu</string>
     <string name="yuk_login">Sudah punya akun? Yuk login</string>
     <string name="berbuah">BerBuah</string>
+    <string name="add_fruit">Add fruit</string>
+    <string name="add_successfully">Sukses menambahkan buah favorit</string>
+    <string name="delete_successfully">Sukses menghapus buah favorit</string>
 
 </resources>

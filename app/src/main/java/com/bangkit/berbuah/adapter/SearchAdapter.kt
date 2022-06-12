@@ -1,20 +1,14 @@
 package com.bangkit.berbuah.adapter
 
-import android.app.Activity
-import android.content.Intent
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.app.ActivityOptionsCompat
-import androidx.core.util.Pair
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bangkit.berbuah.databinding.SearchItemListBinding
 import com.bangkit.berbuah.interfaces.ItemClickCallback
 import com.bangkit.berbuah.model.FruitItem
 import com.bumptech.glide.Glide
-import com.bangkit.berbuah.ui.activities.DetailActivity
-import com.bangkit.berbuah.utils.SearchDiffUtil
+import com.bangkit.berbuah.utils.MyDiffUtil
 
 class SearchAdapter : RecyclerView.Adapter<SearchAdapter.ViewHolder>() {
 
@@ -37,7 +31,7 @@ class SearchAdapter : RecyclerView.Adapter<SearchAdapter.ViewHolder>() {
     }
 
     fun setData(items: ArrayList<FruitItem>) {
-        val diffUtils = SearchDiffUtil(fruitList, items)
+        val diffUtils = MyDiffUtil(fruitList, items)
         val diffResult = DiffUtil.calculateDiff(diffUtils)
         fruitList.clear()
         fruitList.addAll(items)

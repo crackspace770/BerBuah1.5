@@ -11,10 +11,10 @@
         android:icon="@drawable/ic_nav_search"
         android:title="@string/title_dashboard" />
 
-<!--    <item-->
-<!--        android:id="@+id/favoriteFragment"-->
-<!--        android:icon="@drawable/ic_baseline_favorite_24_black"-->
-<!--        android:title="@string/title_notifications" />-->
+    <item
+        android:id="@+id/favoriteFragment"
+        android:icon="@drawable/ic_baseline_favorite_24_black"
+        android:title="@string/title_notifications" />
 
     <item
         android:id="@+id/settingFragment"

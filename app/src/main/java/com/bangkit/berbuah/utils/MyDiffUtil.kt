@@ -3,7 +3,7 @@ package com.bangkit.berbuah.utils
 import androidx.recyclerview.widget.DiffUtil
 import com.bangkit.berbuah.model.FruitItem
 
-class SearchDiffUtil(
+class MyDiffUtil(
     private val oldList: List<FruitItem>,
     private val newList: List<FruitItem>
 ): DiffUtil.Callback() {

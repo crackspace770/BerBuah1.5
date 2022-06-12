@@ -9,14 +9,9 @@ import com.bangkit.berbuah.model.UserPreferences
 import com.bangkit.berbuah.ui.repository.FavoriteRepository
 import kotlinx.coroutines.launch
 
-class FavoriteViewModel(application: Application, private val pref : UserPreferences) : ViewModel() {
-    private val mFavoriteRepository: FavoriteRepository = FavoriteRepository(application)
+class FavoriteViewModel(application: Application) : ViewModel() {
+    private val favoriteUserRepository: FavoriteRepository = FavoriteRepository(application)
 
-    fun getAllFavorites(): LiveData<List<Favorite>> = mFavoriteRepository.getAllFavorites()
-
-    fun logout() {
-        viewModelScope.launch {
-            pref.logout()
-        }
-    }
+    fun getAllFavoriteUser(): LiveData<List<Favorite>> =
+        favoriteUserRepository.getAllFavorite()
 }

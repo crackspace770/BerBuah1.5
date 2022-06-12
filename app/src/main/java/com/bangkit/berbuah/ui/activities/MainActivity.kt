@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         val appBarConfiguration = AppBarConfiguration.Builder(
             R.id.homeFragment,
             R.id.searchFragment,
-//            R.id.favoriteFragment,
+            R.id.favoriteFragment,
             R.id.settingFragment
         ).build()
 

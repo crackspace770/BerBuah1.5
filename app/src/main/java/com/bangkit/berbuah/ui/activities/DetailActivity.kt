@@ -2,11 +2,11 @@ package com.bangkit.berbuah.ui.activities
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.ViewModelProvider
+import com.bangkit.berbuah.R
 import com.bangkit.berbuah.databinding.ActivityDetailBinding
-import com.bangkit.berbuah.model.DetailFruit
 import com.bangkit.berbuah.model.FruitItem
 import com.bangkit.berbuah.utils.Utils.loadImageUrl
 import com.bangkit.berbuah.viewmodel.DetailViewModel
@@ -40,7 +40,7 @@ class DetailActivity : AppCompatActivity() {
             setActionBarTitle(fruit.nama.toString())
         }
 
-        getDataFruit()
+        getDataFruit(fruit)
 
     }
 
@@ -49,7 +49,7 @@ class DetailActivity : AppCompatActivity() {
         return ViewModelProvider(activity, factory)[DetailViewModel::class.java]
     }
 
-    private fun getDataFruit() {
+    private fun getDataFruit(fruitItem: FruitItem) {
         binding.apply {
             detailViewModel.getDetailFruit().observe(this@DetailActivity) { listFruit ->
                 listFruit?.let { fruit ->
@@ -67,40 +67,51 @@ class DetailActivity : AppCompatActivity() {
 //                        tvProtein.text = detailFruit.nutrisi.protein
 //                        tvSerat.text = detailFruit.nutrisi.serat
 
-//                        var isFavorite = false
-//                        CoroutineScope(Dispatchers.IO).launch {
-//                            userData.id?.let {
-//                                val count = detailViewModel.check(it)
-//                                isFavorite = if (count > 0) {
-//                                    setStatusFavorite(true)
-//                                    true
-//                                } else {
-//                                    false
-//                                }
-//                            }
-//                        }
-//
-//                        fabAddUser.setOnClickListener {
-//                            userData.id?.let { userId ->
-//                                isFavorite = !isFavorite
-//                                if (isFavorite) {
-//                                    detailViewModel.insert(
-//                                        userId,
-//                                        userData.username.toString(),
-//                                        userData.avatar_url.toString(),
-//                                        userData.type.toString()
-//                                    )
-//                                    toastMessage(getString(R.string.add_successfully))
-//                                } else {
-//                                    detailViewModel.delete(userId)
-//                                    toastMessage(getString(R.string.delete_successfully))
-//                                }
-//                                setStatusFavorite(isFavorite)
-//                            }
-//                        }
+                        var isFavorite = false
+                        CoroutineScope(Dispatchers.IO).launch {
+                            fruitItem.nama?.let {
+                                val count = detailViewModel.check(it)
+                                isFavorite = if (count > 0) {
+                                    setStatusFavorite(true)
+                                    true
+                                } else {
+                                    false
+                                }
+                            }
+                        }
+
+                        fabAddFruit.setOnClickListener {
+                            fruitItem.nama?.let { fruitId ->
+                                isFavorite = !isFavorite
+                                if (isFavorite) {
+                                    detailViewModel.insert(
+                                        fruitId,
+                                        fruitItem.nama.toString(),
+                                        fruitItem.deskripsi.toString(),
+                                        fruitItem.gambar.toString()
+                                    )
+                                    toastMessage(getString(R.string.add_successfully))
+                                } else {
+                                    detailViewModel.delete(fruitItem.nama)
+                                    toastMessage(getString(R.string.delete_successfully))
+                                }
+                                setStatusFavorite(isFavorite)
+                            }
+                        }
                     }
                 }
             }
+        }
+    }
+
+    private fun toastMessage(message: String) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+    }
+
+    private fun setStatusFavorite(isFavorite: Boolean) {
+        binding.apply {
+            if (isFavorite) fabAddFruit.setImageResource(R.drawable.ic_favorite_selected)
+            else fabAddFruit.setImageResource(R.drawable.ic_favorite_unselected)
         }
     }
 
