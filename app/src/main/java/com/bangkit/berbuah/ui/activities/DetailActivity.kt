@@ -7,10 +7,14 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.bangkit.berbuah.R
 import com.bangkit.berbuah.databinding.ActivityDetailBinding
+import com.bangkit.berbuah.model.DetailFruit
+import com.bangkit.berbuah.model.FruitData
 import com.bangkit.berbuah.model.FruitItem
+import com.bangkit.berbuah.model.Nutrisi
 import com.bangkit.berbuah.utils.Utils.loadImageUrl
 import com.bangkit.berbuah.viewmodel.DetailViewModel
 import com.bangkit.berbuah.viewmodel.ViewModelFactory
+import com.bumptech.glide.Glide
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -20,6 +24,8 @@ class DetailActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetailBinding
     private lateinit var detailViewModel: DetailViewModel
     private lateinit var fruit: FruitItem
+    private lateinit var fruitDetail: FruitData
+    private lateinit var nutrisi: Nutrisi
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,6 +48,8 @@ class DetailActivity : AppCompatActivity() {
 
         getDataFruit(fruit)
 
+
+
     }
 
     private fun obtainViewModel(activity: AppCompatActivity): DetailViewModel {
@@ -49,23 +57,27 @@ class DetailActivity : AppCompatActivity() {
         return ViewModelProvider(activity, factory)[DetailViewModel::class.java]
     }
 
-    private fun getDataFruit(fruitItem: FruitItem) {
+    private fun getDataFruit(fruitItem: FruitItem, ) {
         binding.apply {
             detailViewModel.getDetailFruit().observe(this@DetailActivity) { listFruit ->
                 listFruit?.let { fruit ->
                     fruit.forEach { detailFruit ->
+                       // val nutrisi = nutrisiData
+
                         imgFruit.loadImageUrl(detailFruit.gambar.toString())
                         tvNama.text = detailFruit.nama
                         tvNamaLatin.text = detailFruit.nama_latin
                         tvDeskripsi.text = detailFruit.deskripsi
                         tvManfaat.text = detailFruit.manfaat.toString()
-//                        tvAir.text = detailFruit.nutrisi.air
-//                        tvKalori.text = detailFruit.nutrisi.kalori
-//                        tvKarbo.text = detailFruit.nutrisi.karbohidrat
-//                        tvGula.text = detailFruit.nutrisi.gula
-//                        tvLemak.text = detailFruit.nutrisi.lemak
-//                        tvProtein.text = detailFruit.nutrisi.protein
-//                        tvSerat.text = detailFruit.nutrisi.serat
+
+                      //  tvAir.text = nutrisi.air
+ //                       tvAir.text = nutrisi.air
+ //                       tvKalori.text = nutrisi.kalori
+ //                       tvKarbo.text = nutrisi.karbohidrat
+ //                       tvGula.text = nutrisi.gula
+ //                       tvLemak.text = nutrisi.lemak
+ //                       tvProtein.text = nutrisi.protein
+ //                       tvSerat.text = nutrisi.serat
 
                         var isFavorite = false
                         CoroutineScope(Dispatchers.IO).launch {

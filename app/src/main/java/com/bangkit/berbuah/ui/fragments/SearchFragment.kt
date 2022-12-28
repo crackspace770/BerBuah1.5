@@ -123,22 +123,11 @@ class SearchFragment : Fragment() {
         view?.findNavController()?.navigate(R.id.action_searchFragment_to_detailActivity, bundle)
     }
 
-//    private fun setSearchData(searchResult: List<DataItem>) {
-//        val listFruit: ArrayList<FruitItem> = ArrayList()
-//        for (fruit in searchResult) {
-//            val userList = FruitItem(fruit.nama, fruit.photo)
-//            listFruit.add(userList)
-//}
-//        val adapter = SearchAdapter(listFruit)
-//        binding.rvResult.adapter = adapter
-//        binding.searchView.setText("")
 
-//    }
 
     private fun showLoading(isLoading: Boolean) {
         binding?.apply {
             progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
-//            tvLoading.visibility = if (isLoading) View.VISIBLE else View.GONE
         }
     }
 

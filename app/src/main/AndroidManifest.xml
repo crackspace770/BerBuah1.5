@@ -4,7 +4,6 @@
     package="com.bangkit.berbuah">
 
     <uses-feature android:name="android.hardware.camera" />
-
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -47,6 +46,14 @@
         <activity
             android:name=".ui.activities.DetailActivity"
             android:exported="false" />
+
+        <activity android:name=".ui.activities.ScanActivity"
+            android:exported="false"
+            />
+
+        <activity android:name=".ui.activities.DetectActivity"
+            android:exported="false"
+            />
 
         <meta-data
             android:name="com.google.firebase.ml.vision.DEPENDENCIES"

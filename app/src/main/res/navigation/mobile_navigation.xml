@@ -36,10 +36,5 @@
         tools:layout="@layout/fragment_favorite">
 
     </fragment>
-    <fragment
-        android:id="@+id/profilFragment"
-        android:name="com.bangkit.berbuah.ui.fragments.ProfilFragment"
-        android:label="fragment_setting"
-        tools:layout="@layout/fragment_profil" />
 
 </navigation>

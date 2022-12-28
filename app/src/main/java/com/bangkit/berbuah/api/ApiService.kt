@@ -7,12 +7,12 @@ import retrofit2.http.*
 
 interface ApiService {
 
-    @GET("search")
+    @GET("artikel")
     fun getSearchFruit(
-        @Query("buah") query: String
+        @Query("nama") query: String
     ): Call<Search>
 
-    @GET("buah/{nama}")
+    @GET("artikel/{nama}")
     fun getDetailFruit(
         @Path("nama") nama: String
     ): Call<Detail>

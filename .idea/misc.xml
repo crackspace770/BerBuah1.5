@@ -3,6 +3,23 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android/BerBuah2/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.193" />
+        <entry key="..\:/Android/BerBuah2/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.193" />
+        <entry key="..\:/Android/BerBuah2/app/src/main/res/drawable/ic_baseline_home_white.xml" value="0.193" />
+        <entry key="..\:/Android/BerBuah2/app/src/main/res/drawable/ic_favorite_selected.xml" value="0.193" />
+        <entry key="..\:/Android/BerBuah2/app/src/main/res/drawable/ic_favorite_unselected.xml" value="0.193" />
+        <entry key="..\:/Android/BerBuah2/app/src/main/res/drawable/ic_launcher_background.xml" value="0.193" />
+        <entry key="..\:/Android/BerBuah2/app/src/main/res/drawable/ic_place_holder.xml" value="0.1785" />
+        <entry key="..\:/Android/BerBuah2/app/src/main/res/drawable/ic_profil.xml" value="0.1785" />
+        <entry key="..\:/Android/BerBuah2/app/src/main/res/layout/activity_detail.xml" value="0.15760869565217392" />
+        <entry key="..\:/Android/BerBuah2/app/src/main/res/layout/activity_detect.xml" value="0.14666666666666667" />
+        <entry key="..\:/Android/BerBuah2/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Android/BerBuah2/app/src/main/res/layout/activity_scan.xml" value="0.2" />
+        <entry key="..\:/Android/BerBuah2/app/src/main/res/layout/empty_data.xml" value="0.1" />
+        <entry key="..\:/Android/BerBuah2/app/src/main/res/layout/fragment_home.xml" value="0.2" />
+        <entry key="..\:/Android/BerBuah2/app/src/main/res/layout/fragment_search.xml" value="0.15760869565217392" />
+        <entry key="..\:/Android/BerBuah2/app/src/main/res/layout/item_row_fruit.xml" value="0.15760869565217392" />
+        <entry key="..\:/Android/BerBuah2/app/src/main/res/layout/search_item_list.xml" value="0.15760869565217392" />
         <entry key="..\:/AndroidStudioProjects/BerBuah/app/src/main/res/drawable/ic_baseline_favorite_24_black.xml" value="0.1355" />
         <entry key="..\:/AndroidStudioProjects/BerBuah/app/src/main/res/drawable/ic_capture.xml" value="0.123" />
         <entry key="..\:/AndroidStudioProjects/BerBuah/app/src/main/res/drawable/ic_place_holder.xml" value="0.1165" />

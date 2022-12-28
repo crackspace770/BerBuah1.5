@@ -47,7 +47,7 @@ class DetailViewModel(private val application: Application) : ViewModel() {
                                     detailFruit.deskripsi,
                                     detailFruit.gambar,
                                     detailFruit.manfaat,
-//                                    detailFruit.nutrisi.air
+                                //    detailFruit.nutrisi
                                 )
                             )
                         }

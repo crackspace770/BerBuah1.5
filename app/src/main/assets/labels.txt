@@ -1,0 +1,22 @@
+0 Alpukat
+1 Apel
+2 Blewah
+3 Bluberi
+4 Buah Delima
+5 Ceri
+6 Jeruk
+7 Kiwi
+8 Lemon
+9 Mangga
+10 Nanas
+11 Pepaya
+12 Pir
+13 Pisang
+14 Raspberi
+15 Semangka
+16 Stroberi
+17 Anggur
+18 Belimbing
+19 Buah Naga
+20 Jambu
+21 Rambutan

@@ -1,0 +1,200 @@
+[
+{
+    "id": "1",
+    "nama": "Alpukat",
+    "deskripsi": "Alpukat merupakan jenis buah yang memiliki kandungan lemak tinggi, sekitar 20 kali lebih tinggi dibanding buah-buahan lain.",
+    "asal": "Nama latin tanaman alpukat adalah Persea americana, diyakini berasal dari Amerika Tengah, yaitu meksiko",
+    "manfaat": "Mengkonsumsi alpukat bermanfaat untuk otak, jantung dan pembuluh darah.",
+    "nutrisi": "Serat, Glukosa, Kalium, Natrium, Magnesium, Vitamin A, Vitamin C, Vitamin E, Vitamin K1, Folat, Vitamin B6",
+    "gambar": "https://docs.google.com/uc?export=download&id=11JR2l_yjOC-E10qfLmuL4_I1bR5RViX8"
+},
+{
+    "id": "2",
+    "nama": "Anggur",
+    "deskripsi": "Anggur merupakan tanaman buah berupa perdu merambat yang termasuk ke dalam keluarga Vitaceae.[1] Buah ini biasanya digunakan untuk membuat jus anggur, jelly, minuman anggur, minyak biji anggur dan kismis, atau dimakan langsung",
+    "asal": "Tanaman anggur merupakan tanaman asli daerah subtropik yang tumbuh secara liar di kawasan Pegunungan Kaukus dekat Laut Kaspia. Para ahli botani berpendapat bahwa daerah Armenia (Rusia) menjadi daerah asal tanaman anggur.",
+    "manfaat": "Mencegah kanker, Melawan penuaan dini, Menjaga kesehatan otak, Meredakan gejala alergi dan peradangan, Menurunkan kadar kolesterol.",
+    "nutrisi": "Energi, protein, lemak, karbohidrat, kalsium, fosfor, magnesium, natrium, kalium, zat besi, zink, vitamin B1, vitamin B2, vitamin B3, vitamin B6, asam pantotenat, asam folat, vitamin C, vitamin K, serat, dan air.",
+    "gambar": "https://docs.google.com/uc?export=download&id=1UytL9Z5fXzk95mdkCsltA2uQ1qnLBDlL"
+},
+{
+    "id": "3",
+    "nama": "Apel",
+    "deskripsi": "Apel merupakan jenis buah-buahan, atau buah yang dihasilkan dari pohon buah apel. Buah apel biasanya berwarna merah kulitnya jika masak dan (siap dimakan), namun bisa juga kulitnya berwarna hijau atau kuning.",
+    "asal": "Apel yang dibudidayakan memiliki nama ilmiah Malus domestica yang menurut sejarahnya merupakan keturunan dari Malus sieversii dengan sebagian genom dari Malus sylvestris (apel hutan/apel liar) yang ditemui hidup secara liar di pegunungan Asia Tengah, di Kazakhstan, Kirgiztan, Tajikistan, dan Xinjiang, Cina, dan kemungkinan juga Malus sylvestris.",
+    "manfaat": "Menjaga kesehatan saluran pencernaan, Menjaga kesehatan dan fungsi jantung, Menurunkan risiko terkena diabetes,  Menjaga kesehatan otak.",
+    "nutrisi": "Vitamin A, vitamin B1, vitamin B2, vitamin B3, vitamin B5, vitamin B6, vitamin B9, vitamin C.",
+    "gambar": "https://docs.google.com/uc?export=download&id=15M9Nw6Cvqzq0i-j7EsWNI14igS7kIw02"
+},
+{
+    "id": "4",
+    "nama": "Aprikot",
+    "deskripsi": "Aprikot adalah salah satu spesies buah dari subgenus Prem. Asal tanaman ini sulit dipastikan karena sudah dibudayakan orang sejak zaman prasejarah.",
+    "asal": "Kemungkinan besar tanaman ini berasal dari sebelah utara dan barat daratan Cina atau Asia Tengah, tetapi mungkin juga berasal dari Korea atau Jepang.",
+    "manfaat": "Menjaga kesehatan usus, Menjaga kadar gula dan kolesterol tubuh, Memelihara kesehatan jantung, Mencegah dehidrasi, Menjaga kesehatan mata, Membuat kulit semakin menawan.",
+    "nutrisi": "Minyak air dan diperkaya beragam antioksidan dan vitamin, di antaranya vitamin A, vitamin B, folat, vitamin C, dan vitamin E.",
+    "gambar": "https://docs.google.com/uc?export=download&id=1cQEX10t4EB8ac4LyG0DlogWton8O_s_x"
+},
+{
+    "id": "5",
+    "nama": "Belimbing",
+    "deskripsi": "Belimbing sayur (dikenal pula dengan nama belimbing wuluh, belimbing buluh, belimbing botol, belimbing besi, atau belimbing asam).",
+    "asal": "(Averrhoa Bilimbi Linn) merupakan sejenis pohon kecil yang diperkirakan berasal dari Kepulauan Maluku, dan dikembangbiakkan serta tumbuh bebas di Indonesia, Filipina, Sri Lanka, Myanmar, dan Malaysia.",
+    "manfaat": "Mengendalikan kadar gula darah, Meningkatkan daya tahan tubuh, Menurunkan tekanan darah tinggi, Mengurangi risiko terkena penyakit kardiovaskuler, Menurunkan risiko terkena penyakit kanker.",
+    "nutrisi": "Karbohidrat, Protein, Serat, Vitamin C, Kalsium, Fosfor, Zat Besi",
+    "gambar": "https://docs.google.com/uc?export=download&id=1NImo_N9erH2M6alEjNjcwomdhK0EmNms"
+},
+{
+    "id": "6",
+    "nama": "Bluberi",
+    "deskripsi": "Bluberi atau beri biru adalah tanaman berbunga dalam genus Vaccinium, bagian Cyanococcus.",
+    "asal": " Spesies tumbuhan ini berasal dari Amerika Utara.",
+    "manfaat": "Anti-Peradangan, Membantu Mencegah Penyakit Jantung, Membantu Mengatur Kadar Gula Darah, Menjaga Kesehatan Mata, Melindungi Kolesterol Dalam Darah, Membantu Menjaga Fungsi Otak dan Meningkatkan Daya Ingat,Membantu Melawan Infeksi Saluran Kemih.",
+    "nutrisi": "Protein sebanyak 1,1 gram. Lemak sebanyak 0,49 gram. Karbohidrat sebanyak 21,45 gram. Serat sebanyak 3,6 gram, Kalori sebanyak 84 gram, Gula sebanyak 14,74 gram, Kalsium sebanyak 9 miligram, Zat besi sebanyak 0,41 miligram, Kalium sebanyak 114 miligram, Magnesium sebanyak 9 miligram, Fosfor sebanyak 18 miligram, Natrium sebanyak 1 miligram, Folat sebanyak 9 miligram, Vitamin C, Vitamin B6, Vitamin K.",
+    "gambar": "https://docs.google.com/uc?export=download&id=1_EqT3DaBMSeDUA3io0rapjCJJxS0aEJ6"
+},
+{
+    "id": "7",
+    "nama": "Buah Naga",
+    "deskripsi": "Buah naga adalah buah dari beberapa jenis kaktus dari genus Hylocereus dan Selenicereus.",
+    "asal": "Buah ini berasal dari Meksiko, Amerika Tengah dan Amerika Selatan namun sekarang juga dibudidayakan di negara-negara Asia seperti Taiwan, Vietnam, Filipina, Indonesia dan Malaysia",
+    "manfaat": "Sumber Beberapa Jenis Antioksidan, Membantu Proses Detoksifikasi, Mampu Mencegah Diabetes, Menangkal Kanker, Menurunkan Tekanan Darah Tinggi, Membantu Masalah Pencernaan, Menjaga Kesehatan Tulang, Melancarkan Peredaran Darah",
+    "nutrisi": "Vitamin C, Vitamin B2, vitamin B3, Magnesium, Zat besi, Kalsium, Antioksidan",
+    "gambar": "https://docs.google.com/uc?export=download&id=1icQvkYvmemsguZGS1tJ4xIDa0_6xXBCZ"
+},
+{
+    "id": "8",
+    "nama": "Durian",
+    "deskripsi": "Buah Durian ini dapat sekaligus dimakan tanpa diolah. Nama ini diambil dari ciri khas kulit buahnya yang keras dan berlekuk-lekuk tajam sehingga menyerupai duri.",
+    "asal": "Buah Durian adalah nama tumbuhan tropis yang berasal dari wilayah Asia Tenggara",
+    "manfaat": "Nutrisi Bagi Tulang Dan Gigi, membuat pencernaan Yang Lebih Sehat, Menstabilkan Kadar Gula Dalam Darah, Solusi Anemia (Kurang Darah).",
+    "nutrisi": "Dalam 100 gram buah ini mengandung sekitar 27 gram karbohidrat, 4 gram serat, 1,5 gram protein, 5 gram lemak, vitamin A sebanyak 44 IU, vitamin C sekitar 20 mg, magnesium 30 mg, fosfor 39 mg, dan mineral lainnya",
+    "gambar": "https://docs.google.com/uc?export=download&id=1jNzZEz26u5k5Nte7ECXdY40iLH2Va7wX"
+},
+{
+    "id": "9",
+    "nama": "Jambu Biji",
+    "deskripsi": "Jambu Biji memiliki buah yang berwarna hijau dengan daging buah berwarna putih atau merah dan berasa asam-manis. Buah jambu biji dikenal mengandung banyak vitamin C.",
+    "asal": "Buah Jambu adalah tanaman tropis yang berasal dari Brasil, disebarkan ke Indonesia melalui Thailand.",
+    "manfaat": "Melawan radikal bebas, Melancarkan saluran pencernaan, Memperkuat daya tahan tubuh, Menurunkan tekanan darah dan kolesterol, Menjaga kesehatan mata, Mencegah diabetes",
+    "nutrisi": "Dalam satu buah jambu biji dengan berat sekitar 55 gram, mengandung 37 kalori dan beberapa nutrisi berikut ini: 1,4 gram protein, 2,97 gram serat, 9,9 miligram kalsium, 12 miligram Magnesium, 229 miligram Kalium, 125 miligram Vitamin C, Vitamin A, Vitamin B, Vitamin K, Vitamin E, Selenium, Zinc, dan Mangan",
+    "gambar": "https://docs.google.com/uc?export=download&id=1XGK4O8Hy8NcxxWysRETAviBx1BFPF7sM"
+},
+{
+    "id": "10",
+    "nama": "Jeruk",
+    "deskripsi": "Jeruk(bahasa Inggris: orange) adalah buah dari berbagai spesies citrus dalam famili Rutaceae (lihat daftar tanaman yang dikenal sebagai jeruk); terutama mengacu pada Citrus x sinensis, yang juga disebut jeruk manis, untuk membedakannya dari Citrus x aurantium terkait, yang disebut jeruk pahit.",
+    "asal": "Jeruk dikenal berasal dari Asia Tenggara, yaitu India, Cina Selatan, dan beberapa jenis dari Florida, Australia Utara, dan Kaledonia. Jeruk besar dapat dijumpai di Kalimantan dan Malaysia.",
+    "manfaat": "Melancarkan Pencernaan, Mengatur Tekanan Darah Tinggi, Mencegah Kanker, Mencegah Penyakit Jantung, Meningkatkan Kekebalan Tubuh, Memurnikan Darah, Memperkuat Tulang, Memperkuat Gigi, Mencegah Penyakit Ginjal, Membantu Mencegah Asma",
+    "nutrisi": "Jeruk merupakan sumber vitamin C yang sangat baik. Tidak hanya itu, dalam satu buah jeruk juga mengandung vitamin dan mineral lain yang dibutuhkan, seperti vitamin B1, folat, hingga potassium. Selain vitamin dan mineral, buah jeruk juga terkenal akan kandungan air yang sangat tinggi.",
+    "gambar": "https://docs.google.com/uc?export=download&id=1AeKq1vtoUF8-KedGVBRDlwj5H4bpyw1-"
+},
+{
+    "id": "11",
+    "nama": "Kelapa",
+    "deskripsi": "Kelapa, nyiur atau kerambil (Cocos nucifera) adalah anggota tunggal dalam genus Cocos dari suku aren-arenan atau Arecaceae. Arti kata kelapa (atau coconut, dalam bahasa Inggris) dapat merujuk pada keseluruhan pohon kelapa, biji, atau buah, yang secara botani adalah pohon berbuah, bukan pohon kacang-kacangan.",
+    "asal": "Asal kelapa diperkirakan berasal dari Amerika Selatan. Tanaman ini telah dibudidayakan di sekitar Lembah Andes di Kolombia sejak ribuan tahun sebelum masehi.",
+    "manfaat": "Menjaga Kesehatan Pencernaan, Meningkatkan Daya Tahan Tubuh, Membantu Menurunkan Berat Badan, Mendukung Fungsi Otak, Menjaga Kesehatan Jantung, Mengontrol Kadar Gula Darah",
+    "nutrisi": "Secara umum, air buah ini mengandung 16 kalori dan 4,1 gram gula. Sedangkan daging yang terkandung di dalamnya mengandung 77 kalori, 1,4 gram protein, 3.6 gram lemak, 10 gram gula, 257 gram kalium, dan 6 miligram vitamin C.",
+    "gambar": "https://docs.google.com/uc?export=download&id=1wZIWvRAukfqXQBKldzIp4rYDDfvt45kp"
+},
+{
+    "id": "12",
+    "nama": "Kiwi",
+    "deskripsi": "Kiwi atau Gosberi China adalah nama yang diberikan kepada buah beri yang bisa dimakan dari beberapa jenis tanaman kayu merambat dalam genus (Actinidia). Actinidia asli berasal dari Shaanxi, Tiongkok.",
+    "asal": "Siapa sangka bahwa kiwi ternyata mulanya bukan berasal dari Selandia Baru, melainkan dari negeri tirai bambu, Cina yang dinamai gooseberry. Menurut laporan The Time, pada 1904, biji kiwi dibawa oleh guru Selandia Baru usai mengunjungi Cina. Ia memberikan benih tersebut pada petani yang kemudian berhasil berbuah pertama kali pada 1910",
+    "manfaat": "Mengatasi Masalah Rambut, Melancarkan Pencernaan, Mengatur Tekanan Darah, Meningkatkan Imunitas, Menstabilkan Diabetes, Menyehatkan Kulit",
+    "nutrisi": "Dalam 100 gram buah kiwi terkandung 64 kalori dan beberapa nutrisi berikut: 1gram protein, 3gram serat, 74.7miligram vitamin C, 35miligram kalsium, 1.3miligram vitamin E, dan 0.24miligram zat besi",
+    "gambar": "https://docs.google.com/uc?export=download&id=1TU7DLktWfCGulZfBq2_1F7hKg7Djz7ol"
+},
+{
+    "id": "13",
+    "nama": "Kurma",
+    "deskripsi": "Kurma, (Arab: نحل, Nakhla; nama latin Phoenix dactylifera) adalah tanaman palma (Arecaceae) dalam genus Phoenix, buahnya dapat dimakan.",
+    "asal": "Walaupun tempat asalnya tidak diketahui karena telah sejak lama dibudidayakan, kemungkinan tanaman ini berasal dari tanah sekitar Teluk Persia.",
+    "manfaat": "Manfaat dari kurma diantaranya bebas dari masalah konstipasi, gangguan pencernaan, masalah jantung, anemia, disfungsi seksual, diare, kanker abdomen, dan kondisi-kondisi lain. Kurma juga sangatlah baik untuk menaikkan berat badan. Kurma kaya akan vitamin, mineral, dan serat.",
+    "nutrisi": "Apabila diurai lebih rinci, maka kandungan gizi kurma per 100 gramnya (± 13 butir) adalah 63,35 gram gula; 8 gram serat; 2,45 gram protein; 0,39 gram lemak; 2 miligram Natrium; 656 miligram Kalium; dengan kalori total sebesar 299 kkal",
+    "gambar": "https://docs.google.com/uc?export=download&id=1IKMlfaObTCjxZPA-Iv2RLl0rIUnuHPZh"
+},
+{
+    "id": "14",
+    "nama": "Labu",
+    "deskripsi": "Labu merupakan buah yang dihasilkan oleh sejumlah anggota suku labu-labuan (Cucurbitaceae), terutama yang berukuran cukup besar dan berbentuk bulat atau memanjang. Tidak ada kriteria yang jelas mengenai pemanfaatannya, sehingga labu dapat dimakan segar atau diolah terlebih dahulu. Namun, labu biasanya tidak dimakan sebagai lalapan.",
+    "asal": "Labu kuning berasal dari benua Amerika terutama di Negara Meksiko dan Palu. Banyak yang beranggapan bahwa labu kuning ini berasal dari Indonesia, tetapi itu tidak benar.",
+    "manfaat": "Menurunkan berat badan, Melancarkan pencernaan, Meningkatkan daya tahan tubuh, Menjaga kesehatan mata, Membuat kulit lebih sehat dan awet muda, Menjaga kesehatan jantung, Menurunkan risiko terkena kanker",
+    "nutrisi": "2 gram protein, 12-15 gram karbohidrat, 0,1 gram lemak, 2,5 gram serat, 800-900 mikrogram vitamin A, 20 miligram vitamin C, 50 miligram kalsium, 25 miligram magnesium.",
+    "gambar": "https://docs.google.com/uc?export=download&id=1PNOUSum-EHOfN8Je4sXuZ9gbJ6lHFHGH"
+},
+{
+    "id": "15",
+    "nama": "Leci",
+    "deskripsi": "Leci atau Lici adalah buah-buahan dari genus Litchi yang tergolong familia lerak-lerakan Sapindaceae. Pohon lici tumbuh di iklim tropis.",
+    "asal": "Buah ini berasal dari Provinsi Fujian dan Guangdong, Cinta. Namun kita juga dapat menemukannya ditemukan di India, Madagaskar, Nepal, Bangladesh, Pakistan, Taiwan bagian selatan dan tengah, Vietnam utara, Indonesia, Thailand, Filipina, Afrika Selatan dan Meksiko.",
+    "manfaat": "Menjaga Kesehatan Kulit, Menjaga Tekanan Darah, Menyehatkan Pencernaan, Meningkatkan Sirkulasi Darah, Menjaga Sistem Kekebalan Tubuh, Mengobati Anemia dan Kekurangan Zat Besi, Membantu Melawan Radikal Bebas, Membantu Menurunkan Berat Badan.",
+    "nutrisi": "Selain serat dan karbohidrat, buah leci juga mengandung banyak vitamin dan mineral, di antaranya: Vitamin C yang menjadi kandungan vitamin paling tinggi pada buah leci. Vitamin B, termasuk B2 (riboflavin), B3 (niasin), dan B6 (pyridoxine). Kalium",
+    "gambar": "https://docs.google.com/uc?export=download&id=1JOJun5smNY0Au2wqZQrM3M9_kQzdVvdn"
+},
+{
+    "id": "16",
+    "nama": "Lemon",
+    "deskripsi": "Sitrun, jeruk sitrun (dari bahasa Belanda, citroen), atau limun (bahasa Arab: ليمون), limau (bahasa Portugis: limão), atau lemon adalah sejenis jeruk yang buahnya biasa dipakai sebagai penyedap dan penyegar dalam banyak seni boga dunia.",
+    "asal": "Lemon (Citrus limon) merupakan tanaman asli Asia Tenggara (Manner et al, 2006). Lemon pertama kali tumbuh di India, Burma Utara, dan Cina. Pada tahun 1493, Christopher Columbus membawa biji Citrus limon ke Hispaniola.",
+    "manfaat": "Mengatasi Jerawat, Mencerahkan Kulit, Meredakan Gatal, Mengurangi Tanda-tanda Penuaan, Menghilangkan Komedo, Menyehatkan Jantung, Membantu Mengontrol Berat Badan, Mencegah Batu Ginjal, Mencegah Anemia, Mencegah Kanker, Melancarkan Pencernaan, Menyegarkan Mulut",
+    "nutrisi": "Vitamin C, Zat Besi, Vitamin B6, Magnesium, Calcium, Vitamin D, Cobalamin",
+    "gambar": "https://docs.google.com/uc?export=download&id=1t8XdEcgtZrkonxQdP92m9HssntrXn5nX"
+},
+{
+    "id": "17",
+    "nama": "Mangga",
+    "deskripsi": "Mangga atau mempelam adalah nama sejenis buah, demikian pula nama pohonnya. Mangga termasuk ke dalam genus Mangifera, yang terdiri dari 35-40 anggota dari famili Anacardiaceae.",
+    "asal": "Tahun 327 SM, Alexander Agung menemukan tanaman mangga di lembah Indus, India. Hal ini mendasari anggapan bahwa mangga berasal dari India dan menyebar ke Semenanjung Malaysia, Indonesia dan sekitarnya.",
+    "manfaat": "Menjaga, Menurunkan tekanan darah, Mangga punya manfaat untuk mata, Berpotensi mencegah kanker, Meredakan sembelit, Membantu mencegah sakit jantung, Mangga punya manfaat untuk berat badan turun.",
+    "nutrisi": "Mangga merupakan sumber vitamin yang kaya akan vitamin A, vitamin C dan vitamin B. Walaupun tidak banyak mangga juga mengandung vitamin E dan vitamin K. Makan mangga sangat sehat karena memiliki beberapa senyawa lain seperti, lutein, asam galat, asam anakardat dan kriptozantin.",
+    "gambar": "https://docs.google.com/uc?export=download&id=1pfGzsrYha8ZhKxP7xWDHLzi1Tz3nDO-o"
+},
+{
+    "id": "18",
+    "nama": "Pepaya",
+    "deskripsi": "Pepaya adalah satu-satunya jenis dalam genus Carica. Nama pepaya dalam bahasa Indonesia diambil dari bahasa Belanda (papaja), yang pada gilirannya juga mengambil dari nama bahasa Arawak, papaya. Pepaya kini telah menyebar luas dan banyak ditanam di seluruh daerah tropis untuk diambil buahnya.",
+    "asal": "Pepaya (Carica papaya L.), atau battek adalah tumbuhan yang diperkirakan berasal dari Meksiko bagian selatan dan bagian utara dari Amerika Selatan.",
+    "manfaat": "Vitamin C dan vitamin A yang diproduksi dalam tubuh. Senyawa beta karoten yang terdapat dalam pepaya, diperlukan untuk meningkatkan sistem kekebalan tubuh dari dalam. Oleh karena itu, pepaya mungkin menjadi pilihan buah yang sehat untuk mencegah penyakit seperti infeksi, pilek, flu dan meredakan demam.",
+    "nutrisi": "Satu buah pepaya dengan ukuran sedang, mengandung sekitar 120 kalori, 30 gram karbohidrat (di dalamnya terdapat 5 gram serat dan 18 gram gula) dan 2 gram protein. Pepaya merupakan sumber yang sangat baik dari manfaat vitamin C dan satu buah pepaya, memberikan 224% dari kebutuhan harian.",
+    "gambar": "https://docs.google.com/uc?export=download&id=1aISSvIHr6Eq6hCRIek_9kQg9EEtJ_YhX"
+},
+{
+    "id": "19",
+    "nama": "Pisang",
+    "deskripsi": "Pisang adalah nama umum yang diberikan pada tumbuhan ternak berukuran besar dengan daun memanjang dan besar yang tumbuh langsung dari bagian tangkai. Batang Pisang bersifat lunak karena terbentuk dari lapisan pelepah yang lunak dan panjang. Batang yang agak keras berada di bagian permukaan tanah.",
+    "asal": "Pisang adalah tanaman buah berupa herba yang berasal dari kawasan di Asia Tenggara (termasuk Indonesia). Tanaman ini kemudian menyebar ke Afrika (Madagaskar), Amerika Selatan dan Tengah. Di Jawa Barat, pisang disebut dengan Cau, di Jawa Tengah dan Jawa Timur dinamakan gedang.",
+    "manfaat": "Membantu Atasi Hipertensi, Sumber Karbohidrat dan Vitamin A, Pisang Memperlancar Metabolisme, Meningkatkan Kekebalan Tubuh, Melancarkan Aliran Oksigen ke Otak, Mengatasi Anemia, Menurunkan Berat Badan, Menyehatkan Tulang.",
+    "nutrisi": "Satu buah pisang berukuran sedang atau 100 gram mengandung 89 kalori, 75 persen air, 1,1 gram protein, 22,8 gram karbohidrat, 12,2 gram gula, 2,6 gram serat, dan 0,3 gram lemak. Pisang merupakan sumber karbohidrat yang kaya, yang utamanya berbentuk pati pada pisang mentah dan gula pada pisang matang.",
+    "gambar": "https://docs.google.com/uc?export=download&id=1zhZqmKkV6F09C09IhQsFeaAmcw21g0Cj"
+},
+{
+    "id": "20",
+    "nama": "Rambutan",
+    "deskripsi": "Rambutan adalah tanaman tropis yang tergolong ke dalam suku lerak-lerakan atau Sapindaceae, berasal dari daerah kepulauan di Asia Tenggara. Kata rambutan berasal dari bentuk buahnya yang mempunyai kulit menyerupai rambut.",
+    "asal": "Salah satu buah yang asli Indonesia adalah Rambutan. Dari namanya Rambutan, tentu orang akan mengerti dengan ciri khas buah ini yaitu mempunyai banyak 'rambut'. Rambutan adalah tanaman tropis yang tergolong ke dalam suku lerak-lerakan atau Sapindaceae, berasal dari daerah kepulauan di Asia Tenggara",
+    "manfaat": "Melancarkan sistem pencernaan, Memperkuat daya tahan tubuh, Menjaga kesehatan jantung, Membantu penurunan berat badan, Menjaga kesehatan tulang, Menurunkan risiko munculnya kanker.",
+    "nutrisi": "Protein: 0.9gram, Karbohidrat: 18gram, Serat: 0.8-1gram, Kalsium: 15 miligram, Fosfor: 15 mg, Zat besi: 0.5 mg, Natrium: 15 mg, ",
+    "gambar": "https://docs.google.com/uc?export=download&id=1iQrsS9ZcNsh9qSUg4bYvN025W1MvTp3a"
+},
+{
+    "id": "21",
+    "nama": "Salak",
+    "deskripsi": "Salak (Salacca zalacca) adalah sejenis palma dengan buah yang biasa dimakan. Ia dikenal juga sebagai sala. Dalam bahasa Inggris disebut salak atau snake fruit, sementara nama ilmiahnya adalah Salacca zalacca. Buah ini disebut snake fruit karena kulitnya mirip dengan sisik ular.",
+    "asal": "Tanaman salak merupakan salah satu tanaman buah yang disukai dan mempunyai prospek baik untuk diusahakan. Daerah asal nya tidak jelas, tetapi diduga dari Thailand, Malaysia dan Indonesia. Ada pula yang mengatakan bahwa tanaman salak (Salacca edulis) berasal dari Pulau Jawa.",
+    "manfaat": "Meningkatkan daya tahan tubuh, Mencerahkan kulit, Mencegah sembelit, Menurunkan berat badan, Meningkatkan daya ingat, Menjaga kesehatan mata, Meningkatkan kesehatan jantung, Mengontrol diabetes, Mengontrol kadar asam urat, Mencegah penyakit kanker",
+    "nutrisi": "Di balik kulitnya yang bersisik, salak memiliki beragam khasiat bagi kesehatan. Manfaatnya dapat diperoleh karena buah satu ini tidak hanya mengandung karbohidrat dan serat yang tinggi, tapi juga beragam vitamin dan mineral penting seperti vitamin B2, vitamin C, kalium, kalsium, fosfor, folat, dan zat besi.",
+    "gambar": "https://docs.google.com/uc?export=download&id=1Zf5C5JA0PYp75iTIPNDyOfcNm9fWeyfp"
+},
+{
+    "id": "22",
+    "nama": "Stroberi",
+    "deskripsi": "Stroberi atau tepatnya stroberi kebun (juga dikenal dengan nama arbei, dari bahasa Belanda ardbei) adalah sebuah varietas stroberi yang paling banyak dikenal di dunia. Seperti spesies lain dalam genus Fragaria (stroberi), buah ini berada dalam keluarga Rosaceae. Secara umum buah ini bukanlah buah, melainkan buah semu, artinya daging buahnya tidak berasal dari ovari tanaman (achenium) tetapi dari bagian bawah hypanthium yang berbentuk mangkuk tempat ovari tanaman itu berada.",
+    "asal": "Strawberry tumbuh liar di Italia sejak 234 SM dan ditemukan di Virginia oleh orang Eropa pertama ketika kapal mereka mendarat di sana pada 1588. Pada zaman Yunani kuno buah ini diangkat sebagai lambang dewi cinta.",
+    "manfaat": "Menyehatkan saluran pencernaan, Menurunkan kadar kolesterol dalam tubuh, Menjaga tekanan darah tetap stabil, Mengontrol kadar gula darah, Mencegah penyakit jantung, Menangkal efek radikal bebas, Menurunkan berat badan.",
+    "nutrisi": "Stroberi mengandung magnesium, kalium, zat besi, dan beragam jenis antioksidan, seperti antosianin dan ellagitannins. Kandungan zat besi dan antioksidan tersebut juga dapat digunakan untuk memperbaiki rambut yang rusak, melembapkan, serta menjadikan rambut terasa halus.",
+    "gambar": "https://docs.google.com/uc?export=download&id=15TGDgs2PGqgkQTypnMEXlkuz_EzI7mKW"
+}
+]

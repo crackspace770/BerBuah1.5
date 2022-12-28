@@ -19,8 +19,8 @@ data class DetailResponse(
     @field:SerializedName("manfaat")
     val manfaat: List<String>,
 
-//    @field:SerializedName("nutrisi")
-//    val nutrisi: List<Nutrisi>
+    @field:SerializedName("nutrisi")
+    val nutrisi: List<Nutrisi>
 )
 
 data class Nutrisi(
@@ -34,9 +34,6 @@ data class Nutrisi(
     @field:SerializedName("gula")
     val gula: String,
 
-    @field:SerializedName("serat")
-    val serat: String,
-
     @field:SerializedName("protein")
     val protein: String,
 
@@ -44,5 +41,14 @@ data class Nutrisi(
     val air: String,
 
     @field:SerializedName("lemak")
-    val lemak: String
+    val lemak: String,
+
+    @field:SerializedName("serat")
+    val serat: String,
+
+    @field:SerializedName("kalsium")
+    val kalsium: String,
+
+    @field:SerializedName("fosfor")
+    val fosfor: String
 )

@@ -35,6 +35,7 @@ class CameraActivity:AppCompatActivity() {
 
         cameraExecutor = Executors.newSingleThreadExecutor()
 
+
         binding.captureImage.setOnClickListener { takePhoto() }
         binding.switchCamera.setOnClickListener {
             cameraSelector = if (cameraSelector.equals(CameraSelector.DEFAULT_BACK_CAMERA)) CameraSelector.DEFAULT_FRONT_CAMERA
@@ -79,7 +80,7 @@ class CameraActivity:AppCompatActivity() {
                         "isBackCamera",
                         cameraSelector == CameraSelector.DEFAULT_BACK_CAMERA
                     )
-                    setResult(HomeFragment.CAMERA_X_RESULT, intent)
+                   // setResult(HomeFragment.CAMERA_X_RESULT, intent)
                     finish()
                 }
             }

@@ -18,7 +18,7 @@ class ApiConfig {
                 .addInterceptor(loggingInterceptor)
                 .build()
             val retrofit = Retrofit.Builder()
-                .baseUrl("https://us-central1-lustrous-maxim-349908.cloudfunctions.net/articles/")
+                .baseUrl("https://api-berbuah.herokuapp.com/api/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build()
