@@ -4,6 +4,13 @@ import com.google.gson.annotations.SerializedName
 
 data class SearchResponse (
 
+    @field:SerializedName("items")
+    val data: List<SearchItem>
+
+)
+
+data class SearchItem (
+
     @field:SerializedName("id")
     val id: String,
 
@@ -13,6 +20,6 @@ data class SearchResponse (
     @field:SerializedName("deskripsi")
     val deskripsi: String,
 
-    @field:SerializedName("gambar")
-    val gambar: String
+    @field:SerializedName("image")
+    val image: String
 )

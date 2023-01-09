@@ -20,7 +20,7 @@ data class Favorite (
     @ColumnInfo(name = "deskripsi")
     var deskripsi: String? = null,
 
-    @ColumnInfo(name = "gambar")
-    var gambar: String? = null
+    @ColumnInfo(name = "image")
+    var image: String? = null
 
 ): Parcelable

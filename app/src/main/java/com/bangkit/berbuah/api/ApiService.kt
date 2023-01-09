@@ -1,19 +1,18 @@
 package com.bangkit.berbuah.api
 
-import com.bangkit.berbuah.model.Detail
-import com.bangkit.berbuah.model.Search
+import com.bangkit.berbuah.response.FruitResponse
 import retrofit2.Call
 import retrofit2.http.*
 
 interface ApiService {
 
-    @GET("artikel")
+    @GET("artikel/search")
     fun getSearchFruit(
-        @Query("nama") query: String
-    ): Call<Search>
+        @Query("buah") query: String
+    ): Call<FruitResponse>
 
-    @GET("artikel/{nama}")
+    @GET("artikel/nama")
     fun getDetailFruit(
-        @Path("nama") nama: String
-    ): Call<Detail>
+        @Query("buah") nama: String
+    ): Call<FruitResponse>
 }

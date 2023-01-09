@@ -13,7 +13,6 @@ import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.bangkit.berbuah.databinding.ActivityDetectBinding
-import com.bangkit.berbuah.model.DetailFruit
 import com.bangkit.berbuah.model.FruitItem
 import com.bangkit.berbuah.ui.activities.DetailActivity.Companion.EXTRA_DATA_FRUIT
 
@@ -26,8 +25,6 @@ class DetectActivity: AppCompatActivity() {
     private val mModelPath = "fruits_model.tflite"
     private val mLabelPath = "fruits_labels.txt"
     private val mSamplePath = "orange.jpg"
-    var txtTest : Int? = null
-    private lateinit var fruit: DetailFruit
 
     override fun onRequestPermissionsResult(
         requestCode: Int,
@@ -65,7 +62,7 @@ class DetectActivity: AppCompatActivity() {
         binding.apply {
             buttonCamera.setOnClickListener{camera()}
             buttonGallery.setOnClickListener { gallery() }
-            buttonDetect.setOnClickListener { detect() }
+            buttonDetect.setOnClickListener { detect(FruitItem()) }
             btnDetail.setOnClickListener { showDetail(FruitItem()) }
         }
 
@@ -104,22 +101,32 @@ class DetectActivity: AppCompatActivity() {
         startActivityForResult(camera, 200)
     }
 
-    private fun detect(){
+    private fun detect(fruitItem: FruitItem){
         val results = mClassifier.recognizeImage(mBitmap).firstOrNull()
+        if (results != null) {
+            Toast.makeText(this, "Buah " + results.title, Toast.LENGTH_SHORT).show()
+        }
+
+        val fruitItem = results?.title
 
         binding.tvResult.text = results?.title
 
+       
     }
 
     private fun showDetail(fruitItem: FruitItem){
+        Toast.makeText(this, "Kamu memilih " + fruitItem.nama, Toast.LENGTH_SHORT).show()
+
         val results = mClassifier.recognizeImage(mBitmap).firstOrNull()
         val nama = binding.tvResult.text
+
         binding.tvResult.text = results?.title
 
         val intent = Intent(this@DetectActivity, DetailActivity::class.java
         ).apply {
-            putExtra(EXTRA_DATA_FRUIT, fruitItem.nama)
-           putExtra(EXTRA_DATA_FRUIT, binding.tvResult.text)
+            putExtra(EXTRA_DATA_FRUIT, fruitItem)
+           // putExtra(EXTRA_DATA_FRUIT, results?.title)
+          // putExtra(EXTRA_DATA_FRUIT, binding.tvResult.text)
         }
         startActivity(intent)
     }
@@ -143,8 +150,7 @@ class DetectActivity: AppCompatActivity() {
         if (maxHeight > 0 && maxWidth > 0) {
             val width = bmp.width
             val height = bmp.height
-
-            //トリミングする幅、高さ、座標の設定
+            
             val startX = (width - maxWidth) / 2
             val startY = (height - maxHeight) / 2
 

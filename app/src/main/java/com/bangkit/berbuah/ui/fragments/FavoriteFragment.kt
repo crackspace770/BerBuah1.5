@@ -77,7 +77,7 @@ class FavoriteFragment : Fragment() {
         val listFruitData = ArrayList<FruitItem>()
         if (listFruitFavorite != null) {
             for (fruit in listFruitFavorite) {
-                val fruitFavorite = FruitItem(fruit.id, fruit.deskripsi, fruit.gambar)
+                val fruitFavorite = FruitItem(fruit.id, fruit.deskripsi, fruit.image)
                 listFruitData.add(fruitFavorite)
             }
         }

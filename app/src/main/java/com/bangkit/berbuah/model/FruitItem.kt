@@ -6,30 +6,34 @@ import java.io.Serializable
 
 @Parcelize
 data class FruitItem(
-//    val id: String? = null,
+    val id: String? = null,
     val nama: String? = null,
+    val namaLatin: String?,
     val deskripsi: String? = null,
+    val manfaat: String,
+    val kandungan: List<String>,
     val gambar: String? = null
 ) : Parcelable
 
 data class FruitData(
     val id : Int,
     val nama : String,
+    val namaLatin: String?,
     val deskripsi : String,
-    val asal : String,
-    val manfaat : String,
-    val nutrisi : String,
+    val manfaat : List<String>? = null,
+    val kandungan : String,
     val gambar : String
 ) : Serializable
 
 @Parcelize
 data class DetailFruit(
+    val id : String,
     val nama: String? = null,
-    val nama_latin: String? = null,
+    val namaLatin: String? = null,
     val deskripsi: String? = null,
-    val gambar: String? = null,
+    val image: String? = null,
     val manfaat: List<String>? = null,
-    val nutrisi: List<Nutrisi>? = null
+    val kandungan: List<Kandungan>? = null
 ) : Parcelable
 
 //@Parcelize
@@ -39,7 +43,7 @@ data class DetailFruit(
 
 
 @Parcelize
-data class Nutrisi(
+data class Kandungan(
     val kalori: String? = null,
     val karbohidrat: String? = null,
     val gula: String? = null,

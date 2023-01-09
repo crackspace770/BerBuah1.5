@@ -9,8 +9,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.bangkit.berbuah.api.ApiConfig
 import com.bangkit.berbuah.database.Favorite
-import com.bangkit.berbuah.model.Detail
-import com.bangkit.berbuah.model.DetailFruit
+import com.bangkit.berbuah.model.FruitItem
+import com.bangkit.berbuah.response.FruitResponse
 import com.bangkit.berbuah.ui.repository.FavoriteRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -20,7 +20,7 @@ import retrofit2.Response
 
 class DetailViewModel(private val application: Application) : ViewModel() {
 
-    private val listDetailFruitMutable = MutableLiveData<ArrayList<DetailFruit>>()
+    private val listDetailFruitMutable = MutableLiveData<ArrayList<FruitItem>>()
     private val favoriteFruitRepository: FavoriteRepository = FavoriteRepository(application)
 
     private val _isLoading = MutableLiveData<Boolean>()
@@ -29,25 +29,26 @@ class DetailViewModel(private val application: Application) : ViewModel() {
     internal fun setDetailFruit(nama: String) {
         _isLoading.value = true
         val client = ApiConfig.getApiService().getDetailFruit(nama)
-        client.enqueue(object : Callback<Detail> {
+        client.enqueue(object : Callback<FruitResponse> {
 
             override fun onResponse(
-                call: Call<Detail>,
-                response: Response<Detail>
+                call: Call<FruitResponse>,
+                response: Response<FruitResponse>
             ) {
                 _isLoading.value = false
-                val listDetailFruit = ArrayList<DetailFruit>()
+                val listDetailFruit = ArrayList<FruitItem>()
                 if (response.isSuccessful) {
                     if (response.body() != null) {
-                        response.body()?.data?.forEach { detailFruit ->
+                        response.body()?.artikel?.forEach { detailFruit ->
                             listDetailFruit.add(
-                                DetailFruit(
+                                FruitItem(
+                                    detailFruit.id,
                                     detailFruit.nama,
-                                    detailFruit.nama_latin,
+                                    detailFruit.namaLatin,
                                     detailFruit.deskripsi,
-                                    detailFruit.gambar,
+                                    detailFruit.image,
                                     detailFruit.manfaat,
-                                //    detailFruit.nutrisi
+                                 //   detailFruit.kandungan
                                 )
                             )
                         }
@@ -63,7 +64,7 @@ class DetailViewModel(private val application: Application) : ViewModel() {
                 }
             }
 
-            override fun onFailure(call: Call<Detail>, t: Throwable) {
+            override fun onFailure(call: Call<FruitResponse>, t: Throwable) {
                 _isLoading.value = false
                 Toast.makeText(
                     application.applicationContext,
@@ -75,7 +76,7 @@ class DetailViewModel(private val application: Application) : ViewModel() {
         })
     }
 
-    internal fun getDetailFruit(): LiveData<ArrayList<DetailFruit>> = listDetailFruitMutable
+    internal fun getDetailFruit(): LiveData<ArrayList<FruitItem>> = listDetailFruitMutable
 
     internal fun check(id: String) = favoriteFruitRepository.check(id)
 

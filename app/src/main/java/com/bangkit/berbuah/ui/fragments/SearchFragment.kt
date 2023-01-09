@@ -16,6 +16,7 @@ import com.bangkit.berbuah.databinding.FragmentSearchBinding
 import com.bangkit.berbuah.interfaces.ItemClickCallback
 import com.bangkit.berbuah.model.FruitItem
 import com.bangkit.berbuah.ui.activities.DetailActivity
+import com.bangkit.berbuah.ui.activities.LoginActivity
 import com.bangkit.berbuah.viewmodel.SearchViewModel
 import com.bangkit.berbuah.viewmodel.ViewModelFactory
 
@@ -26,15 +27,15 @@ class SearchFragment : Fragment() {
     private var binding: FragmentSearchBinding? = null
     private lateinit var searchAdapter: SearchAdapter
     private lateinit var viewModel: SearchViewModel
-//    private lateinit var preferences: SharedPreferences
+  //  private lateinit var preferences: SharedPreferences
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-//        val mainViewModel = ViewModelProvider(this).get(SearchViewModel::class.java)
-//        preferences = getSharedPreferences(LoginActivity.SHARED_PREFERENCES, Context.MODE_PRIVATE)
+    //    val mainViewModel = ViewModelProvider(this).get(SearchViewModel::class.java)
+  //      preferences = getSharedPreferences(LoginActivity.SHARED_PREFERENCES, Context.MODE_PRIVATE)
 
         binding = FragmentSearchBinding.inflate(inflater, container, false)
         return binding?.root
