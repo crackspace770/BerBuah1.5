@@ -9,7 +9,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.bangkit.berbuah.api.ApiConfig
 import com.bangkit.berbuah.database.Favorite
-import com.bangkit.berbuah.model.FruitItem
+import com.bangkit.berbuah.model.DetailFruit
 import com.bangkit.berbuah.response.FruitResponse
 import com.bangkit.berbuah.ui.repository.FavoriteRepository
 import kotlinx.coroutines.Dispatchers
@@ -20,7 +20,7 @@ import retrofit2.Response
 
 class DetailViewModel(private val application: Application) : ViewModel() {
 
-    private val listDetailFruitMutable = MutableLiveData<ArrayList<FruitItem>>()
+    private val listDetailFruitMutable = MutableLiveData<ArrayList<DetailFruit>>()
     private val favoriteFruitRepository: FavoriteRepository = FavoriteRepository(application)
 
     private val _isLoading = MutableLiveData<Boolean>()
@@ -36,13 +36,12 @@ class DetailViewModel(private val application: Application) : ViewModel() {
                 response: Response<FruitResponse>
             ) {
                 _isLoading.value = false
-                val listDetailFruit = ArrayList<FruitItem>()
+                val listDetailFruit = ArrayList<DetailFruit>()
                 if (response.isSuccessful) {
                     if (response.body() != null) {
                         response.body()?.artikel?.forEach { detailFruit ->
                             listDetailFruit.add(
-                                FruitItem(
-                                    detailFruit.id,
+                                DetailFruit(
                                     detailFruit.nama,
                                     detailFruit.namaLatin,
                                     detailFruit.deskripsi,
@@ -76,7 +75,7 @@ class DetailViewModel(private val application: Application) : ViewModel() {
         })
     }
 
-    internal fun getDetailFruit(): LiveData<ArrayList<FruitItem>> = listDetailFruitMutable
+    internal fun getDetailFruit(): LiveData<ArrayList<DetailFruit>> = listDetailFruitMutable
 
     internal fun check(id: String) = favoriteFruitRepository.check(id)
 

@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bangkit.berbuah.databinding.SearchItemListBinding
 import com.bangkit.berbuah.interfaces.ItemClickCallback
 import com.bangkit.berbuah.model.FruitItem
+import com.bangkit.berbuah.utils.Constant
 import com.bumptech.glide.Glide
 import com.bangkit.berbuah.utils.MyDiffUtil
 
@@ -44,7 +45,7 @@ class SearchAdapter : RecyclerView.Adapter<SearchAdapter.ViewHolder>() {
             binding.apply {
                 binding.apply {
                     Glide.with(itemView.context)
-                        .load(data.gambar)
+                        .load("${Constant.IMAGE_BASE_URL}${data.gambar}")
                         .centerCrop()
                         .into(imgPhoto)
                     tvName.setText(data.nama)

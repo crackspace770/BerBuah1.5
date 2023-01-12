@@ -16,7 +16,6 @@ import com.bangkit.berbuah.databinding.FragmentSearchBinding
 import com.bangkit.berbuah.interfaces.ItemClickCallback
 import com.bangkit.berbuah.model.FruitItem
 import com.bangkit.berbuah.ui.activities.DetailActivity
-import com.bangkit.berbuah.ui.activities.LoginActivity
 import com.bangkit.berbuah.viewmodel.SearchViewModel
 import com.bangkit.berbuah.viewmodel.ViewModelFactory
 

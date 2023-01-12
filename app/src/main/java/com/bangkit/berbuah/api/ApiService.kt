@@ -11,8 +11,8 @@ interface ApiService {
         @Query("buah") query: String
     ): Call<FruitResponse>
 
-    @GET("artikel/nama")
+    @GET("artikel")
     fun getDetailFruit(
-        @Query("buah") nama: String
+        @Query("nama") nama: String
     ): Call<FruitResponse>
 }

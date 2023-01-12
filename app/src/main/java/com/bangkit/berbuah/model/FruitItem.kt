@@ -6,41 +6,36 @@ import java.io.Serializable
 
 @Parcelize
 data class FruitItem(
-    val id: String? = null,
     val nama: String? = null,
-    val namaLatin: String?,
     val deskripsi: String? = null,
-    val manfaat: String,
-    val kandungan: List<String>,
-    val gambar: String? = null
+    val gambar: String? = null,
 ) : Parcelable
+
+@Parcelize
+data class SearchItem(
+    val nama: String? = null,
+    val namaLatin: String? = null,
+    val deskripsi: String? = null,
+    val gambar: String? = null
+): Parcelable
 
 data class FruitData(
     val id : Int,
     val nama : String,
     val namaLatin: String?,
     val deskripsi : String,
-    val manfaat : List<String>? = null,
-    val kandungan : String,
     val gambar : String
 ) : Serializable
 
 @Parcelize
 data class DetailFruit(
-    val id : String,
     val nama: String? = null,
     val namaLatin: String? = null,
     val deskripsi: String? = null,
     val image: String? = null,
     val manfaat: List<String>? = null,
-    val kandungan: List<Kandungan>? = null
+    val nutrisi: List<Kandungan>? = null
 ) : Parcelable
-
-//@Parcelize
-//data class Manfaat(
-//    val nama: String? = null
-//):Parcelable
-
 
 @Parcelize
 data class Kandungan(

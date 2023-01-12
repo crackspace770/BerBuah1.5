@@ -35,7 +35,6 @@ class SearchViewModel(private val application: Application) : ViewModel() {
                         response.body()?.artikel?.forEach { fruit ->
                             listFruit.add(
                                 FruitItem(
-                                    fruit.id,
                                     fruit.nama,
                                     fruit.deskripsi,
                                     fruit.image

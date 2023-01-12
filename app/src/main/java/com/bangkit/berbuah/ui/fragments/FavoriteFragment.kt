@@ -37,7 +37,7 @@ class FavoriteFragment : Fragment() {
 
     private fun obtainViewModel(activity: AppCompatActivity): FavoriteViewModel {
         val factory = ViewModelFactory.getInstance(activity.application)
-        return ViewModelProvider(activity, factory).get(FavoriteViewModel::class.java)
+        return ViewModelProvider(activity, factory)[FavoriteViewModel::class.java]
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -77,7 +77,10 @@ class FavoriteFragment : Fragment() {
         val listFruitData = ArrayList<FruitItem>()
         if (listFruitFavorite != null) {
             for (fruit in listFruitFavorite) {
-                val fruitFavorite = FruitItem(fruit.id, fruit.deskripsi, fruit.image)
+                val fruitFavorite = FruitItem(
+                    fruit.id,
+                    fruit.deskripsi,
+                    fruit.image)
                 listFruitData.add(fruitFavorite)
             }
         }
@@ -92,9 +95,7 @@ class FavoriteFragment : Fragment() {
 
     private fun emptyState() {
         binding.apply {
-            layoutEmptyData.let {
-                it.root.visibility = View.VISIBLE
-            }
+            layoutEmptyData.root.visibility = View.VISIBLE
             rvFavorite.visibility = View.GONE
         }
     }

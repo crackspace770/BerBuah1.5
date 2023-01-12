@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.bangkit.berbuah.R
 import com.bangkit.berbuah.databinding.ActivityDetailBinding
 import com.bangkit.berbuah.model.*
+import com.bangkit.berbuah.utils.Constant.Companion.IMAGE_BASE_URL
 import com.bangkit.berbuah.utils.Utils.loadImageUrl
 import com.bangkit.berbuah.viewmodel.DetailViewModel
 import com.bangkit.berbuah.viewmodel.ViewModelFactory
@@ -56,7 +57,8 @@ class DetailActivity : AppCompatActivity() {
                 listFruit?.let { fruit ->
                     fruit.forEach { detailFruit ->
 
-                        imgFruit.loadImageUrl(detailFruit.image.toString())
+                      //  imgFruit.loadImageUrl(detailFruit.image.toString())
+                        imgFruit.loadImageUrl("${IMAGE_BASE_URL}${detailFruit.image}")
                         tvNama.text = detailFruit.nama
                         tvNamaLatin.text = detailFruit.namaLatin
                         tvDeskripsi.text = detailFruit.deskripsi
