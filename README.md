@@ -6,6 +6,8 @@ We are from team C22-PS206, and this is our main project repository.
 
 Our project combines technology from path machine learning, android, and cloud computing to produce an application that can classify fruits and display nutrition & description of fruits.
 
+This project also be used for Final Thesis.
+
 ## Our Members
 | Name                            | Bangkit-ID    | Path              |
 | -------------                   | ------------- | -------------     |
