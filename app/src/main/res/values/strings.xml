@@ -43,8 +43,9 @@
     <string name="title_activity_bottom_navigation">BottomNavigationActivity</string>
     <string name="invalid_permission">Invalid Permission</string>
     <string name="search_fruit">Pencarian Buah</string>
-    <string name="hasil_deteksi">Pepaya</string>
     <string name="fruit_detection">Deteksi Buah</string>
+    <string name="detect">DETECT</string>
+    <string name="detail">DETAIL</string>
     <string name="nama_latin">Nama Latin</string>
     <string name="lorem_ipsum">Lorem ipsum dolor sit amet</string>
     <string name="deskripsi">Deskripsi</string>

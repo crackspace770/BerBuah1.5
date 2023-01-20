@@ -3,6 +3,8 @@ package com.bangkit.berbuah.ui.activities
 import android.content.res.AssetManager
 import android.graphics.Bitmap
 import android.util.Log
+import com.bangkit.berbuah.model.FruitData
+import com.bangkit.berbuah.model.FruitItem
 import org.tensorflow.lite.Interpreter
 import java.io.FileInputStream
 import java.nio.ByteBuffer
@@ -12,7 +14,10 @@ import java.nio.channels.FileChannel
 import java.util.*
 import kotlin.Comparator
 
-class Classifier (assetManager: AssetManager, modelPath: String, labelPath: String, inputSize: Int) {
+class Classifier (assetManager: AssetManager,
+                  modelPath: String,
+                  labelPath: String,
+                  inputSize: Int) {
 
     private var INTERPRETER: Interpreter
     private var LABEL_LIST: List<String>
@@ -24,12 +29,12 @@ class Classifier (assetManager: AssetManager, modelPath: String, labelPath: Stri
     private val THRESHOLD = 0.4f
 
     data class Recognition(
-        var id: String = "",
-        var title: String = "",
+        var id: String? = null,
+        var nama: String? = null,
         var confidence: Float = 0F
     )  {
         override fun toString(): String {
-            return "Title = $title)"
+            return "Nama = $nama)"
         }
     }
 
@@ -52,7 +57,7 @@ class Classifier (assetManager: AssetManager, modelPath: String, labelPath: Stri
 
     }
 
-    fun recognizeImage(bitmap: Bitmap): List<Classifier.Recognition> {
+    fun recognizeImage(bitmap: Bitmap): List<FruitData> {
         val scaledBitmap = Bitmap.createScaledBitmap(bitmap, INPUT_SIZE, INPUT_SIZE, false)
         val byteBuffer = convertBitmapToByteBuffer(scaledBitmap)
         val result = Array(1) { FloatArray(LABEL_LIST.size) }
@@ -81,12 +86,12 @@ class Classifier (assetManager: AssetManager, modelPath: String, labelPath: Stri
         return byteBuffer
     }
 
-    private fun getSortedResult(labelProbArray: Array<FloatArray>): List<Classifier.Recognition> {
+    private fun getSortedResult(labelProbArray: Array<FloatArray>): List<FruitData> {
         Log.d("Classifier", "List Size:(%d, %d, %d)".format(labelProbArray.size,labelProbArray[0].size,LABEL_LIST.size))
 
         val pq = PriorityQueue(
             MAX_RESULTS,
-            Comparator<Recognition> {
+            Comparator<FruitData> {
                     (_, _, confidence1), (_, _, confidence2)
                 -> java.lang.Float.compare(confidence1, confidence2) * -1
             })
@@ -94,14 +99,14 @@ class Classifier (assetManager: AssetManager, modelPath: String, labelPath: Stri
         for (i in LABEL_LIST.indices) {
             val confidence = labelProbArray[0][i]
             if (confidence >= THRESHOLD) {
-                pq.add(Classifier.Recognition("" + i,
+                pq.add(FruitData("" + i,
                     if (LABEL_LIST.size > i) LABEL_LIST[i] else "Unknown", confidence)
                 )
             }
         }
         Log.d("Classifier", "pqsize:(%d)".format(pq.size))
 
-        val recognitions = ArrayList<Recognition>()
+        val recognitions = ArrayList<FruitData>()
         val recognitionsSize = Math.min(pq.size, MAX_RESULTS)
         for (i in 0 until recognitionsSize) {
             recognitions.add(pq.poll())

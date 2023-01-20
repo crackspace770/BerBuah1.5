@@ -75,6 +75,55 @@ class DetailViewModel(private val application: Application) : ViewModel() {
         })
     }
 
+    internal fun setScanFruit(nama: String) {
+        _isLoading.value = true
+        val client = ApiConfig.getApiService().getScanFruit(nama)
+        client.enqueue(object : Callback<FruitResponse> {
+
+            override fun onResponse(
+                call: Call<FruitResponse>,
+                response: Response<FruitResponse>
+            ) {
+                _isLoading.value = false
+                val listDetailFruit = ArrayList<DetailFruit>()
+                if (response.isSuccessful) {
+                    if (response.body() != null) {
+                        response.body()?.artikel?.forEach { detailFruit ->
+                            listDetailFruit.add(
+                                DetailFruit(
+                                    detailFruit.nama,
+                                    detailFruit.namaLatin,
+                                    detailFruit.deskripsi,
+                                    detailFruit.image,
+                                    detailFruit.manfaat,
+                              //      detailFruit.kandungan
+                                )
+                            )
+                        }
+                        listDetailFruitMutable.postValue(listDetailFruit)
+                    }
+                } else {
+                    Toast.makeText(
+                        application.applicationContext,
+                        response.message(),
+                        Toast.LENGTH_SHORT
+                    ).show()
+                    Log.e(TAG, "onFailure: ${response.message()}")
+                }
+            }
+
+            override fun onFailure(call: Call<FruitResponse>, t: Throwable) {
+                _isLoading.value = false
+                Toast.makeText(
+                    application.applicationContext,
+                    t.message,
+                    Toast.LENGTH_SHORT
+                ).show()
+                Log.e(TAG, "onFailure ${t.message}")
+            }
+        })
+    }
+
     internal fun getDetailFruit(): LiveData<ArrayList<DetailFruit>> = listDetailFruitMutable
 
     internal fun check(id: String) = favoriteFruitRepository.check(id)

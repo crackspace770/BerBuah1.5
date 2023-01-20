@@ -31,12 +31,12 @@ data class ArtikelItem(
 	@field:SerializedName("id")
 	val id: String,
 
-	//  @field:SerializedName("kandungan")
-	//  val kandungan: List<Kandungan>
+//	  @field:SerializedName("kandungan")
+//	  val kandungan: List<Kandungan>
 
 )
 
-/*
+
 data class Kandungan(
 
 	@field:SerializedName("kalori")
@@ -67,7 +67,7 @@ data class Kandungan(
 	val fosfor: String
 
 )
-*/
+
 
 
 

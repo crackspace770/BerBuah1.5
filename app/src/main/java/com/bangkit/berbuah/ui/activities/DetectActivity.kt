@@ -10,9 +10,13 @@ import android.os.Build
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
+import android.view.View
 import android.widget.Toast
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.bangkit.berbuah.databinding.ActivityDetectBinding
+import com.bangkit.berbuah.model.FruitData
 import com.bangkit.berbuah.model.FruitItem
 import com.bangkit.berbuah.ui.activities.DetailActivity.Companion.EXTRA_DATA_FRUIT
 
@@ -25,6 +29,16 @@ class DetectActivity: AppCompatActivity() {
     private val mModelPath = "fruits_model.tflite"
     private val mLabelPath = "fruits_labels.txt"
     private val mSamplePath = "orange.jpg"
+
+    private val resultLauncher: ActivityResultLauncher<Intent> = registerForActivityResult(
+        ActivityResultContracts.StartActivityForResult()
+    ) { result ->
+        if (result.resultCode == DetectActivity.RESULT_CODE && result.data != null) {
+            val selectedValue =
+                result.data?.getIntExtra(DetectActivity.EXTRA_DATA_FRUIT, 0)
+            binding.tvResult.text = "$selectedValue"
+        }
+    }
 
     override fun onRequestPermissionsResult(
         requestCode: Int,
@@ -68,9 +82,7 @@ class DetectActivity: AppCompatActivity() {
 
         // handling permissions
         checkandGetpermissions()
-
     }
-
 
 
     private fun checkandGetpermissions(){
@@ -104,31 +116,39 @@ class DetectActivity: AppCompatActivity() {
     private fun detect(fruitItem: FruitItem){
         val results = mClassifier.recognizeImage(mBitmap).firstOrNull()
         if (results != null) {
-            Toast.makeText(this, "Buah " + results.title, Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Buah " + results.nama, Toast.LENGTH_SHORT).show()
+            val intent = Intent(this@DetectActivity,
+                DetailActivity::class.java)
+                .apply {
+                    putExtra(EXTRA_DATA_FRUIT, fruitItem)
+                    setResult(RESULT_CODE, intent)
+                }
+            startActivity(intent)
         }
 
-        val fruitItem = results?.title
-
-        binding.tvResult.text = results?.title
-
+        binding.tvResult.text = results?.nama
        
     }
 
-    private fun showDetail(fruitItem: FruitItem){
-        Toast.makeText(this, "Kamu memilih " + fruitItem.nama, Toast.LENGTH_SHORT).show()
-
-        val results = mClassifier.recognizeImage(mBitmap).firstOrNull()
-        val nama = binding.tvResult.text
-
-        binding.tvResult.text = results?.title
-
-        val intent = Intent(this@DetectActivity, DetailActivity::class.java
-        ).apply {
-            putExtra(EXTRA_DATA_FRUIT, fruitItem)
-           // putExtra(EXTRA_DATA_FRUIT, results?.title)
-          // putExtra(EXTRA_DATA_FRUIT, binding.tvResult.text)
+    private fun emptyState() {
+        binding.apply {
+            layoutEmptyData.root.visibility = View.VISIBLE
         }
-        startActivity(intent)
+    }
+
+    private fun showDetail(fruitItem: FruitItem){
+        val results = mClassifier.recognizeImage(mBitmap).firstOrNull()
+        Toast.makeText(this, "Kamu memilih " + results?.nama, Toast.LENGTH_SHORT).show()
+        binding.tvResult.text = results?.nama
+
+
+            val intent = Intent(this@DetectActivity,
+                DetailActivity::class.java)
+                .apply {
+                    putExtra(EXTRA_DATA_FRUIT, fruitItem)
+                    setResult(RESULT_CODE, intent)
+                }
+            startActivity(intent)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -146,18 +166,14 @@ class DetectActivity: AppCompatActivity() {
 
         }
 
-    private fun bmpCrop(bmp: Bitmap, maxWidth: Int, maxHeight: Int): Bitmap {
-        if (maxHeight > 0 && maxWidth > 0) {
-            val width = bmp.width
-            val height = bmp.height
-            
-            val startX = (width - maxWidth) / 2
-            val startY = (height - maxHeight) / 2
 
-            return Bitmap.createBitmap(bmp, startX, startY, maxWidth, maxHeight, null, true)
-        } else {
-            return bmp
-        }
+
+    companion object {
+        const val EXTRA_DATA_FRUIT = "extra_data_fruit"
+        const val EXTRA_DATA_DETAIL = "extra_data_detail"
+
+        const val RESULT_CODE = 110
+
     }
 
     }

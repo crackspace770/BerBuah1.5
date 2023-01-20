@@ -1,8 +1,11 @@
 package com.bangkit.berbuah.ui.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.bangkit.berbuah.R
@@ -21,7 +24,17 @@ class DetailActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetailBinding
     private lateinit var detailViewModel: DetailViewModel
     private lateinit var fruit: FruitItem
+    private lateinit var nutrisi: KandunganBuah
 
+    private val resultLauncher: ActivityResultLauncher<Intent> = registerForActivityResult(
+        ActivityResultContracts.StartActivityForResult()
+    ) { result ->
+        if (result.resultCode == DetectActivity.RESULT_CODE && result.data != null) {
+            val selectedValue =
+                result.data?.getIntExtra(DetectActivity.EXTRA_DATA_FRUIT, 0)
+            binding.tvNama.text = "$selectedValue"
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,11 +51,11 @@ class DetailActivity : AppCompatActivity() {
             val nama = Bundle()
             nama.putString(EXTRA_DATA_DETAIL, fruit.nama)
             detailViewModel.setDetailFruit(it.toString())
-
             setActionBarTitle(fruit.nama.toString())
         }
 
         getDataFruit(fruit)
+
 
     }
 
@@ -51,14 +64,14 @@ class DetailActivity : AppCompatActivity() {
         return ViewModelProvider(activity, factory)[DetailViewModel::class.java]
     }
 
-    private fun getDataFruit(fruitItem: FruitItem ) {
+    private fun getDataFruit(fruitItem: FruitItem) {
         binding.apply {
             detailViewModel.getDetailFruit().observe(this@DetailActivity) { listFruit ->
                 listFruit?.let { fruit ->
                     fruit.forEach { detailFruit ->
 
                       //  imgFruit.loadImageUrl(detailFruit.image.toString())
-                        imgFruit.loadImageUrl("${IMAGE_BASE_URL}${detailFruit.image}")
+                        imgFruit.loadImageUrl("${IMAGE_BASE_URL}${detailFruit.image.toString()}")
                         tvNama.text = detailFruit.nama
                         tvNamaLatin.text = detailFruit.namaLatin
                         tvDeskripsi.text = detailFruit.deskripsi
@@ -110,6 +123,7 @@ class DetailActivity : AppCompatActivity() {
         }
     }
 
+
     private fun toastMessage(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
@@ -142,5 +156,8 @@ class DetailActivity : AppCompatActivity() {
         companion object {
         const val EXTRA_DATA_FRUIT = "extra_data_fruit"
         const val EXTRA_DATA_DETAIL = "extra_data_detail"
-    }
+
+            const val RESULT_CODE = 110
+
+        }
 }

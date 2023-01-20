@@ -1,15 +1,17 @@
 package com.bangkit.berbuah.model
 
 import android.os.Parcelable
+import com.bangkit.berbuah.response.Kandungan
 import kotlinx.parcelize.Parcelize
 import java.io.Serializable
 
 @Parcelize
 data class FruitItem(
-    val nama: String? = null,
+    val nama: String? = null ,
     val deskripsi: String? = null,
     val gambar: String? = null,
 ) : Parcelable
+
 
 @Parcelize
 data class SearchItem(
@@ -19,13 +21,14 @@ data class SearchItem(
     val gambar: String? = null
 ): Parcelable
 
+@Parcelize
 data class FruitData(
-    val id : Int,
-    val nama : String,
-    val namaLatin: String?,
-    val deskripsi : String,
-    val gambar : String
-) : Serializable
+    val id : String? = null,
+    val nama : String? = null,
+    var confidence: Float = 0F,
+    val deskripsi: String? = null,
+    val gambar: String? = null
+) : Parcelable
 
 @Parcelize
 data class DetailFruit(
@@ -34,11 +37,11 @@ data class DetailFruit(
     val deskripsi: String? = null,
     val image: String? = null,
     val manfaat: List<String>? = null,
-    val nutrisi: List<Kandungan>? = null
+  //  val nutrisi: List<KandunganBuah>
 ) : Parcelable
 
 @Parcelize
-data class Kandungan(
+data class KandunganBuah(
     val kalori: String? = null,
     val karbohidrat: String? = null,
     val gula: String? = null,
