@@ -16,9 +16,8 @@ import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.bangkit.berbuah.databinding.ActivityDetectBinding
-import com.bangkit.berbuah.model.FruitData
 import com.bangkit.berbuah.model.FruitItem
-import com.bangkit.berbuah.ui.activities.DetailActivity.Companion.EXTRA_DATA_FRUIT
+import com.bangkit.berbuah.utils.Classifier
 
 class DetectActivity: AppCompatActivity() {
 
@@ -29,16 +28,6 @@ class DetectActivity: AppCompatActivity() {
     private val mModelPath = "fruits_model.tflite"
     private val mLabelPath = "fruits_labels.txt"
     private val mSamplePath = "orange.jpg"
-
-    private val resultLauncher: ActivityResultLauncher<Intent> = registerForActivityResult(
-        ActivityResultContracts.StartActivityForResult()
-    ) { result ->
-        if (result.resultCode == DetectActivity.RESULT_CODE && result.data != null) {
-            val selectedValue =
-                result.data?.getIntExtra(DetectActivity.EXTRA_DATA_FRUIT, 0)
-            binding.tvResult.text = "$selectedValue"
-        }
-    }
 
     override fun onRequestPermissionsResult(
         requestCode: Int,
@@ -117,13 +106,6 @@ class DetectActivity: AppCompatActivity() {
         val results = mClassifier.recognizeImage(mBitmap).firstOrNull()
         if (results != null) {
             Toast.makeText(this, "Buah " + results.nama, Toast.LENGTH_SHORT).show()
-            val intent = Intent(this@DetectActivity,
-                DetailActivity::class.java)
-                .apply {
-                    putExtra(EXTRA_DATA_FRUIT, fruitItem)
-                    setResult(RESULT_CODE, intent)
-                }
-            startActivity(intent)
         }
 
         binding.tvResult.text = results?.nama

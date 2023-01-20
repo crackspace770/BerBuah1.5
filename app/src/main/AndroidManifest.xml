@@ -57,6 +57,14 @@
             android:exported="false"
             />
 
+        <activity android:name=".ui.activities.DetectionActivity"
+            android:exported="false"
+            />
+
+        <activity android:name=".ui.activities.ResultActivity"
+            android:exported="false"
+            />
+
         <meta-data
             android:name="com.google.firebase.ml.vision.DEPENDENCIES"
             android:value="label" />

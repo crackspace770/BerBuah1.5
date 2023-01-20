@@ -13,8 +13,6 @@ class SplashActivity: AppCompatActivity() {
     internal val mRunnable: Runnable = Runnable {
         val intent = Intent(applicationContext, MainActivity::class.java)
         startActivity(intent)
-
-
         finish()
     }
 

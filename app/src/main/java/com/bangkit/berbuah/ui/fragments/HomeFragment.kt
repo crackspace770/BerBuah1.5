@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment
 import com.bangkit.berbuah.ui.activities.ScanActivity
 import com.bangkit.berbuah.databinding.FragmentHomeBinding
 import com.bangkit.berbuah.ui.activities.DetectActivity
+import com.bangkit.berbuah.ui.activities.DetectionActivity
 
 
 class HomeFragment : Fragment() {
@@ -37,12 +38,18 @@ class HomeFragment : Fragment() {
 
         binding.apply {
             btnToDetect.setOnClickListener {goDetect()}
+            btnDetect.setOnClickListener{detect()}
         }
 
         }
 
     private fun goDetect(){
         val intent = Intent(context, DetectActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun detect(){
+        val intent = Intent(context, DetectionActivity::class.java)
         startActivity(intent)
     }
 

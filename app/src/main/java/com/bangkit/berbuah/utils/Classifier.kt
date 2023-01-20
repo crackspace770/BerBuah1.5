@@ -1,10 +1,9 @@
-package com.bangkit.berbuah.ui.activities
+package com.bangkit.berbuah.utils
 
 import android.content.res.AssetManager
 import android.graphics.Bitmap
 import android.util.Log
 import com.bangkit.berbuah.model.FruitData
-import com.bangkit.berbuah.model.FruitItem
 import org.tensorflow.lite.Interpreter
 import java.io.FileInputStream
 import java.nio.ByteBuffer
