@@ -34,7 +34,7 @@
     <string name="username">Username</string>
     <string name="input_name">Name</string>
     <string name="enter_password">Enter Password</string>
-
+    <string name="close_button">Back</string>
     <string name="image_login">Image Login</string>
     <string name="image_signup">Image Signup</string>
     <string name="pilih_gambar">Pilih gambar yang kamu inginkan</string>
@@ -43,7 +43,7 @@
     <string name="title_activity_bottom_navigation">BottomNavigationActivity</string>
     <string name="invalid_permission">Invalid Permission</string>
     <string name="search_fruit">Pencarian Buah</string>
-    <string name="fruit_detection">Deteksi Buah</string>
+    <string name="fruit_detection">Nama Buah</string>
     <string name="detect">DETECT</string>
     <string name="detail">DETAIL</string>
     <string name="nama_latin">Nama Latin</string>

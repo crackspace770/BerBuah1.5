@@ -41,8 +41,8 @@
 
     <Button
         android:id="@+id/btnToDetect"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="241dp"
+        android:layout_height="69dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="92dp"
         android:layout_marginEnd="32dp"
@@ -77,15 +77,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
-    <Button
-        android:id="@+id/btnDetect"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="29dp"
-        android:text="Button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnToDetect" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

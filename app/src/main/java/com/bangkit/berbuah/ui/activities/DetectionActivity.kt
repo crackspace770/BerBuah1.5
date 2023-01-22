@@ -30,10 +30,9 @@ class DetectionActivity:AppCompatActivity() {
     private val mSamplePath = "orange.jpg"
 
     //all reference for getting fruit detection
-    var txtTest : Int? = null
     private var fruitData = ArrayList<FruitDetect>()
     private var detection: Intent? = null
-    var txtResult: String? = null
+    private var txtResult: String? = null
 
 
     override fun onRequestPermissionsResult(
@@ -80,7 +79,6 @@ class DetectionActivity:AppCompatActivity() {
             buttonCamera.setOnClickListener{camera()}
             buttonGallery.setOnClickListener { gallery() }
             buttonDetect.setOnClickListener { detect() }
-
         }
 
         // handling permissions
@@ -121,7 +119,7 @@ class DetectionActivity:AppCompatActivity() {
         detection = validate()
         val results = mClassifier.recognizeImage(mBitmap).firstOrNull()
         binding.tvResult.text = results?.nama
-       // binding.tvResult.text = txtTest.toString()
+        txtResult = results?.nama
 
         if(detection != null){
             startActivity(detection)
@@ -134,201 +132,247 @@ class DetectionActivity:AppCompatActivity() {
         if (txtResult == "Alpukat"){
             var detect1 = Intent(this@DetectionActivity, ResultActivity::class.java).apply {
                 putExtra("nama", fruitData[0].nama)
-                putExtra("desc", fruitData[0].deskripsi)
-                putExtra("asal", fruitData[0].namaLatin)
-                putExtra("manfaat", fruitData[0].manfaat)
+                putExtra("deskripsi", fruitData[0].deskripsi)
+                putExtra("namaLatin", fruitData[0].namaLatin)
+                putExtra("manfaat", fruitData[0].manfaat.toString())
                 putExtra("nutrisi", fruitData[0].nutrisi)
                 putExtra("gambar", fruitData[0].gambar) }
             return detect1
         } else if (txtResult == "Anggur"){
             var detect2 = Intent(this@DetectionActivity, ResultActivity::class.java).apply {
                 putExtra("nama", fruitData[1].nama)
-                putExtra("desc", fruitData[1].deskripsi)
-                putExtra("asal", fruitData[1].namaLatin)
-                putExtra("manfaat", fruitData[1].manfaat)
+                putExtra("deskripsi", fruitData[1].deskripsi)
+                putExtra("namaLatin", fruitData[1].namaLatin)
+                putExtra("manfaat", fruitData[1].manfaat.toString())
                 putExtra("nutrisi", fruitData[1].nutrisi)
                 putExtra("gambar", fruitData[1].gambar) }
             return detect2
         } else if (txtResult == "Apel") {
             var untunt3 = Intent(this@DetectionActivity, ResultActivity::class.java).apply {
                 putExtra("nama", fruitData[2].nama)
-                putExtra("desc", fruitData[2].deskripsi)
-                putExtra("asal", fruitData[2].namaLatin)
-                putExtra("manfaat", fruitData[2].manfaat)
+                putExtra("deskripsi", fruitData[2].deskripsi)
+                putExtra("namaLatin", fruitData[2].namaLatin)
+                putExtra("manfaat", fruitData[2].manfaat.toString())
                 putExtra("nutrisi", fruitData[2].nutrisi)
                 putExtra("gambar", fruitData[2].gambar) }
-            return untunt3;
+            return untunt3
         } else if (txtResult == "Aprikot") {
             var untunt4 = Intent(this@DetectionActivity, ResultActivity::class.java).apply {
                 putExtra("nama", fruitData[3].nama)
-                putExtra("desc", fruitData[3].deskripsi)
-                putExtra("asal", fruitData[3].namaLatin)
-                putExtra("manfaat", fruitData[3].manfaat)
+                putExtra("deskripsi", fruitData[3].deskripsi)
+                putExtra("namaLatin", fruitData[3].namaLatin)
+                putExtra("manfaat", fruitData[3].manfaat.toString())
                 putExtra("nutrisi", fruitData[3].nutrisi)
                 putExtra("gambar", fruitData[3].gambar) }
-            return untunt4;
+            return untunt4
         } else if (txtResult == "Blewah") {
             var untunt5 = Intent(this@DetectionActivity, ResultActivity::class.java).apply {
                 putExtra("nama", fruitData[4].nama)
-                putExtra("desc", fruitData[4].deskripsi)
-                putExtra("asal", fruitData[4].namaLatin)
-                putExtra("manfaat", fruitData[4].manfaat)
+                putExtra("deskripsi", fruitData[4].deskripsi)
+                putExtra("namaLatin", fruitData[4].namaLatin)
+                putExtra("manfaat", fruitData[4].manfaat.toString())
                 putExtra("nutrisi", fruitData[4].nutrisi)
                 putExtra("gambar", fruitData[4].gambar) }
-            return untunt5;
+            return untunt5
         } else if (txtResult == "Blueberry") {
             var untunt6 = Intent(this@DetectionActivity, ResultActivity::class.java).apply {
                 putExtra("nama", fruitData[5].nama)
-                putExtra("desc", fruitData[5].deskripsi)
-                putExtra("asal", fruitData[5].namaLatin)
-                putExtra("manfaat", fruitData[5].manfaat)
+                putExtra("deskripsi", fruitData[5].deskripsi)
+                putExtra("namaLatin", fruitData[5].namaLatin)
+                putExtra("manfaat", fruitData[5].manfaat.toString())
                 putExtra("nutrisi", fruitData[5].nutrisi)
                 putExtra("gambar", fruitData[5].gambar) }
             return untunt6;
         } else if (txtResult == "Buah Naga") {
             var untunt7 = Intent(this@DetectionActivity, ResultActivity::class.java).apply {
                 putExtra("nama", fruitData[6].nama)
-                putExtra("desc", fruitData[6].deskripsi)
-                putExtra("asal", fruitData[6].namaLatin)
-                putExtra("manfaat", fruitData[6].manfaat)
+                putExtra("deskripsi", fruitData[6].deskripsi)
+                putExtra("namaLatin", fruitData[6].namaLatin)
+                putExtra("manfaat", fruitData[6].manfaat.toString())
                 putExtra("nutrisi", fruitData[6].nutrisi)
                 putExtra("gambar", fruitData[6].gambar) }
             return untunt7;
-        } else if (txtResult == "Jambu") {
+        } else if (txtResult == "Ceri") {
             val untunt8 = Intent(this@DetectionActivity, ResultActivity::class.java).apply {
                 putExtra("nama", fruitData[7].nama)
-                putExtra("desc", fruitData[7].deskripsi)
-                putExtra("asal", fruitData[7].namaLatin)
-                putExtra("manfaat", fruitData[7].manfaat)
+                putExtra("deskripsi", fruitData[7].deskripsi)
+                putExtra("namaLatin", fruitData[7].namaLatin)
+                putExtra("manfaat", fruitData[7].manfaat.toString())
                 putExtra("nutrisi", fruitData[7].nutrisi)
                 putExtra("gambar", fruitData[7].gambar) }
             return untunt8;
-        } else if (txtResult == "Jeruk") {
+        } else if (txtResult == "Jambu") {
             var untunt9 = Intent(this@DetectionActivity, ResultActivity::class.java).apply {
                 putExtra("nama", fruitData[8].nama)
-                putExtra("desc", fruitData[8].deskripsi)
-                putExtra("asal", fruitData[8].namaLatin)
-                putExtra("manfaat", fruitData[8].manfaat)
+                putExtra("deskripsi", fruitData[8].deskripsi)
+                putExtra("namaLatin", fruitData[8].namaLatin)
+                putExtra("manfaat", fruitData[8].manfaat.toString())
                 putExtra("nutrisi", fruitData[8].nutrisi)
                 putExtra("gambar", fruitData[8].gambar) }
             return untunt9;
-        } else if (txtResult == "Kelapa") {
+        } else if (txtResult == "Jeruk") {
             var untunt10 = Intent(this@DetectionActivity, ResultActivity::class.java).apply {
                 putExtra("nama", fruitData[9].nama)
-                putExtra("desc", fruitData[9].deskripsi)
-                putExtra("asal", fruitData[9].namaLatin)
-                putExtra("manfaat", fruitData[9].manfaat)
+                putExtra("deskripsi", fruitData[9].deskripsi)
+                putExtra("namaLatin", fruitData[9].namaLatin)
+                putExtra("manfaat", fruitData[9].manfaat.toString())
                 putExtra("nutrisi", fruitData[9].nutrisi)
                 putExtra("gambar", fruitData[9].gambar) }
             return untunt10;
-        } else if (txtResult == "Kiwi") {
+        } else if (txtResult == "Kelapa") {
             var untunt11 = Intent(this@DetectionActivity, ResultActivity::class.java).apply {
                 putExtra("nama", fruitData[10].nama)
-                putExtra("desc", fruitData[10].deskripsi)
-                putExtra("asal", fruitData[10].namaLatin)
-                putExtra("manfaat", fruitData[10].manfaat)
+                putExtra("deskripsi", fruitData[10].deskripsi)
+                putExtra("namaLatin", fruitData[10].namaLatin)
+                putExtra("manfaat", fruitData[10].manfaat.toString())
                 putExtra("nutrisi", fruitData[10].nutrisi)
                 putExtra("gambar", fruitData[10].gambar) }
             return untunt11;
-        } else if (txtResult == "Kacang") {
+        } else if (txtResult == "Kiwi") {
             var untunt12 = Intent(this@DetectionActivity, ResultActivity::class.java).apply {
                 putExtra("nama", fruitData[11].nama)
-                putExtra("desc", fruitData[11].deskripsi)
-                putExtra("asal", fruitData[11].namaLatin)
-                putExtra("manfaat", fruitData[11].manfaat)
+                putExtra("deksripsi", fruitData[11].deskripsi)
+                putExtra("namaLatin", fruitData[11].namaLatin)
+                putExtra("manfaat", fruitData[11].manfaat.toString())
                 putExtra("nutrisi", fruitData[11].nutrisi)
                 putExtra("gambar", fruitData[11].gambar) }
             return untunt12;
-        } else if (txtResult == "Belimbing") {
+        } else if (txtResult == "Kacang") {
             var untunt13 = Intent(this@DetectionActivity, ResultActivity::class.java).apply {
                 putExtra("nama", fruitData[12].nama)
-                putExtra("desc", fruitData[12].deskripsi)
-                putExtra("asal", fruitData[12].namaLatin)
-                putExtra("manfaat", fruitData[12].manfaat)
+                putExtra("deskripsi", fruitData[12].deskripsi)
+                putExtra("namaLatin", fruitData[12].namaLatin)
+                putExtra("manfaat", fruitData[12].manfaat.toString())
                 putExtra("nutrisi", fruitData[12].nutrisi)
                 putExtra("gambar", fruitData[12].gambar) }
             return untunt13;
-        } else if (txtResult == "Leci") {
+        } else if (txtResult == "Belimbing") {
             var untunt14 = Intent(this@DetectionActivity, ResultActivity::class.java).apply {
                 putExtra("nama", fruitData[13].nama)
-                putExtra("desc", fruitData[13].deskripsi)
-                putExtra("asal", fruitData[13].namaLatin)
-                putExtra("manfaat", fruitData[13].manfaat)
+                putExtra("deskripsi", fruitData[13].deskripsi)
+                putExtra("namaLatin", fruitData[13].namaLatin)
+                putExtra("manfaat", fruitData[13].manfaat.toString())
                 putExtra("nutrisi", fruitData[13].nutrisi)
                 putExtra("gambar", fruitData[13].gambar) }
             return untunt14;
-        } else if (txtResult == "Lemon") {
+        } else if (txtResult == "Leci") {
             var untunt15 = Intent(this@DetectionActivity, ResultActivity::class.java).apply {
                 putExtra("nama", fruitData[14].nama)
-                putExtra("desc", fruitData[14].deskripsi)
-                putExtra("asal", fruitData[14].namaLatin)
-                putExtra("manfaat", fruitData[14].manfaat)
+                putExtra("deskripsi", fruitData[14].deskripsi)
+                putExtra("namaLatin", fruitData[14].namaLatin)
+                putExtra("manfaat", fruitData[14].manfaat.toString())
                 putExtra("nutrisi", fruitData[14].nutrisi)
                 putExtra("gambar", fruitData[14].gambar) }
             return untunt15;
-        } else if (txtResult == "Mangga") {
+        } else if (txtResult == "Lemon") {
             var untunt16 = Intent(this@DetectionActivity, ResultActivity::class.java).apply {
                 putExtra("nama", fruitData[15].nama)
-                putExtra("desc", fruitData[15].deskripsi)
-                putExtra("asal", fruitData[15].namaLatin)
-                putExtra("manfaat", fruitData[15].manfaat)
+                putExtra("deskripsi", fruitData[15].deskripsi)
+                putExtra("namaLatin", fruitData[15].namaLatin)
+                putExtra("manfaat", fruitData[15].manfaat.toString())
                 putExtra("nutrisi", fruitData[15].nutrisi)
                 putExtra("gambar", fruitData[15].gambar) }
             return untunt16
-        } else if (txtResult == "Pepaya") {
+        } else if (txtResult == "Mangga") {
             var untunt17 = Intent(this@DetectionActivity, ResultActivity::class.java).apply {
                 putExtra("nama", fruitData[16].nama)
-                putExtra("desc", fruitData[16].deskripsi)
-                putExtra("asal", fruitData[16].namaLatin)
-                putExtra("manfaat", fruitData[16].manfaat)
+                putExtra("deskripsi", fruitData[16].deskripsi)
+                putExtra("namaLatin", fruitData[16].namaLatin)
+                putExtra("manfaat", fruitData[16].manfaat.toString())
                 putExtra("nutrisi", fruitData[16].nutrisi)
                 putExtra("gambar", fruitData[16].gambar) }
             return untunt17
-        } else if (txtResult == "Pisang") {
+        } else if (txtResult == "Pepaya") {
             var untunt18 = Intent(this@DetectionActivity, ResultActivity::class.java).apply {
                 putExtra("nama", fruitData[17].nama)
-                putExtra("desc", fruitData[17].deskripsi)
-                putExtra("asal", fruitData[17].namaLatin)
-                putExtra("manfaat", fruitData[17].manfaat)
+                putExtra("deskripsi", fruitData[17].deskripsi)
+                putExtra("namaLatin", fruitData[17].namaLatin)
+                putExtra("manfaat", fruitData[17].manfaat.toString())
                 putExtra("nutrisi", fruitData[17].nutrisi)
                 putExtra("gambar", fruitData[17].gambar) }
             return untunt18
-        } else if (txtResult == "Rambutan") {
+        } else if (txtResult == "Pisang") {
             var untunt19 = Intent(this@DetectionActivity, ResultActivity::class.java).apply {
                 putExtra("nama", fruitData[18].nama)
-                putExtra("desc", fruitData[18].deskripsi)
-                putExtra("asal", fruitData[18].namaLatin)
-                putExtra("manfaat", fruitData[18].manfaat)
+                putExtra("deskripsi", fruitData[18].deskripsi)
+                putExtra("namaLatin", fruitData[18].namaLatin)
+                putExtra("manfaat", fruitData[18].manfaat.toString())
                 putExtra("nutrisi", fruitData[18].nutrisi)
                 putExtra("gambar", fruitData[18].gambar) }
             return untunt19
-        } else if (txtResult == "Salak") {
+        } else if (txtResult == "Rambutan") {
             var untunt20 = Intent(this@DetectionActivity, ResultActivity::class.java).apply {
                 putExtra("nama", fruitData[19].nama)
-                putExtra("desc", fruitData[19].deskripsi)
-                putExtra("asal", fruitData[19].namaLatin)
-                putExtra("manfaat", fruitData[19].manfaat)
+                putExtra("deskripsi", fruitData[19].deskripsi)
+                putExtra("namaLatin", fruitData[19].namaLatin)
+                putExtra("manfaat", fruitData[19].manfaat.toString())
                 putExtra("nutrisi", fruitData[19].nutrisi)
                 putExtra("gambar", fruitData[19].gambar) }
             return untunt20
-        } else if (txtResult == "Strawberry") {
+        } else if (txtResult == "Salak") {
             var untunt21 = Intent(this@DetectionActivity, ResultActivity::class.java).apply {
                 putExtra("nama", fruitData[20].nama)
-                putExtra("desc", fruitData[20].deskripsi)
-                putExtra("asal", fruitData[20].namaLatin)
-                putExtra("manfaat", fruitData[20].manfaat)
+                putExtra("deskripsi", fruitData[20].deskripsi)
+                putExtra("namaLatin", fruitData[20].namaLatin)
+                putExtra("manfaat", fruitData[20].manfaat.toString())
                 putExtra("nutrisi", fruitData[20].nutrisi)
                 putExtra("gambar", fruitData[20].gambar) }
             return untunt21
-        } else if (txtResult == "Manggis") {
+        } else if (txtResult == "Strawberry") {
             var untunt22 = Intent(this@DetectionActivity, ResultActivity::class.java).apply {
                 putExtra("nama", fruitData[21].nama)
-                putExtra("desc", fruitData[21].deskripsi)
-                putExtra("asal", fruitData[21].namaLatin)
-                putExtra("manfaat", fruitData[21].manfaat)
+                putExtra("deskripsi", fruitData[21].deskripsi)
+                putExtra("namaLatin", fruitData[21].namaLatin)
+                putExtra("manfaat", fruitData[21].manfaat.toString())
                 putExtra("nutrisi", fruitData[21].nutrisi)
                 putExtra("gambar", fruitData[21].gambar) }
             return untunt22
+        }else if (txtResult == "Manggis"){
+            var untunt23 = Intent(this@DetectionActivity, ResultActivity::class.java).apply {
+                putExtra("nama", fruitData[22].nama)
+                putExtra("deskripsi", fruitData[22].deskripsi)
+                putExtra("namaLatin", fruitData[22].namaLatin)
+                putExtra("manfaat", fruitData[22].manfaat.toString())
+                putExtra("nutrisi", fruitData[22].nutrisi)
+                putExtra("gambar", fruitData[22].gambar) }
+            return untunt23
+        }else if (txtResult == "Persik"){
+            var untunt24 = Intent(this@DetectionActivity, ResultActivity::class.java).apply {
+                putExtra("nama", fruitData[23].nama)
+                putExtra("deskripsi", fruitData[23].deskripsi)
+                putExtra("namaLatin", fruitData[23].namaLatin)
+                putExtra("manfaat", fruitData[23].manfaat.toString())
+                putExtra("nutrisi", fruitData[23].nutrisi)
+                putExtra("gambar", fruitData[23].gambar) }
+            return untunt24
+        }else if (txtResult == "Pir"){
+            var untunt25 = Intent(this@DetectionActivity, ResultActivity::class.java).apply {
+                putExtra("nama", fruitData[24].nama)
+                putExtra("deskripsi", fruitData[24].deskripsi)
+                putExtra("namaLatin", fruitData[24].namaLatin)
+                putExtra("manfaat", fruitData[24].manfaat.toString())
+                putExtra("nutrisi", fruitData[24].nutrisi)
+                putExtra("gambar", fruitData[24].gambar) }
+            return untunt25
+        }else if (txtResult == "Nanas"){
+            var untunt26 = Intent(this@DetectionActivity, ResultActivity::class.java).apply {
+                putExtra("nama", fruitData[25].nama)
+                putExtra("deskripsi", fruitData[25].deskripsi)
+                putExtra("namaLatin", fruitData[25].namaLatin)
+                putExtra("manfaat", fruitData[25].manfaat.toString())
+                putExtra("nutrisi", fruitData[25].nutrisi)
+                putExtra("gambar", fruitData[25].gambar) }
+            return untunt26
+        }
+        else if (txtResult == "Tomat"){
+            var untunt27 = Intent(this@DetectionActivity, ResultActivity::class.java).apply {
+                putExtra("nama", fruitData[26].nama)
+                putExtra("deskripsi", fruitData[26].deskripsi)
+                putExtra("namaLatin", fruitData[26].namaLatin)
+                putExtra("manfaat", fruitData[26].manfaat.toString())
+                putExtra("nutrisi", fruitData[26].nutrisi)
+                putExtra("gambar", fruitData[26].gambar) }
+            return untunt27
         }
         return detection
     }
@@ -349,15 +393,5 @@ class DetectionActivity:AppCompatActivity() {
         }
 
     }
-
-
-    companion object {
-        const val EXTRA_DATA_FRUIT = "extra_data_fruit"
-        const val EXTRA_DATA_DETAIL = "extra_data_detail"
-
-        const val RESULT_CODE = 110
-
-    }
-
 
 }

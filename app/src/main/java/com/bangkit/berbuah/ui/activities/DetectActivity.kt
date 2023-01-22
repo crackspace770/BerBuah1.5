@@ -66,7 +66,7 @@ class DetectActivity: AppCompatActivity() {
             buttonCamera.setOnClickListener{camera()}
             buttonGallery.setOnClickListener { gallery() }
             buttonDetect.setOnClickListener { detect(FruitItem()) }
-            btnDetail.setOnClickListener { showDetail(FruitItem()) }
+          //  btnDetail.setOnClickListener { showDetail(FruitItem()) }
         }
 
         // handling permissions
@@ -116,21 +116,6 @@ class DetectActivity: AppCompatActivity() {
         binding.apply {
             layoutEmptyData.root.visibility = View.VISIBLE
         }
-    }
-
-    private fun showDetail(fruitItem: FruitItem){
-        val results = mClassifier.recognizeImage(mBitmap).firstOrNull()
-        Toast.makeText(this, "Kamu memilih " + results?.nama, Toast.LENGTH_SHORT).show()
-        binding.tvResult.text = results?.nama
-
-
-            val intent = Intent(this@DetectActivity,
-                DetailActivity::class.java)
-                .apply {
-                    putExtra(EXTRA_DATA_FRUIT, fruitItem)
-                    setResult(RESULT_CODE, intent)
-                }
-            startActivity(intent)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

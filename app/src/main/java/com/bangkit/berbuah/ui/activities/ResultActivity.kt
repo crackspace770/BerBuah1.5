@@ -15,28 +15,36 @@ class ResultActivity:AppCompatActivity() {
         binding = ActivityResultBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         // create reference from parsing intent
         val nama  = intent.getStringExtra("nama")
-        val desc  = intent.getStringExtra("desc")
-        val asal = intent.getStringExtra("asal")
+        val deskripsi  = intent.getStringExtra("deskripsi")
+        val namaLatin = intent.getStringExtra("namaLatin")
         val manfaat = intent.getStringExtra("manfaat")
        // val nutrisi = intent.getStringExtra("nutrisi")
         val gambar = intent.getStringExtra("gambar")
 
-        //fetching all data result
-        binding.tvNama.text = nama
-        binding.tvNamaLatin.text = desc
-        binding.tvDeskripsi.text = asal
-        binding.tvManfaat.text = manfaat
-       // binding.txtNutrisiBuah.text = nutrisi
-
+        binding.apply {
+            //fetching all data result
+            tvNama.text = nama
+            tvNamaLatin.text = namaLatin
+            tvDeskripsi.text = deskripsi
+            tvManfaat.text = manfaat
+            // binding.txtNutrisiBuah.text = nutrisi
+        }
         Glide.with(this)
             .load(gambar)
             .fitCenter()
             .into(binding.imgFruit)
 
-        //btn home logic
+        binding.btnClose.setOnClickListener {
+            finish()
+        }
 
-}
+    }
+
+
+
+
 
 }

@@ -26,16 +26,6 @@ class DetailActivity : AppCompatActivity() {
     private lateinit var fruit: FruitItem
     private lateinit var nutrisi: KandunganBuah
 
-    private val resultLauncher: ActivityResultLauncher<Intent> = registerForActivityResult(
-        ActivityResultContracts.StartActivityForResult()
-    ) { result ->
-        if (result.resultCode == DetectActivity.RESULT_CODE && result.data != null) {
-            val selectedValue =
-                result.data?.getIntExtra(DetectActivity.EXTRA_DATA_FRUIT, 0)
-            binding.tvNama.text = "$selectedValue"
-        }
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailBinding.inflate(layoutInflater)
@@ -157,7 +147,6 @@ class DetailActivity : AppCompatActivity() {
         const val EXTRA_DATA_FRUIT = "extra_data_fruit"
         const val EXTRA_DATA_DETAIL = "extra_data_detail"
 
-            const val RESULT_CODE = 110
 
         }
 }

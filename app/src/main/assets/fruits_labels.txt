@@ -15,16 +15,16 @@ Alpukat
 Pisang
 Pisang
 Pisang
-Cactus fruit
+Buah Naga
 Blewah
 Blewah
 Pepaya
-Cherry
-Cherry
-Cherry
-Cherry
-Cherry
-Cherry
+Ceri
+Ceri
+Ceri
+Ceri
+Ceri
+Ceri
 Kastanye
 Jeruk
 Cocoa
@@ -77,7 +77,7 @@ Jeruk
 Lemon
 Rambutan
 Strawberry
-Cherry
+Ceri
 Salak
 Strawberry
 Strawberry

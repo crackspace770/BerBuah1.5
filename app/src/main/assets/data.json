@@ -46,26 +46,30 @@
     "nama": "Aprikot",
     "deskripsi": "Aprikot adalah salah satu spesies buah dari subgenus Prem. Asal tanaman ini sulit dipastikan karena sudah dibudayakan orang sejak zaman prasejarah.",
     "namaLatin": "Prunus armeniaca.",
-    "manfaat": "Menjaga kesehatan usus, Menjaga kadar gula dan kolesterol tubuh, Memelihara kesehatan jantung, Mencegah dehidrasi, Menjaga kesehatan mata, Membuat kulit semakin menawan.",
+    "manfaat": [
+        "Menjaga kesehatan usus",
+        "Menjaga kadar gula dan kolesterol tubuh, Memelihara kesehatan jantung",
+        "Mencegah dehidrasi, Menjaga kesehatan mata, Membuat kulit semakin menawan"
+    ],
     "nutrisi": "Minyak air dan diperkaya beragam antioksidan dan vitamin, di antaranya vitamin A, vitamin B, folat, vitamin C, dan vitamin E.",
     "gambar": "https://docs.google.com/uc?export=download&id=1cQEX10t4EB8ac4LyG0DlogWton8O_s_x"
 },
-{
-    "id": "5",
-    "nama": "Blewah",
-    "deskripsi": "Blewah masih satu keluarga dengan buah melon. Buah yang memiliki nama latin Cucumis melo var. cantalupensis ini memiliki daging berwarna oranye dan bentuk luar yang mirip labu. Jenis buah ini mudah untuk Anda dapatkan di pasar tradisional di negara-negara Asia Tenggara, contohnya Indonesia dan Malaysia.",
-    "namaLatin": "Cucumis melo var",
-    "manfaat": ["Meningkatkan sistem kekebalan tubuh",
-        "Menurunkan risiko penyakit jantung",
-        "Menurunkan risiko kanker",
-        "Mencegah penuaan dini",
-        "Mencegah anemia",
-        "Menurunkan tekanan darah tinggi",
-        "Mencegah sembelit",
-        "Membantu menurunkan berat badan"],
-    "nutrisi": "Karbohidrat, Protein, Serat, Vitamin C, Kalsium, Fosfor, Zat Besi",
-    "gambar": "https://docs.google.com/uc?export=download&id=1NImo_N9erH2M6alEjNjcwomdhK0EmNms"
-},
+
+    {
+        "id": "5",
+        "nama": "Blewah",
+        "deskripsi": "Aprikot adalah salah satu spesies buah dari subgenus Prem. Asal tanaman ini sulit dipastikan karena sudah dibudayakan orang sejak zaman prasejarah.",
+        "namaLatin": "Prunus armeniaca.",
+        "manfaat": [
+            "Menjaga kesehatan usus",
+            "Menjaga kadar gula dan kolesterol tubuh, Memelihara kesehatan jantung",
+            "Mencegah dehidrasi, Menjaga kesehatan mata, Membuat kulit semakin menawan"
+        ],
+        "nutrisi": "Minyak air dan diperkaya beragam antioksidan dan vitamin, di antaranya vitamin A, vitamin B, folat, vitamin C, dan vitamin E.",
+        "gambar": "https://docs.google.com/uc?export=download&id=1cQEX10t4EB8ac4LyG0DlogWton8O_s_x"
+    },
+
+
 {
     "id": "6",
     "nama": "Blueberry",
@@ -345,7 +349,7 @@
     },
 
     {
-        "id": "25",
+        "id": "24",
         "nama": "Persik",
         "deskripsi": "Persik adalah buah yang memiliki kulit yang halus dan daging buah yang empuk dan manis. Buah ini tumbuh di daerah beriklim sedang dan sering dijadikan bahan dasar untuk jus, smoothie, atau diolah menjadi makanan lainnya. Persik memiliki biji yang terletak di tengah-tengah buah dan dikelilingi oleh daging buah yang lembut. Buah ini kaya akan nutrisi, terutama vitamin C, dan dapat memberikan banyak manfaat bagi kesehatan. Persik tersedia dalam berbagai varietas yang berbeda, dengan warna kulit yang beragam mulai dari kuning hingga merah tergantung pada varietasnya.",
         "namaLatin": "Prunus persica",
@@ -363,35 +367,27 @@
         "gambar": "https://docs.google.com/uc?export=download&id=15TGDgs2PGqgkQTypnMEXlkuz_EzI7mKW"
     },
     {
-        "id": "26",
+        "id": "25",
         "nama": "Pir",
-        "deskripsi": "Stroberi atau tepatnya stroberi kebun (juga dikenal dengan nama arbei, dari bahasa Belanda ardbei) adalah sebuah varietas stroberi yang paling banyak dikenal di dunia. Seperti spesies lain dalam genus Fragaria (stroberi), buah ini berada dalam keluarga Rosaceae. Secara umum buah ini bukanlah buah, melainkan buah semu, artinya daging buahnya tidak berasal dari ovari tanaman (achenium) tetapi dari bagian bawah hypanthium yang berbentuk mangkuk tempat ovari tanaman itu berada.",
-        "namaLatin": "Strawberry tumbuh liar di Italia sejak 234 SM dan ditemukan di Virginia oleh orang Eropa pertama ketika kapal mereka mendarat di sana pada 1588. Pada zaman Yunani kuno buah ini diangkat sebagai lambang dewi cinta.",
-        "manfaat": "Menyehatkan saluran pencernaan, Menurunkan kadar kolesterol dalam tubuh, Menjaga tekanan darah tetap stabil, Mengontrol kadar gula darah, Mencegah penyakit jantung, Menangkal efek radikal bebas, Menurunkan berat badan.",
-        "nutrisi": "Stroberi mengandung magnesium, kalium, zat besi, dan beragam jenis antioksidan, seperti antosianin dan ellagitannins. Kandungan zat besi dan antioksidan tersebut juga dapat digunakan untuk memperbaiki rambut yang rusak, melembapkan, serta menjadikan rambut terasa halus.",
-        "gambar": "https://docs.google.com/uc?export=download&id=15TGDgs2PGqgkQTypnMEXlkuz_EzI7mKW"
-    },
-
-    {
-        "id": "27",
-        "nama": "Belimbing",
-        "deskripsi": "Buah belimbing adalah buah yang berasal dari pohon belimbing. Buah belimbing memiliki kulit yang keras, dengan daging buah yang berwarna putih atau merah dan berasa asam. Buah belimbing dapat dimakan mentah atau diolah menjadi jus, sirup, atau campuran masakan lainnya. Buah belimbing kaya akan vitamin C, kalium, dan antioksidan, sehingga bermanfaat bagi kesehatan.",
-        "namaLatin": "Averrhoa carambola",
-        "manfaat": ["Menurunkan tekanan darah",
-            "Mencegah penyakit jantung",
+        "deskripsi": "Pir adalah buah yang tumbuh di daerah beriklim sedang dan memiliki kulit yang halus dan daging buah yang lembut dan manis. Buah ini biasanya memiliki warna kulit yang kuning atau oranye dan daging buah yang merah atau oranye tergantung pada varietasnya. Pir sering dijadikan bahan dasar untuk jus, smoothie, atau diolah menjadi makanan lainnya. Buah ini kaya akan nutrisi, terutama vitamin C, dan dapat memberikan banyak manfaat bagi kesehatan",
+        "namaLatin": "Pyrus.",
+        "manfaat": ["Mencegah penyakit jantung",
+            "Mengontrol tekanan darah",
+            "Meningkatkan sistem kekebalan tubuh",
             "Menurunkan risiko kanker",
-            "Menjaga kesehatan kulit",
-            "Menjaga kesehatan mata",
             "Mencegah anemia",
-            "Menjaga kesehatan tulang",
-            "Mencegah dehidrasi",
-            "Menjaga kesehatan saluran pencernaan"],
+            "Menjaga kesehatan kulit",
+            "Mencegah diabetes",
+            "Mencegah osteoporosis",
+            "Membantu pencernaan",
+            "Menjaga kesehatan mata"],
         "nutrisi": "Stroberi mengandung magnesium, kalium, zat besi, dan beragam jenis antioksidan, seperti antosianin dan ellagitannins. Kandungan zat besi dan antioksidan tersebut juga dapat digunakan untuk memperbaiki rambut yang rusak, melembapkan, serta menjadikan rambut terasa halus.",
         "gambar": "https://docs.google.com/uc?export=download&id=15TGDgs2PGqgkQTypnMEXlkuz_EzI7mKW"
     },
 
+
     {
-        "id": "28",
+        "id": "26",
         "nama": "Nanas",
         "deskripsi": "adalah tumbuhan tropis dengan buah yang dapat dimakan dan tumbuhan yang paling penting secara ekonomi dalam famili Bromeliaceae. Nanas adalah tumbuhan asli Amerika Selatan, dan telah dibudidayakan disana selama berabad-abad. Pengenalan nanas ke Eropa pada abad ke-17 menjadikannya ikon budaya kemewahan yang signifikan. \\nSejak tahun 1820-an, nanas telah ditanam secara komersial di rumah kaca dan banyak perkebunan tropis. \\nSelain itu, nanas merupakan buah tropis terpenting ketiga dalam produksi dunia.",
         "namaLatin": "Ananas comosus",
@@ -404,7 +400,7 @@
     },
 
     {
-        "id": "29",
+        "id": "27",
         "nama": "Tomat",
         "deskripsi": "Tomat adalah buah yang tumbuh di daerah beriklim sedang dan memiliki daging buah yang merah atau kuning tergantung pada varietasnya. Buah ini memiliki bentuk yang bulat dengan kulit yang licin dan daging buah yang empuk. Tomat sering dijadikan bahan dasar untuk sambal, saus, atau diolah menjadi makanan lainnya. Buah ini kaya akan nutrisi, terutama vitamin C, dan dapat memberikan banyak manfaat bagi kesehatan.",
         "namaLatin": "Solanum lycopersicum",
