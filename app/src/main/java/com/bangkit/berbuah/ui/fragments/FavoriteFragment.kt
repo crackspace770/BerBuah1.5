@@ -80,7 +80,7 @@ class FavoriteFragment : Fragment() {
                 val fruitFavorite = FruitItem(
                     fruit.id,
                     fruit.deskripsi,
-                    //fruit.image
+                    fruit.image
                 )
                 listFruitData.add(fruitFavorite)
             }

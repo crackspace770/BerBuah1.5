@@ -19,6 +19,9 @@ class ViewModelFactory constructor(private val application: Application) :
             modelClass.isAssignableFrom(SearchViewModel::class.java) -> {
                 SearchViewModel(application) as T
             }
+            modelClass.isAssignableFrom(ResultViewModel::class.java) -> {
+                ResultViewModel(application) as T
+            }
             else -> throw  IllegalArgumentException("Unknown ViewModel Class: ${modelClass.name}")
         }
     }

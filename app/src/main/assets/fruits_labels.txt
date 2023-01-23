@@ -13,12 +13,12 @@ Persik
 Alpukat
 Alpukat
 Pisang
-Pisang
+Apel
 Pisang
 Buah Naga
 Blewah
 Blewah
-Pepaya
+Belimbing
 Ceri
 Ceri
 Ceri
@@ -27,9 +27,9 @@ Ceri
 Ceri
 Kastanye
 Jeruk
-Cocoa
+Kelapa
 Kurma
-Granadilla
+Jeruk
 Anggur
 Anggur
 Anggur
@@ -51,7 +51,7 @@ Leci
 Jeruk
 Mangga
 Manggis
-Jeruk
+Markisa
 Melon
 Blueberry
 Apel
@@ -66,13 +66,13 @@ Pir
 Pir
 Pir
 Pepino
-Jeruk
-Jeruk
+Ceplukan
+Ceplukan
 Nanas
 Nanas
 Buah Naga
 Plum
-Pomegranate
+Delima
 Jeruk
 Lemon
 Rambutan

@@ -1,9 +1,13 @@
 package com.bangkit.berbuah.viewmodel
 
 import android.app.Application
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.bangkit.berbuah.database.Favorite
+import com.bangkit.berbuah.model.DetailFruit
+import com.bangkit.berbuah.model.FruitDetect
 import com.bangkit.berbuah.ui.repository.FavoriteRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -11,6 +15,10 @@ import kotlinx.coroutines.launch
 class ResultViewModel(private val application: Application):ViewModel() {
 
     private val favoriteFruitRepository: FavoriteRepository = FavoriteRepository(application)
+    private val listDetailFruitMutable = MutableLiveData<ArrayList<FruitDetect>>()
+
+
+    internal fun getDetailFruit(): LiveData<ArrayList<FruitDetect>> = listDetailFruitMutable
 
     internal fun check(id: String) = favoriteFruitRepository.check(id)
 

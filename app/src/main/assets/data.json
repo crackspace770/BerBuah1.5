@@ -12,7 +12,7 @@
         "Menjaga kesehatan mata",
         "Mencegah kanker dan membantu pengobatannya"],
     "nutrisi": "Serat, Glukosa, Kalium, Natrium, Magnesium, Vitamin A, Vitamin C, Vitamin E, Vitamin K1, Folat, Vitamin B6",
-    "gambar": "https://docs.google.com/uc?export=download&id=11JR2l_yjOC-E10qfLmuL4_I1bR5RViX8"
+    "gambar": "https://api-berbuah.herokuapp.com/public/uploads/img-alpukat.jpg"
 },
 {
     "id": "2",
@@ -27,7 +27,7 @@
         "Meningkatkan sistem kekebalan tubuh",
         "Menurunkan risiko kanker"],
     "nutrisi": "Energi, protein, lemak, karbohidrat, kalsium, fosfor, magnesium, natrium, kalium, zat besi, zink, vitamin B1, vitamin B2, vitamin B3, vitamin B6, asam pantotenat, asam folat, vitamin C, vitamin K, serat, dan air.",
-    "gambar": "https://docs.google.com/uc?export=download&id=1UytL9Z5fXzk95mdkCsltA2uQ1qnLBDlL"
+    "gambar": "https://api-berbuah.herokuapp.com/public/uploads/img-anggur.jpg"
 },
 {
     "id": "3",
@@ -39,7 +39,7 @@
         "Kaya akan kandungan antioksidan",
         "Menurunkan risiko penyakit diabetes"],
     "nutrisi": "Vitamin A, vitamin B1, vitamin B2, vitamin B3, vitamin B5, vitamin B6, vitamin B9, vitamin C.",
-    "gambar": "https://docs.google.com/uc?export=download&id=15M9Nw6Cvqzq0i-j7EsWNI14igS7kIw02"
+    "gambar": "https://api-berbuah.herokuapp.com/public/uploads/img-apel.jpg"
 },
 {
     "id": "4",
@@ -66,7 +66,7 @@
             "Mencegah dehidrasi, Menjaga kesehatan mata, Membuat kulit semakin menawan"
         ],
         "nutrisi": "Minyak air dan diperkaya beragam antioksidan dan vitamin, di antaranya vitamin A, vitamin B, folat, vitamin C, dan vitamin E.",
-        "gambar": "https://docs.google.com/uc?export=download&id=1cQEX10t4EB8ac4LyG0DlogWton8O_s_x"
+        "gambar": "https://api-berbuah.herokuapp.com/public/uploads/img-blewah.jpeg"
     },
 
 
@@ -84,7 +84,7 @@
         "Mengandung mangan yang dapat membantu metabolisme karbohidrat dan lemak",
         "Mengandung zat besi yang dapat membantu pembentukan sel darah merah"],
     "nutrisi": "Protein sebanyak 1,1 gram. Lemak sebanyak 0,49 gram. Karbohidrat sebanyak 21,45 gram. Serat sebanyak 3,6 gram, Kalori sebanyak 84 gram, Gula sebanyak 14,74 gram, Kalsium sebanyak 9 miligram, Zat besi sebanyak 0,41 miligram, Kalium sebanyak 114 miligram, Magnesium sebanyak 9 miligram, Fosfor sebanyak 18 miligram, Natrium sebanyak 1 miligram, Folat sebanyak 9 miligram, Vitamin C, Vitamin B6, Vitamin K.",
-    "gambar": "https://docs.google.com/uc?export=download&id=1_EqT3DaBMSeDUA3io0rapjCJJxS0aEJ6"
+    "gambar": "https://api-berbuah.herokuapp.com/public/uploads/img-blueberry.jpg"
 },
 {
     "id": "7",
@@ -100,7 +100,7 @@
         "Menurunkan Tekanan Darah Tinggi",
         "Menjaga Kesehatan Tulang"],
     "nutrisi": "Vitamin C, Vitamin B2, vitamin B3, Magnesium, Zat besi, Kalsium, Antioksidan",
-    "gambar": "https://docs.google.com/uc?export=download&id=1icQvkYvmemsguZGS1tJ4xIDa0_6xXBCZ"
+    "gambar": "https://api-berbuah.herokuapp.com/public/uploads/img-buah-naga.jpg"
 },
 {
     "id": "8",
@@ -116,7 +116,7 @@
         "Menjaga kesehatan kulit",
         "Menurunkan risiko infeksi"],
     "nutrisi": "Dalam 100 gram buah ini mengandung sekitar 27 gram karbohidrat, 4 gram serat, 1,5 gram protein, 5 gram lemak, vitamin A sebanyak 44 IU, vitamin C sekitar 20 mg, magnesium 30 mg, fosfor 39 mg, dan mineral lainnya",
-    "gambar": "https://docs.google.com/uc?export=download&id=1jNzZEz26u5k5Nte7ECXdY40iLH2Va7wX"
+    "gambar": "https://api-berbuah.herokuapp.com/public/uploads/img-ceri.jpeg"
 },
 {
     "id": "9",
@@ -126,7 +126,7 @@
     "manfaat": ["Buah jambu biji cocok dikonsumsi di siang hari karena buahnya segar dan mendinginkan badan.",
         "Buah jambu biji mengandung banyak vitamin dan serat sehingga cocok dikonsumsi untuk menjaga kesehatan. Warna daging jambu biji yang merah mengidikasikan jambu biji kaya akan vitamin A untuk kesehatan mata dan antioksidan."],
     "nutrisi": "Dalam satu buah jambu biji dengan berat sekitar 55 gram, mengandung 37 kalori dan beberapa nutrisi berikut ini: 1,4 gram protein, 2,97 gram serat, 9,9 miligram kalsium, 12 miligram Magnesium, 229 miligram Kalium, 125 miligram Vitamin C, Vitamin A, Vitamin B, Vitamin K, Vitamin E, Selenium, Zinc, dan Mangan",
-    "gambar": "https://docs.google.com/uc?export=download&id=1XGK4O8Hy8NcxxWysRETAviBx1BFPF7sM"
+    "gambar": "https://api-berbuah.herokuapp.com/public/uploads/img-jambu.jpg"
 },
 {
     "id": "10",
@@ -136,9 +136,9 @@
     "manfaat": ["Meningkatkan daya tahan tubuh",
         "Mencegah anemia",
         "Menjaga kesehatan jantung",
-        "Mendukung kesehatan sistem cerna"],
+        "Mendukung kesehatan sistem pencernaan"],
     "nutrisi": "Jeruk merupakan sumber vitamin C yang sangat baik. Tidak hanya itu, dalam satu buah jeruk juga mengandung vitamin dan mineral lain yang dibutuhkan, seperti vitamin B1, folat, hingga potassium. Selain vitamin dan mineral, buah jeruk juga terkenal akan kandungan air yang sangat tinggi.",
-    "gambar": "https://docs.google.com/uc?export=download&id=1AeKq1vtoUF8-KedGVBRDlwj5H4bpyw1-"
+    "gambar": "https://api-berbuah.herokuapp.com/public/uploads/img-jeruk.jpg"
 },
 {
     "id": "11",
@@ -152,7 +152,7 @@
         "Menjaga Kesehatan Jantung",
         "Mengontrol Kadar Gula Darah"],
     "nutrisi": "Secara umum, air buah ini mengandung 16 kalori dan 4,1 gram gula. Sedangkan daging yang terkandung di dalamnya mengandung 77 kalori, 1,4 gram protein, 3.6 gram lemak, 10 gram gula, 257 gram kalium, dan 6 miligram vitamin C.",
-    "gambar": "https://docs.google.com/uc?export=download&id=1wZIWvRAukfqXQBKldzIp4rYDDfvt45kp"
+    "gambar": "https://api-berbuah.herokuapp.com/public/uploads/img-kelapa.jpg"
 },
 {
     "id": "12",
@@ -166,7 +166,7 @@
         "Menstabilkan Diabetes",
         "Menyehatkan Kulit"],
     "nutrisi": "Dalam 100 gram buah kiwi terkandung 64 kalori dan beberapa nutrisi berikut: 1gram protein, 3gram serat, 74.7miligram vitamin C, 35miligram kalsium, 1.3miligram vitamin E, dan 0.24miligram zat besi",
-    "gambar": "https://docs.google.com/uc?export=download&id=1TU7DLktWfCGulZfBq2_1F7hKg7Djz7ol"
+    "gambar": "https://api-berbuah.herokuapp.com/public/uploads/img-manggis.jpg"
 },
 {
     "id": "13",
@@ -180,7 +180,7 @@
         "Kaya akan lemak tak jenuh",
         "Kaya akan mineral dan vitamin"],
     "nutrisi": "Apabila diurai lebih rinci, maka kandungan gizi kurma per 100 gramnya (± 13 butir) adalah 63,35 gram gula; 8 gram serat; 2,45 gram protein; 0,39 gram lemak; 2 miligram Natrium; 656 miligram Kalium; dengan kalori total sebesar 299 kkal",
-    "gambar": "https://docs.google.com/uc?export=download&id=1IKMlfaObTCjxZPA-Iv2RLl0rIUnuHPZh"
+    "gambar": "https://api-berbuah.herokuapp.com/public/uploads/img-kacang.jpg"
 },
 {
     "id": "14",
@@ -197,7 +197,7 @@
         "Mencegah dehidrasi",
         "Menjaga kesehatan saluran pencernaan"],
     "nutrisi": "2 gram protein, 12-15 gram karbohidrat, 0,1 gram lemak, 2,5 gram serat, 800-900 mikrogram vitamin A, 20 miligram vitamin C, 50 miligram kalsium, 25 miligram magnesium.",
-    "gambar": "https://docs.google.com/uc?export=download&id=1PNOUSum-EHOfN8Je4sXuZ9gbJ6lHFHGH"
+    "gambar": "https://api-berbuah.herokuapp.com/public/uploads/img-belimbing.jpg"
 },
 {
     "id": "15",
@@ -212,7 +212,7 @@
         "Mengobati Anemia dan Kekurangan Zat Besi",
         "Membantu Menurunkan Berat Badan"],
     "nutrisi": "Selain serat dan karbohidrat, buah leci juga mengandung banyak vitamin dan mineral, di antaranya: Vitamin C yang menjadi kandungan vitamin paling tinggi pada buah leci. Vitamin B, termasuk B2 (riboflavin), B3 (niasin), dan B6 (pyridoxine). Kalium",
-    "gambar": "https://docs.google.com/uc?export=download&id=1JOJun5smNY0Au2wqZQrM3M9_kQzdVvdn"
+    "gambar": "https://api-berbuah.herokuapp.com/public/uploads/img-leci.jpg"
 },
 {
     "id": "16",
@@ -226,7 +226,7 @@
         "Meningkatkan sistem pencernaan",
         "Menjaga kesehatan gigi"],
     "nutrisi": "Vitamin C, Zat Besi, Vitamin B6, Magnesium, Calcium, Vitamin D, Cobalamin",
-    "gambar": "https://docs.google.com/uc?export=download&id=1t8XdEcgtZrkonxQdP92m9HssntrXn5nX"
+    "gambar": "https://api-berbuah.herokuapp.com/public/uploads/img-lemon.jpg"
 },
 {
     "id": "17",
@@ -244,7 +244,7 @@
         "Menjaga kesehatan mata",
         "Meningkatkan konsentrasi"],
     "nutrisi": "Mangga merupakan sumber vitamin yang kaya akan vitamin A, vitamin C dan vitamin B. Walaupun tidak banyak mangga juga mengandung vitamin E dan vitamin K. Makan mangga sangat sehat karena memiliki beberapa senyawa lain seperti, lutein, asam galat, asam anakardat dan kriptozantin.",
-    "gambar": "https://docs.google.com/uc?export=download&id=1pfGzsrYha8ZhKxP7xWDHLzi1Tz3nDO-o"
+    "gambar": "https://api-berbuah.herokuapp.com/public/uploads/img-mangga.jpg"
 },
 {
     "id": "18",
@@ -262,7 +262,7 @@
         "Membantu pencernaan",
         "Mencegah osteoporosis"],
     "nutrisi": "Satu buah pepaya dengan ukuran sedang, mengandung sekitar 120 kalori, 30 gram karbohidrat (di dalamnya terdapat 5 gram serat dan 18 gram gula) dan 2 gram protein. Pepaya merupakan sumber yang sangat baik dari manfaat vitamin C dan satu buah pepaya, memberikan 224% dari kebutuhan harian.",
-    "gambar": "https://docs.google.com/uc?export=download&id=1aISSvIHr6Eq6hCRIek_9kQg9EEtJ_YhX"
+    "gambar": "https://api-berbuah.herokuapp.com/public/uploads/img-pepaya.jpg"
 },
 {
     "id": "19",
@@ -275,7 +275,7 @@
         "Menjaga kesehatan jantung dan pembuluh darah",
         "Sebagai sumber energi"],
     "nutrisi": "Satu buah pisang berukuran sedang atau 100 gram mengandung 89 kalori, 75 persen air, 1,1 gram protein, 22,8 gram karbohidrat, 12,2 gram gula, 2,6 gram serat, dan 0,3 gram lemak. Pisang merupakan sumber karbohidrat yang kaya, yang utamanya berbentuk pati pada pisang mentah dan gula pada pisang matang.",
-    "gambar": "https://docs.google.com/uc?export=download&id=1zhZqmKkV6F09C09IhQsFeaAmcw21g0Cj"
+    "gambar": "https://api-berbuah.herokuapp.com/public/uploads/img-pisang.jpg"
 },
 {
     "id": "20",
@@ -293,7 +293,7 @@
         "Mencegah osteoporosis",
         "Membantu pencernaan"],
     "nutrisi": "Protein: 0.9gram, Karbohidrat: 18gram, Serat: 0.8-1gram, Kalsium: 15 miligram, Fosfor: 15 mg, Zat besi: 0.5 mg, Natrium: 15 mg, ",
-    "gambar": "https://docs.google.com/uc?export=download&id=1iQrsS9ZcNsh9qSUg4bYvN025W1MvTp3a"
+    "gambar": "https://api-berbuah.herokuapp.com/public/uploads/img-rambutan.jpg"
 },
 {
     "id": "21",
@@ -309,7 +309,7 @@
         "Mengontrol tekanan darah",
         "Mencegah penyakit jantung"],
     "nutrisi": "Di balik kulitnya yang bersisik, salak memiliki beragam khasiat bagi kesehatan. Manfaatnya dapat diperoleh karena buah satu ini tidak hanya mengandung karbohidrat dan serat yang tinggi, tapi juga beragam vitamin dan mineral penting seperti vitamin B2, vitamin C, kalium, kalsium, fosfor, folat, dan zat besi.",
-    "gambar": "https://docs.google.com/uc?export=download&id=1Zf5C5JA0PYp75iTIPNDyOfcNm9fWeyfp"
+    "gambar": "https://api-berbuah.herokuapp.com/public/uploads/img-salak.jpg"
 },
 {
     "id": "22",
@@ -326,7 +326,7 @@
         "Menjaga kesehatan mata",
         "Mencegah osteoporosis"],
     "nutrisi": "Stroberi mengandung magnesium, kalium, zat besi, dan beragam jenis antioksidan, seperti antosianin dan ellagitannins. Kandungan zat besi dan antioksidan tersebut juga dapat digunakan untuk memperbaiki rambut yang rusak, melembapkan, serta menjadikan rambut terasa halus.",
-    "gambar": "https://docs.google.com/uc?export=download&id=15TGDgs2PGqgkQTypnMEXlkuz_EzI7mKW"
+    "gambar": "https://api-berbuah.herokuapp.com/public/uploads/img-strawberry.jpg"
 },
 
     {
@@ -345,7 +345,7 @@
             "Memperkuat sistem kekebalan tubuh",
             "Mencegah osteoporosis"],
         "nutrisi": "Stroberi mengandung magnesium, kalium, zat besi, dan beragam jenis antioksidan, seperti antosianin dan ellagitannins. Kandungan zat besi dan antioksidan tersebut juga dapat digunakan untuk memperbaiki rambut yang rusak, melembapkan, serta menjadikan rambut terasa halus.",
-        "gambar": "https://docs.google.com/uc?export=download&id=15TGDgs2PGqgkQTypnMEXlkuz_EzI7mKW"
+        "gambar": "https://api-berbuah.herokuapp.com/public/uploads/img-manggis.jpg"
     },
 
     {
@@ -364,7 +364,7 @@
             "Mencegah osteoporosis",
             "Membantu pencernaan"],
         "nutrisi": "Stroberi mengandung magnesium, kalium, zat besi, dan beragam jenis antioksidan, seperti antosianin dan ellagitannins. Kandungan zat besi dan antioksidan tersebut juga dapat digunakan untuk memperbaiki rambut yang rusak, melembapkan, serta menjadikan rambut terasa halus.",
-        "gambar": "https://docs.google.com/uc?export=download&id=15TGDgs2PGqgkQTypnMEXlkuz_EzI7mKW"
+        "gambar": "https://api-berbuah.herokuapp.com/public/uploads/img-persik.jpg"
     },
     {
         "id": "25",
@@ -382,7 +382,7 @@
             "Membantu pencernaan",
             "Menjaga kesehatan mata"],
         "nutrisi": "Stroberi mengandung magnesium, kalium, zat besi, dan beragam jenis antioksidan, seperti antosianin dan ellagitannins. Kandungan zat besi dan antioksidan tersebut juga dapat digunakan untuk memperbaiki rambut yang rusak, melembapkan, serta menjadikan rambut terasa halus.",
-        "gambar": "https://docs.google.com/uc?export=download&id=15TGDgs2PGqgkQTypnMEXlkuz_EzI7mKW"
+        "gambar": "https://api-berbuah.herokuapp.com/public/uploads/img-pir.jpg"
     },
 
 
@@ -396,7 +396,7 @@
             "Mengurangi risiko kanker",
             "Membantu penyembuhan luka pasca operasi"],
         "nutrisi": "Stroberi mengandung magnesium, kalium, zat besi, dan beragam jenis antioksidan, seperti antosianin dan ellagitannins. Kandungan zat besi dan antioksidan tersebut juga dapat digunakan untuk memperbaiki rambut yang rusak, melembapkan, serta menjadikan rambut terasa halus.",
-        "gambar": "https://docs.google.com/uc?export=download&id=15TGDgs2PGqgkQTypnMEXlkuz_EzI7mKW"
+        "gambar": "https://api-berbuah.herokuapp.com/public/uploads/img-nanas.jpg"
     },
 
     {
@@ -414,7 +414,127 @@
             "Menjaga kesehatan mata",
             "Membantu pencernaan"],
         "nutrisi": "Stroberi mengandung magnesium, kalium, zat besi, dan beragam jenis antioksidan, seperti antosianin dan ellagitannins. Kandungan zat besi dan antioksidan tersebut juga dapat digunakan untuk memperbaiki rambut yang rusak, melembapkan, serta menjadikan rambut terasa halus.",
-        "gambar": "https://docs.google.com/uc?export=download&id=15TGDgs2PGqgkQTypnMEXlkuz_EzI7mKW"
+        "gambar": "https://api-berbuah.herokuapp.com/public/uploads/img-tomat.jpg"
+    },
+
+    {
+        "id": "28",
+        "nama": "Kurma",
+        "deskripsi": "Buah kurma termasuk buah tertua di dunia yang paling banyak dibudidayakan di timur tengah, misalnya Arab Saudi. Cita rasanya yang manis dan dagingnya yang lembut membuat kurma menjadi salah satu hidangan makanan penutup favorit di berbagai kalangan.",
+        "namaLatin": "Phoenix dactylifera",
+        "manfaat": ["Mendukung kesehatan sistem pencernaan",
+            "Mengontrol kadar gula darah",
+            "Mengontrol tekanan darah",
+            "Menjaga kesehatan ibu hamil dan mendukung tumbuh kembang janin",
+            "Mencegah pertumbuhan sel kanker"],
+        "nutrisi": "Stroberi mengandung magnesium, kalium, zat besi, dan beragam jenis antioksidan, seperti antosianin dan ellagitannins. Kandungan zat besi dan antioksidan tersebut juga dapat digunakan untuk memperbaiki rambut yang rusak, melembapkan, serta menjadikan rambut terasa halus.",
+        "gambar": "https://res.cloudinary.com/dk0z4ums3/image/upload/v1603174434/attached_image/manfaat-buah-kurma-untuk-kesehatan-0-alodokter.jpg"
+    },
+
+    {
+        "id": "29",
+        "nama": "Aprikot",
+        "deskripsi": "Buah aprikot mungkin masih terkesan asing di kalangan masyarakat Indonesia. Padahal, manfaat buah aprikot untuk kesehatan tidaklah sedikit. Meski ukurannya kecil, buah aprikot menyimpan banyak nutrisi yang dapat menjaga kesehatan sejumlah organ penting dalam tubuh dan mencegah berbagai penyakit serius. Buah aprikot memiliki cita rasa manis dan menyegarkan, sehingga sebagian orang lebih gemar mengonsumsinya secara langsung.",
+        "namaLatin": "Prunus armeniaca",
+        "manfaat": ["Menjaga kesehatan usus",
+            "Menjaga kadar gula dan kolesterol tubuh, Memelihara kesehatan jantung",
+            "Mencegah dehidrasi, Menjaga kesehatan mata, Membuat kulit semakin menawan"],
+        "nutrisi": "Stroberi mengandung magnesium, kalium, zat besi, dan beragam jenis antioksidan, seperti antosianin dan ellagitannins. Kandungan zat besi dan antioksidan tersebut juga dapat digunakan untuk memperbaiki rambut yang rusak, melembapkan, serta menjadikan rambut terasa halus.",
+        "gambar": "https://res.cloudinary.com/dk0z4ums3/image/upload/v1641883521/attached_image/manfaat-buah-aprikot-tak-perlu-diragukan-lagi-0-alodokter.jpg"
+    },
+
+    {
+        "id": "30",
+        "nama": "Kastanye",
+        "deskripsi": "Buah aprikot mungkin masih terkesan asing di kalangan masyarakat Indonesia. Padahal, manfaat buah aprikot untuk kesehatan tidaklah sedikit. Meski ukurannya kecil, buah aprikot menyimpan banyak nutrisi yang dapat menjaga kesehatan sejumlah organ penting dalam tubuh dan mencegah berbagai penyakit serius. Buah aprikot memiliki cita rasa manis dan menyegarkan, sehingga sebagian orang lebih gemar mengonsumsinya secara langsung.",
+        "namaLatin": "Castanea",
+        "manfaat": ["Memelihara kesehatan jantung",
+            "Menyehatkan sistem pencernaan",
+            "Mengendalikan gula darah",
+            "Meningkatkan kinerja otak"],
+        "nutrisi": "Stroberi mengandung magnesium, kalium, zat besi, dan beragam jenis antioksidan, seperti antosianin dan ellagitannins. Kandungan zat besi dan antioksidan tersebut juga dapat digunakan untuk memperbaiki rambut yang rusak, melembapkan, serta menjadikan rambut terasa halus.",
+        "gambar": "https://cms.sehatq.com/cdn-cgi/image/format=auto,width=1080,quality=90/public/img/article_img/mengenal-chestnut-atau-kacang-kastanye-banyak-khasiatnya-untuk-kesehatan-1614403812.jpg"
+    },
+
+    {
+        "id": "31",
+        "nama": "Buah Delima",
+        "deskripsi": "Buah dengan nama latin Punica granatum ini merupakan jenis buah yang masuk ke dalam kelompok berry. Buah delima diketahui mengandung berbagai nutrisi yang dibutuhkan oleh tubuh, seperti protein, karbohidrat, serat, dan vitamin, termasuk vitamin C, vitamin B kompleks, folat, vitamin E, serta vitamin K. Buah delima juga mengandung beraneka mineral, di antaranya kalium, magnesium, zinc, dan tembaga, serta kaya antioksidan polifenol, termasuk kantosianin. Tak hanya itu, buah delima juga rendah kalori dan lemak, sehingga relatif aman untuk dikonsumsi tiap hari.",
+        "namaLatin": "Punica granatum",
+        "manfaat": ["Mencegah penyakit jantung",
+            "Mencegah kanker",
+            "Mengurangi kolesterol",
+            "Mengurangi risiko penyakit radang sendi"],
+        "nutrisi": "Stroberi mengandung magnesium, kalium, zat besi, dan beragam jenis antioksidan, seperti antosianin dan ellagitannins. Kandungan zat besi dan antioksidan tersebut juga dapat digunakan untuk memperbaiki rambut yang rusak, melembapkan, serta menjadikan rambut terasa halus.",
+        "gambar": "https://res.cloudinary.com/dk0z4ums3/image/upload/v1603089385/attached_image/4-manfaat-buah-delima-yang-perlu-kamu-tahu-0-alodokter.jpg"
+    },
+
+    {
+        "id": "32",
+        "nama": "Plum",
+        "deskripsi": "Buah plum mungkin masih kurang dikenal oleh sebagian masyarakat Indonesia. Padahal manfaat buah plum sangat baik untuk menjaga kesehatan tubuh, bahkan untuk mengatasi beberapa masalah kesehatan. Buah plum adalah salah satu jenis buah yang banyak dibudidayakan di negara barat, seperti Amerika dan Eropa. Buah plum kaya akan antioksidan yang bermanfaat untuk menangkal radikal bebas.",
+        "namaLatin": "Prunus domestica",
+        "manfaat": ["Menurunkan berat badan",
+            "Meningkatkan sistem kekebalan tubuh",
+            "Menjaga kesehatan mata",
+            "Mencegah sembelit",
+            "Menjaga kadar gula darah",
+            "Mencegah osteoporosis"],
+        "nutrisi": "Stroberi mengandung magnesium, kalium, zat besi, dan beragam jenis antioksidan, seperti antosianin dan ellagitannins. Kandungan zat besi dan antioksidan tersebut juga dapat digunakan untuk memperbaiki rambut yang rusak, melembapkan, serta menjadikan rambut terasa halus.",
+        "gambar": "https://res.cloudinary.com/dk0z4ums3/image/upload/v1641883565/attached_image/manfaat-buah-plum-bagi-kesehatan-tubuh-anda-0-alodokter.jpg"
+    },
+
+    {
+        "id": "33",
+        "nama": "Pepino",
+        "deskripsi": "Pepino adalah buah asli dari wilayah Andes, Amerika Selatan, dengan nama latin Solanum muricatum. Buah ini masih termasuk dalam keluarga terung-terungan. Ukuran buah pepino yang ditanam di Indonesia biasanya sebesar ubi jalar, dan berbentuk bulat atau lonjong seperti telur. Warna kulitnya kuning dengan belang-belang ungu atau kecokelatan. Sementara rasa buah pepino menyegarkan karena kandungan air yang tinggi, dan aromanya sangat harum. Saat dibelah, warna daging buah pepino mirip dengan melon. Tapi teksturnya sedikit lebih keras seperti mentimun.",
+        "namaLatin": "Solanum muricatum",
+        "manfaat": ["Membantu dalam mengelola kadar gula darah",
+            "Mengobati tekanan darah tinggi",
+           "Menghambat penyebaran kanker"],
+        "nutrisi": "Stroberi mengandung magnesium, kalium, zat besi, dan beragam jenis antioksidan, seperti antosianin dan ellagitannins. Kandungan zat besi dan antioksidan tersebut juga dapat digunakan untuk memperbaiki rambut yang rusak, melembapkan, serta menjadikan rambut terasa halus.",
+        "gambar": "https://cdn.idntimes.com/content-images/community/2019/06/images-0ffb8759508b622604b74134dae3889b_600x400.jpeg"
+    },
+
+    {
+        "id": "34",
+        "nama": "Markisa",
+        "deskripsi": "Buah markisa memiliki rasa yang manis, asam, dan menyegarkan. Ada dua jenis buah markisa yang umum ditemukan di Indonesia, yaitu markisa ungu (Passiflora edulis) dan markisa kuning (Passiflora flavicarpa). Markisa ungu memiliki ukuran yang lebih kecil dan rasa yang lebih manis daripada markisa kuning.",
+        "namaLatin": "Passiflora edulis",
+        "manfaat": ["Menangkal radikal bebas",
+            "Memperkuat daya tahan tubuh",
+           "Menjaga kesehatan sistem pencernaan",
+            "Menjaga kadar gula darah tetap stabil",
+            "Meredakan nyeri sendi"],
+        "nutrisi": "Stroberi mengandung magnesium, kalium, zat besi, dan beragam jenis antioksidan, seperti antosianin dan ellagitannins. Kandungan zat besi dan antioksidan tersebut juga dapat digunakan untuk memperbaiki rambut yang rusak, melembapkan, serta menjadikan rambut terasa halus.",
+        "gambar": "https://res.cloudinary.com/dk0z4ums3/image/upload/v1648441999/attached_image/manfaat-buah-markisa-yang-perlu-anda-ketahui-0-alodokter.jpg"
+    },
+
+    {
+        "id": "35",
+        "nama": "Kesemek",
+        "deskripsi": "Kesemek adalah nama sejenis buah-buahan dari marga Diospyros. Tanaman ini dikenal pula dengan sebutan buah kaki, atau dalam bahasa Inggris dinamai Oriental (Chinese/Japanese) persimmon. Nama ilmiahnya adalah Diospyros kaki. (‘Kaki’, bahasa Jepang, adalah nama zat tanin yang dihasilkan buah ini).",
+        "namaLatin": "Diospyros kaki",
+        "manfaat": ["Menjaga kesehatan mata",
+            "Menjaga kesehatan jantung",
+            "Mengurangi risiko terkena penyakit kanker",
+            "Menjaga kesehatan otak"],
+        "nutrisi": "Stroberi mengandung magnesium, kalium, zat besi, dan beragam jenis antioksidan, seperti antosianin dan ellagitannins. Kandungan zat besi dan antioksidan tersebut juga dapat digunakan untuk memperbaiki rambut yang rusak, melembapkan, serta menjadikan rambut terasa halus.",
+        "gambar": "https://res.cloudinary.com/dk0z4ums3/image/upload/v1603175250/attached_image/manfaat-buah-kesemek-yang-wajib-diketahui-0-alodokter.jpg"
+    },
+
+    {
+        "id": "36",
+        "nama": "Ceplukan",
+        "deskripsi": "Ceplukan atau ciplukan adalah nama sejenis buah kecil, yang ketika masak tertutup oleh perbesaran kelopak bunga. Buah ini juga dikenal dengan pelbagai nama kawasan seperti cecenet atau cecendet, nyurnyuran, dan kopok-kopokan.",
+        "namaLatin": "Physallis",
+        "manfaat": ["Mengurangi peradangan",
+            "Membantu menurunkan kadar kolesterol",
+            "Meningkatkan imunitas tubuh",
+            "Menjaga kesehatan tulang",
+            "Mengelola diabetes"],
+        "nutrisi": "Stroberi mengandung magnesium, kalium, zat besi, dan beragam jenis antioksidan, seperti antosianin dan ellagitannins. Kandungan zat besi dan antioksidan tersebut juga dapat digunakan untuk memperbaiki rambut yang rusak, melembapkan, serta menjadikan rambut terasa halus.",
+        "gambar": "https://d1vbn70lmn1nqe.cloudfront.net/prod/wp-content/uploads/2022/11/04060421/X-Manfaat-Buah-Ciplukan-dan-Cara-Mengolahnya-1.jpg.webp"
     }
 
 ]
