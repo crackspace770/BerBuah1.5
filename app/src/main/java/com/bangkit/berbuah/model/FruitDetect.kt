@@ -1,5 +1,9 @@
 package com.bangkit.berbuah.model
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
 data class FruitDetect (
     val id : String,
     val nama : String,
@@ -8,4 +12,4 @@ data class FruitDetect (
     val manfaat : List<String> ,
     val nutrisi : String,
     val gambar : String
-        ):java.io.Serializable
+        ): Parcelable

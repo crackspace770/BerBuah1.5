@@ -132,9 +132,9 @@ class DetectionActivity:AppCompatActivity() {
     private fun detail(){
         detection = validate()
 
-        val results = mClassifier.recognizeImage(mBitmap).firstOrNull()
-        binding.tvResult.text = results?.nama
-        txtResult = results?.nama
+      //  val results = mClassifier.recognizeImage(mBitmap).firstOrNull()
+     //   binding.tvResult.text = results?.nama
+     //   txtResult = results?.nama
 
         if(detection != null){
             startActivity(detection)

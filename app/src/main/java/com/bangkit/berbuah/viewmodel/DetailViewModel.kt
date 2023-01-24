@@ -96,6 +96,6 @@ class DetailViewModel(private val application: Application) : ViewModel() {
     }
 
     companion object {
-        private const val TAG = "DetailViewModel"
+        const val TAG = "DetailViewModel"
     }
 }

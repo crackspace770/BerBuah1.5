@@ -14,12 +14,29 @@
             android:id="@+id/action_homeFragment_to_detailActivity"
             app:destination="@id/detailActivity"
             app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_homeFragment_to_detectActivity"
+            app:destination="@id/detectActivity" />
     </fragment>
     <activity
         android:id="@+id/detailActivity"
         android:name="com.bangkit.berbuah.ui.activities.DetailActivity"
         android:label="activity_detail"
         tools:layout="@layout/activity_detail" />
+    <activity
+        android:id="@+id/detectActivity"
+        android:name="com.bangkit.berbuah.ui.activities.DetectionActivity"
+        android:label="activity_detect"
+        tools:layout="@layout/activity_detect"
+        />
+    <activity
+        android:id="@+id/resultActivity"
+        android:name="com.bangkit.berbuah.ui.activities.ResultActivity"
+        android:label="activity_result"
+        tools:layout="@layout/activity_result"
+
+        />
+
     <fragment
         android:id="@+id/searchFragment"
         android:name="com.bangkit.berbuah.ui.fragments.SearchFragment"
