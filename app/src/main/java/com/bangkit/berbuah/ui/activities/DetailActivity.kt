@@ -1,11 +1,9 @@
 package com.bangkit.berbuah.ui.activities
 
-import android.content.Intent
+
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import androidx.activity.result.ActivityResultLauncher
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.bangkit.berbuah.R
@@ -24,7 +22,7 @@ class DetailActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetailBinding
     private lateinit var detailViewModel: DetailViewModel
     private lateinit var fruit: FruitItem
-    private lateinit var nutrisi: KandunganBuah
+   // private lateinit var nutrisi: KandunganBuah
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -67,15 +65,7 @@ class DetailActivity : AppCompatActivity() {
                         tvDeskripsi.text = detailFruit.deskripsi
                         tvManfaat.text = detailFruit.manfaat.toString()
 
-                        /*
-                        tvAir.text = nutrisi.air
-                        tvKalori.text = nutrisi.kalori
-                        tvKarbo.text = nutrisi.karbohidrat
-                        tvGula.text = nutrisi.gula
-                        tvLemak.text = nutrisi.lemak
-                        tvProtein.text = nutrisi.protein
-                        tvSerat.text = nutrisi.serat
-*/
+
                         var isFavorite = false
                         CoroutineScope(Dispatchers.IO).launch {
                             fruitItem.nama?.let {

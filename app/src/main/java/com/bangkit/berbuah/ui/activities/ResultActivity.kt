@@ -1,14 +1,13 @@
 package com.bangkit.berbuah.ui.activities
 
-import android.content.Intent
+
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.bangkit.berbuah.R
 import com.bangkit.berbuah.databinding.ActivityResultBinding
-import com.bangkit.berbuah.model.FruitDetect
-import com.bangkit.berbuah.viewmodel.DetailViewModel
+import com.bangkit.berbuah.model.FruitItem
 import com.bangkit.berbuah.viewmodel.ResultViewModel
 import com.bangkit.berbuah.viewmodel.ViewModelFactory
 import com.bumptech.glide.Glide
@@ -20,8 +19,6 @@ class ResultActivity:AppCompatActivity() {
 
     private lateinit var binding: ActivityResultBinding
     private lateinit var viewModel: ResultViewModel
-    private lateinit var fruitDetect: FruitDetect
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,65 +31,19 @@ class ResultActivity:AppCompatActivity() {
         val deskripsi  = intent.getStringExtra("deskripsi")
         val namaLatin = intent.getStringExtra("namaLatin")
         val manfaat = intent.getStringExtra("manfaat")
-       // val nutrisi = intent.getStringExtra("nutrisi")
         val gambar = intent.getStringExtra("gambar")
 
         binding.apply {
-            viewModel.getDetailFruit().observe(this@ResultActivity){ listFruit->
-                listFruit?.let { fruit->
-                    fruit.forEach {
-
-                        //fetching all data result
-                        tvNama.text = nama
-                        tvNamaLatin.text = namaLatin
-                        tvDeskripsi.text = deskripsi
-                        tvManfaat.text = manfaat
-                        // binding.txtNutrisiBuah.text = nutrisi
-
-                        var isFavorite = false
-                        CoroutineScope(Dispatchers.IO).launch {
-                            fruitDetect.nama.let {
-                                val count = viewModel.check(it)
-                                isFavorite = if (count > 0) {
-                                    setStatusFavorite(true)
-                                    true
-                                } else {
-                                    false
-                                }
-                            }
-                        }
-
-                        fabAddFruit.setOnClickListener {
-                            fruitDetect.nama.let { fruitId ->
-                                isFavorite = !isFavorite
-                                if (isFavorite) {
-                                    viewModel.insert(
-                                        fruitId,
-                                        fruitDetect.nama.toString(),
-                                        fruitDetect.deskripsi.toString(),
-                                        fruitDetect.gambar.toString()
-                                    )
-                                    toastMessage(getString(R.string.add_successfully))
-                                } else {
-                                    viewModel.delete(fruitDetect.nama)
-                                    toastMessage(getString(R.string.delete_successfully))
-                                }
-                                setStatusFavorite(isFavorite)
-                            }
-                        }
-
-                    }
-
-                }
-
-            }
 
             tvNama.text = nama
             tvNamaLatin.text = namaLatin
             tvDeskripsi.text = deskripsi
             tvManfaat.text = manfaat
-        }
 
+            fabAddFruit.setOnClickListener{
+                addFavorite(FruitItem())
+            }
+        }
 
         setActionBarTitle(nama.toString())
         Glide.with(this)
@@ -106,72 +57,44 @@ class ResultActivity:AppCompatActivity() {
         return ViewModelProvider(activity, factory)[ResultViewModel::class.java]
     }
 
-    /*
-    private fun getDataFruit(fruitDetect:FruitDetect){
 
-        val nama  = intent.getStringExtra("nama")
-        val deskripsi  = intent.getStringExtra("deskripsi")
-        val namaLatin = intent.getStringExtra("namaLatin")
-        val manfaat = intent.getStringExtra("manfaat")
-        // val nutrisi = intent.getStringExtra("nutrisi")
-        val gambar = intent.getStringExtra("gambar")
+    private fun addFavorite(fruitItem: FruitItem){
 
-        binding.apply {
-            viewModel.getDetailFruit().observe(this@ResultActivity){ listFruit->
-
-                listFruit?.let { fruit->
-                fruit.forEach {
-                    //fetching all data result
-                    tvNama.text = nama
-                    tvNamaLatin.text = namaLatin
-                    tvDeskripsi.text = deskripsi
-                    tvManfaat.text = manfaat
-                    // binding.txtNutrisiBuah.text = nutrisi
+        val nama = intent.getStringExtra("nama")
 
 
-                    var isFavorite = false
-                    CoroutineScope(Dispatchers.IO).launch {
-                        fruitDetect.nama.let {
-                            val count = viewModel.check(it)
-                            isFavorite = if (count > 0) {
-                                setStatusFavorite(true)
-                                true
-                            } else {
-                                false
-                            }
-                        }
-                    }
-
-                    fabAddFruit.setOnClickListener {
-                        fruitDetect.nama.let { fruitId ->
-                            isFavorite = !isFavorite
-                            if (isFavorite) {
-                                viewModel.insert(
-                                    fruitId,
-                                    fruitDetect.nama.toString(),
-                                    fruitDetect.deskripsi.toString(),
-                                    fruitDetect.gambar.toString()
-                                )
-                                toastMessage(getString(R.string.add_successfully))
-                            } else {
-                                viewModel.delete(fruitDetect.nama)
-                                toastMessage(getString(R.string.delete_successfully))
-                            }
-                            setStatusFavorite(isFavorite)
-                        }
-                    }
-
+        var isFavorite = false
+        CoroutineScope(Dispatchers.IO).launch {
+            nama?.let {
+                val count = viewModel.check(it)
+                isFavorite = if (count > 0) {
+                    setStatusFavorite(true)
+                    true
+                } else {
+                    false
                 }
-
-
-                }
-
             }
-
-
         }
+
+        nama?.let { fruitId ->
+            isFavorite = !isFavorite
+            if (isFavorite) {
+                viewModel.insert(
+                    fruitId,
+                    fruitItem.nama.toString(),
+                    fruitItem.deskripsi.toString(),
+                    fruitItem.gambar.toString()
+                )
+                toastMessage(getString(R.string.add_successfully))
+            } else {
+                viewModel.delete(nama)
+                toastMessage(getString(R.string.delete_successfully))
+            }
+            setStatusFavorite(isFavorite)
     }
-*/
+
+    }
+
 
     private fun toastMessage(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()

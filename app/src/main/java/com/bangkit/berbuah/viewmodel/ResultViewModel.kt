@@ -31,66 +31,19 @@ class ResultViewModel(private val application: Application):ViewModel() {
         private const val TAG = "ResultViewModel"
     }
 
-    internal fun setDetailFruit(nama: String) {
-        _isLoading.value = true
-        val client = ApiConfig.getApiService().getDetailFruit(nama)
-        client.enqueue(object : Callback<FruitResponse> {
 
-            override fun onResponse(
-                call: Call<FruitResponse>,
-                response: Response<FruitResponse>
-            ) {
-                _isLoading.value = false
-                val listDetailFruit = ArrayList<FruitDetect>()
-                if (response.isSuccessful) {
-                    if (response.body() != null) {
-                        response.body()?.artikel?.forEach { detailFruit ->
-                            listDetailFruit.add(
-                                FruitDetect(
-                                    detailFruit.id,
-                                    detailFruit.nama,
-                                    detailFruit.namaLatin,
-                                    detailFruit.deskripsi,
-                                    detailFruit.manfaat,
-                                    detailFruit.image,
-                                    detailFruit.image
-                                )
-                            )
-                        }
-                        listDetailFruitMutable.postValue(listDetailFruit)
-                    }
-                } else {
-                    Toast.makeText(
-                        application.applicationContext,
-                        response.message(),
-                        Toast.LENGTH_SHORT
-                    ).show()
-                    Log.e(DetailViewModel.TAG, "onFailure: ${response.message()}")
-                }
-            }
-
-            override fun onFailure(call: Call<FruitResponse>, t: Throwable) {
-                _isLoading.value = false
-                Toast.makeText(
-                    application.applicationContext,
-                    t.message,
-                    Toast.LENGTH_SHORT
-                ).show()
-                Log.e(DetailViewModel.TAG, "onFailure ${t.message}")
-            }
-        })
-    }
 
     internal fun getDetailFruit(): LiveData<ArrayList<FruitDetect>> = listDetailFruitMutable
 
     internal fun check(id: String) = favoriteFruitRepository.check(id)
 
-    internal fun insert(id: String, nama: String, deskripsi: String, gambar: String) {
+
+    fun insert(id: String, nama: String, deskripsi: String, gambar: String){
         viewModelScope.launch(Dispatchers.IO) {
-            val fruitItem = Favorite(
+            val favorite= Favorite(
                 id, nama,  deskripsi, gambar
             )
-            favoriteFruitRepository.insert(fruitItem)
+            favoriteFruitRepository.insert(favorite)
         }
     }
 

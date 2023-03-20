@@ -10,6 +10,7 @@ import android.os.Build
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
+import android.view.Gravity
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.bangkit.berbuah.databinding.ActivityDetectBinding
@@ -117,31 +118,18 @@ class DetectionActivity:AppCompatActivity() {
 
     private fun detect(){
         //validate what fruit to detect
-      //  detection = validate()
         val results = mClassifier.recognizeImage(mBitmap).firstOrNull()
         binding.tvResult.text = results?.nama
         txtResult = results?.nama
-
-    //    if(detection != null){
-    //        startActivity(detection)
-    //    }else{
-    //        Toast.makeText(this, "Buah tidak terdeteksi", Toast.LENGTH_LONG).show()
-    //    }
     }
 
     private fun detail(){
         detection = validate()
-
-      //  val results = mClassifier.recognizeImage(mBitmap).firstOrNull()
-     //   binding.tvResult.text = results?.nama
-     //   txtResult = results?.nama
-
         if(detection != null){
             startActivity(detection)
         }else{
             Toast.makeText(this, "Buah tidak terdeteksi", Toast.LENGTH_LONG).show()
         }
-
     }
 
     fun validate():Intent?{
@@ -489,15 +477,30 @@ class DetectionActivity:AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
         if(requestCode == 250){
             binding.imageView.setImageURI(data?.data)
-
             val uri : Uri?= data?.data
             mBitmap = MediaStore.Images.Media.getBitmap(this.contentResolver, uri)
+
         }
         else if(requestCode == 200 && resultCode == Activity.RESULT_OK){
             mBitmap = data?.extras?.get("data") as Bitmap
             binding.imageView.setImageBitmap(mBitmap)
         }
 
+    }
+
+    private fun bmpCrop(bmp: Bitmap, maxWidth: Int, maxHeight: Int): Bitmap {
+        if (maxHeight > 0 && maxWidth > 0) {
+            val width = bmp.width
+            val height = bmp.height
+
+            //トリミングする幅、高さ、座標の設定
+            val startX = (width - maxWidth) / 2
+            val startY = (height - maxHeight) / 2
+
+            return Bitmap.createBitmap(bmp, startX, startY, maxWidth, maxHeight, null, true)
+        } else {
+            return bmp
+        }
     }
 
 }

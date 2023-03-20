@@ -32,10 +32,10 @@ data class FruitData(
 
 @Parcelize
 data class DetailFruit(
-    val nama: String? = null,
+    var nama: String? = null,
     val namaLatin: String? = null,
-    val deskripsi: String? = null,
-    val image: String? = null,
+    var deskripsi: String? = null,
+    var image: String? = null,
     val manfaat: List<String>? = null,
   //  val nutrisi: List<KandunganBuah>
 ) : Parcelable

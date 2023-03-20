@@ -9,7 +9,7 @@ Apel
 Apel
 Apel
 Apel
-Persik
+Aprikot
 Alpukat
 Alpukat
 Pisang
@@ -76,11 +76,11 @@ Delima
 Jeruk
 Lemon
 Rambutan
-Strawberry
+Apel
 Ceri
 Salak
 Strawberry
-Strawberry
+Kelapa
 Apel
 Jeruk
 Tomat
